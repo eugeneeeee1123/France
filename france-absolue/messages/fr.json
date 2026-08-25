@@ -1,0 +1,42 @@
+{
+  "site": {
+    "name": "FRANCE ABSOLUE",
+    "tagline": "La Grande République Impériale · G.R.I.F.",
+    "country": "La Grande République Impériale de France",
+    "abbr": "G.R.I.F.",
+    "slogan": "De la Gaule à l'Empire · La République · L'Éternité"
+  },
+  "nav": {
+    "home": "Accueil",
+    "arsenal": "Arsenal",
+    "statecraft": "Diplomatie",
+    "epochs": "Époques",
+    "territories": "Territoires",
+    "sport": "Sport",
+    "aesthetics": "Esthétique",
+    "science": "Science",
+    "economy": "Économie",
+    "francophonie": "Francophonie",
+    "search": "Rechercher",
+    "menu": "Menu",
+    "close": "Fermer"
+  },
+  "home": {
+    "hero_eyebrow": "La France sous tous les angles",
+    "hero_title_1": "La France n'est pas un pays,",
+    "hero_title_2": "c'est une idée",
+    "hero_desc": "De la Gaule à l'espace, des profondeurs océaniques aux sommets de la pensée, explorez toutes les dimensions de la France et de son influence dans le monde.",
+    "hero_cta": "Commencer l'exploration",
+    "dimensions_label": "La France en 7 dimensions",
+    "rif_badge": "⚠ GDN-2040 · Univers alternatif",
+    "rif_title": "La Grande République Impériale",
+    "rif_desc": "Fiction militaire — force armée complète de la R.I.F. dans l'univers GDN-2040.",
+    "timeline_eyebrow": "Les moments qui ont façonné la France",
+    "global_eyebrow": "Un empire discret",
+    "global_title": "Une présence universelle",
+    "global_desc": "De l'Europe à l'Atlantique, de l'océan Indien au Pacifique, la France déploie ses territoires et son influence aux quatre coins du globe.",
+    "global_cta": "Explorer la carte",
+    "quote": "La France n'est pas un pays, c'est une civilisation.",
+    "quote_author": "— Charles de Gaulle"
+  }
+}

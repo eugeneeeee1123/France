@@ -1,0 +1,103 @@
+{
+  "metrics": [
+    { "value": "SSBN", "label": { "zh": "凯旋级战略核潜艇", "fr": "Sous-marins SNLE", "en": "Triomphant-class SSBN" } },
+    { "value": "4", "label": { "zh": "弹道导弹核潜艇", "fr": "Sous-marins nucléaires", "en": "Ballistic missile subs" } },
+    { "value": "290", "label": { "zh": "约计核弹头规模", "fr": "Têtes nucléaires (est.)", "en": "Estimated warheads" } },
+    { "value": "1831", "label": { "zh": "外籍兵团创立", "fr": "Fondation Légion étrangère", "en": "Foreign Legion founded" } }
+  ],
+  "nuclear": {
+    "label": { "zh": "核威慑体系", "fr": "Dissuasion Nucléaire", "en": "Nuclear Deterrence" },
+    "sections": [
+      {
+        "title": { "zh": "陆基消除", "fr": "Élimination terrestre", "en": "Land-based elimination" },
+        "text": {
+          "zh": "1996年，希拉克在最后六次核试验后主动废除所有陆基弹道导弹，法国成为唯一主动消减核力量的拥核国。",
+          "fr": "En 1996, Chirac démantèle volontairement toutes les forces nucléaires terrestres après six derniers essais. La France est la seule puissance nucléaire à avoir réduit volontairement son arsenal.",
+          "en": "In 1996, Chirac voluntarily dismantled all land-based ballistic missiles after six final tests — France remains the only nuclear power to have voluntarily reduced its arsenal."
+        }
+      },
+      {
+        "title": { "zh": "海基支柱 SNLE", "fr": "Pilier maritime SNLE", "en": "Maritime Pillar SNLE" },
+        "text": {
+          "zh": "4艘凯旋级战略核潜艇，永远保持至少1艘在海上巡逻。M51弹道导弹射程9000km，分导式多弹头，精度200m CEP。每艘携带16枚导弹，每枚最多10枚TN-75核弹头。",
+          "fr": "4 sous-marins de classe Triomphant, toujours au moins un en patrouille. Le missile M51 a une portée de 9000km, têtes multiples, précision de 200m CEP. Chaque sous-marin embarque 16 missiles.",
+          "en": "4 Triomphant-class submarines, always at least one on patrol. The M51 missile has a 9,000km range, MIRV warheads, 200m CEP precision. Each submarine carries 16 missiles."
+        }
+      },
+      {
+        "title": { "zh": "空基支柱 ASMP-A", "fr": "Pilier aérien ASMP-A", "en": "Air Pillar ASMP-A" },
+        "text": {
+          "zh": "Rafale搭载的超音速巡航核导弹，弹头当量300kt，为核打击提供灵活性与可逆性，是法国核威慑的政治信号工具。",
+          "fr": "Missile de croisière nucléaire supersonique embarqué sur Rafale, charge de 300kt, offre flexibilité et réversibilité — un outil de signal politique pour la dissuasion française.",
+          "en": "A supersonic nuclear cruise missile carried by the Rafale, 300kt yield, providing flexibility and reversibility — a political signaling tool for French deterrence."
+        }
+      },
+      {
+        "title": { "zh": "tous azimuts 全方位威慑", "fr": "Doctrine tous azimuts", "en": "Tous Azimuts Doctrine" },
+        "text": {
+          "zh": "戴高乐1967年提出的战略：法国核力量不针对任何特定敌人，而是对全方位威胁的回应，这与北约核共享体系有本质区别。",
+          "fr": "Stratégie énoncée par de Gaulle en 1967 : la force nucléaire française ne vise aucun ennemi spécifique mais répond à toute menace, dans n'importe quelle direction.",
+          "en": "De Gaulle's 1967 doctrine: French nuclear force targets no specific enemy but responds to threats from any direction — fundamentally different from NATO nuclear sharing."
+        }
+      }
+    ]
+  },
+  "branches": [
+    {
+      "key": "air",
+      "icon": "✈",
+      "title": { "zh": "制空权的系统设计", "fr": "Rafale & Aérospatiale", "en": "Air Power Systems" },
+      "subtitle": "Rafale + SPECTRA + RBE2 AESA + FCAS",
+      "text": {
+        "zh": "阵风并非依靠单一性能取胜。航电融合、电子战、自卫系统和多任务挂载构成一套可独立作战的空中体系。FCAS六代机正在研发，与德国、西班牙合作，预计2040年服役。",
+        "fr": "Le Rafale ne gagne pas par une performance isolée. Fusion avionique, guerre électronique, autodéfense et polyvalence forment un système aérien autonome. Le FCAS, développé avec l'Allemagne et l'Espagne, entrera en service vers 2040.",
+        "en": "The Rafale doesn't win through isolated performance. Avionics fusion, electronic warfare, self-defence and multi-role payloads form an autonomous air system. The FCAS sixth-generation fighter is in development with Germany and Spain."
+      }
+    },
+    {
+      "key": "navy",
+      "icon": "⚓",
+      "title": { "zh": "深海中的国家意志", "fr": "Naval Group & Sous-marins", "en": "Naval Power" },
+      "subtitle": "Naval Group · Barracuda · Triomphant · PA France",
+      "text": {
+        "zh": "攻击核潜艇与战略核潜艇共同维持水下情报、远洋护航和二次核打击能力。戴高乐号是法国唯一核动力航母，也是非美国唯一的核动力航母。",
+        "fr": "Sous-marins d'attaque et stratégiques maintiennent ensemble renseignement sous-marin, escorte hauturière et capacité de seconde frappe. Le Charles de Gaulle est le seul porte-avions nucléaire français.",
+        "en": "Attack and strategic submarines together maintain underwater intelligence, blue-water escort, and second-strike capability. The Charles de Gaulle remains France's only nuclear-powered carrier."
+      }
+    },
+    {
+      "key": "land",
+      "icon": "⚔",
+      "title": { "zh": "陆战火力的出口模型", "fr": "Forces Terrestres", "en": "Land Forces" },
+      "subtitle": "CAESAR · Leclerc · Scorpion · SAMP/T",
+      "text": {
+        "zh": "法国陆战装备强调轮式机动、网络化指挥与远程精确火力，适合快速部署和海外行动。Scorpion现代化计划全面数字化陆军车队。",
+        "fr": "L'équipement terrestre français privilégie la mobilité à roues, le commandement en réseau et la frappe de précision longue portée. Le programme Scorpion numérise l'ensemble du parc.",
+        "en": "French land equipment emphasises wheeled mobility, networked command, and precision long-range fire. The Scorpion modernisation programme digitises the entire fleet."
+      }
+    },
+    {
+      "key": "legion",
+      "icon": "🎖",
+      "title": { "zh": "两个世纪的全球部署", "fr": "Légion Étrangère", "en": "Foreign Legion" },
+      "subtitle": "Fondée en 1831 · 8,700 hommes · 140 nations",
+      "text": {
+        "zh": "外籍兵团兼具军事单位、国家神话和人才吸纳机制，是法国全球军事存在最独特的制度之一。服役5年后可申请法国国籍。",
+        "fr": "La Légion étrangère combine unité militaire, mythologie nationale et mécanisme d'intégration. Après 5 ans de service, naturalisation possible.",
+        "en": "The Foreign Legion combines military unit, national mythology, and talent-absorption mechanism. After five years of service, soldiers may apply for French citizenship."
+      }
+    }
+  ],
+  "industrialGroups": [
+    { "name": "Dassault Aviation", "focus": { "zh": "战斗机", "fr": "Chasseurs", "en": "Fighter jets" }, "products": "Rafale, Falcon" },
+    { "name": "MBDA", "focus": { "zh": "导弹系统", "fr": "Systèmes de missiles", "en": "Missile systems" }, "products": "METEOR, ASTER, MdCN, SCALP" },
+    { "name": "Naval Group", "focus": { "zh": "水面舰艇、潜艇", "fr": "Navires & sous-marins", "en": "Surface ships & submarines" }, "products": "Suffren, FREMM, FDI" },
+    { "name": "Thales", "focus": { "zh": "电子战、传感器、C4ISR", "fr": "Guerre électronique, capteurs", "en": "Electronic warfare, sensors" }, "products": "RBE2 AESA, SPECTRA" }
+  ],
+  "opex": [
+    { "name": { "zh": "马里萨赫勒行动", "fr": "Serval / Barkhane", "en": "Operation Serval/Barkhane" }, "period": "2013–2022", "desc": { "zh": "对抗萨赫勒地区伊斯兰武装", "fr": "Lutte contre les groupes islamistes au Sahel", "en": "Counter-insurgency against Islamist groups in the Sahel" } },
+    { "name": { "zh": "利比亚行动", "fr": "Harmattan", "en": "Operation Harmattan" }, "period": "2011", "desc": { "zh": "卡扎菲政权终结", "fr": "Fin du régime de Kadhafi", "en": "End of the Gaddafi regime" } },
+    { "name": { "zh": "黎巴嫩维和", "fr": "DAMAN / FINUL", "en": "UNIFIL / DAMAN" }, "period": "1978–", "desc": { "zh": "联合国驻黎巴嫩临时部队", "fr": "Force intérimaire des Nations Unies au Liban", "en": "UN Interim Force in Lebanon" } },
+    { "name": { "zh": "中非维和", "fr": "Sangaris", "en": "Operation Sangaris" }, "period": "2013–2016", "desc": { "zh": "宗教冲突维和行动", "fr": "Intervention lors du conflit confessionnel", "en": "Intervention during sectarian conflict" } }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "headline": [
+    { "value": "7",    "label": { "zh": "航母", "fr": "Porte-avions", "en": "Carriers" } },
+    { "value": "900+", "label": { "zh": "战机", "fr": "Aéronefs", "en": "Aircraft" } },
+    { "value": "1.5M", "label": { "zh": "士兵", "fr": "Soldats", "en": "Soldiers" } },
+    { "value": "500K", "label": { "zh": "无人系统", "fr": "UGV · Robots", "en": "UGV · Robots" } }
+  ],
+  "forces": {
+    "navy": {
+      "tag": { "zh": "海军", "fr": "Marine Nationale", "en": "Navy" },
+      "name": { "zh": "帝国海军", "fr": "Force Navale Impériale", "en": "Imperial Naval Force" },
+      "items": [
+        { "name": "PANG France Libre (CVN)", "value": { "zh": "4 艘", "fr": "4 unités", "en": "4 units" } },
+        { "name": "Bretagne LHA (Rafale-V)", "value": { "zh": "4 艘", "fr": "4 unités", "en": "4 units" } },
+        { "name": "Suffren SSN Block II", "value": { "zh": "24 艘", "fr": "24 unités", "en": "24 units" } },
+        { "name": "Le Foudroyant SSGN", "value": { "zh": "6 艘", "fr": "6 unités", "en": "6 units" } },
+        { "name": "SNLE 3G (nucléaire)", "value": { "zh": "6 艘", "fr": "6 unités", "en": "6 units" } }
+      ]
+    },
+    "air": {
+      "tag": { "zh": "空天军", "fr": "Armée de l'Air", "en": "Air Force" },
+      "name": { "zh": "帝国空天军", "fr": "Force Aérospatiale Impériale", "en": "Imperial Aerospace Force" },
+      "items": [
+        { "name": "FCAS 6e génération", "value": { "zh": "200 架", "fr": "200 appareils", "en": "200 aircraft" } },
+        { "name": "Rafale F5/F6", "value": { "zh": "450 架", "fr": "450 appareils", "en": "450 aircraft" } },
+        { "name": "Rafale-E (guerre élec.)", "value": { "zh": "40 架", "fr": "40 appareils", "en": "40 aircraft" } },
+        { "name": "A330 MRTT ravitailleur", "value": { "zh": "60 架", "fr": "60 appareils", "en": "60 aircraft" } },
+        { "name": "CSO 3G (satellites)", "value": { "zh": "3 个集群", "fr": "3 constellations", "en": "3 constellations" } }
+      ]
+    },
+    "army": {
+      "tag": { "zh": "陆军", "fr": "Armée de Terre", "en": "Army" },
+      "name": { "zh": "帝国陆军", "fr": "Force Terrestre Impériale", "en": "Imperial Land Force" },
+      "items": [
+        { "name": "Effectifs (professionnels)", "value": { "zh": "1,500,000 人", "fr": "1 500 000", "en": "1,500,000" } },
+        { "name": "UGV (robots de combat)", "value": { "zh": "500,000 台", "fr": "500 000", "en": "500,000" } },
+        { "name": "Leclerc 2.0 (140mm)", "value": { "zh": "5,500 辆", "fr": "5 500 chars", "en": "5,500 tanks" } },
+        { "name": "CAESAR Mk3 (155mm)", "value": { "zh": "2,500 门", "fr": "2 500 pièces", "en": "2,500 pieces" } },
+        { "name": "Tiger Mk3 (MUM-T)", "value": { "zh": "600 架", "fr": "600 hélicos", "en": "600 helicopters" } }
+      ]
+    }
+  }
+}

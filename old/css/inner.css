@@ -1,0 +1,404 @@
+/* ==========================================================================
+   内页通用模块样式 / INNER PAGE GENERICS
+   ========================================================================== */
+
+.breadcrumb {
+  padding: 110px 0 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+}
+
+.breadcrumb a { color: var(--accent-gold); }
+.breadcrumb a:hover { color: var(--accent-gold-bright); }
+
+.page-hero {
+  padding: 36px 0 72px;
+  border-bottom: 1px solid var(--border-hairline);
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.page-hero-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.1em;
+  margin-bottom: 18px;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  margin-bottom: 14px;
+}
+
+.page-hero h1 .zh { font-family: var(--font-cjk); display: block; }
+
+.page-hero .fr-sub {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--accent-gold-bright);
+  margin-bottom: 22px;
+}
+
+.page-hero .lede {
+  max-width: 680px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.page-hero-accent {
+  position: absolute;
+  top: 0; left: 0;
+  width: 56px;
+  height: 4px;
+}
+
+/* === 子导航条（页内锚点） === */
+.subnav {
+  position: sticky;
+  top: 76px;
+  z-index: 50;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 14px 0;
+  margin-bottom: 64px;
+}
+
+.subnav-list {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.subnav-list::-webkit-scrollbar { display: none; }
+
+.subnav-list a {
+  white-space: nowrap;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-hairline);
+  transition: all 0.2s;
+}
+
+.subnav-list a:hover, .subnav-list a.active {
+  color: var(--accent-gold-bright);
+  border-color: var(--border-hairline-strong);
+  background: var(--bg-surface);
+}
+
+/* === 装备 / 数据规格卡片 === */
+.spec-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  padding: 32px;
+  transition: border-color 0.3s;
+}
+
+.spec-card:hover { border-color: var(--border-hairline-strong); }
+
+.spec-card .spec-tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--border-hairline-strong);
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+
+.spec-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.spec-card .spec-sub {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--text-tertiary);
+  margin-bottom: 20px;
+}
+
+.spec-card .spec-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.spec-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .spec-grid-2 { grid-template-columns: 1fr; }
+}
+
+.spec-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-hairline);
+  border: 1px solid var(--border-hairline);
+}
+
+@media (max-width: 900px) {
+  .spec-grid-3 { grid-template-columns: 1fr; }
+}
+
+/* === 时间轴（外籍兵团 / 历史事件通用） === */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  border-left: 1px solid var(--border-hairline-strong);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -37.5px;
+  top: 4px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-gold);
+}
+
+.timeline-item .tl-year {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--accent-gold-bright);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.timeline-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.timeline-item p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 600px;
+}
+
+.timeline-item .tl-loc {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* === 统计条 / Stat strip === */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border-hairline);
+  border: 1px solid var(--border-hairline);
+  margin-bottom: 80px;
+}
+
+@media (max-width: 800px) {
+  .stat-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-strip .stat-cell {
+  background: var(--bg-surface);
+  padding: 28px 24px;
+}
+
+.stat-strip .stat-cell .num {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-gold-bright);
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-strip .stat-cell .label {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}
+
+/* === 表格风格（参数对比） === */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.compare-table th, .compare-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.compare-table th {
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.compare-table td.num-cell {
+  font-family: var(--font-mono);
+  color: var(--accent-gold-bright);
+}
+
+.compare-table tbody tr:hover {
+  background: var(--bg-surface);
+}
+
+/* === 进度条（用于战力对比可视化） === */
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.bar-row .bar-label {
+  width: 140px;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.bar-row .bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-surface-raised);
+  position: relative;
+  overflow: hidden;
+}
+
+.bar-row .bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--c-gold-600), var(--accent-gold));
+  width: 0;
+  transition: width 1.1s var(--ease-out);
+}
+
+.bar-row.is-visible .bar-fill { width: var(--bar-pct, 50%); }
+
+.bar-row .bar-val {
+  width: 46px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-gold-bright);
+}
+
+/* === 装备图鉴标签云 === */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.tag-row span {
+  font-size: 0.68rem;
+  padding: 5px 11px;
+  border: 1px solid var(--border-hairline);
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* === 双栏图文 === */
+.split-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .split-block { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.split-block.reverse { direction: rtl; }
+.split-block.reverse > * { direction: ltr; }
+
+.split-visual {
+  aspect-ratio: 4/3;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* === 三语内容块系统 / TRILINGUAL CONTENT BLOCKS === */
+[data-lang-block] { display: none; }
+html[data-lang="zh"] [data-lang-block="zh"],
+html:not([data-lang]) [data-lang-block="zh"] { display: block; }
+html[data-lang="fr"] [data-lang-block="fr"] { display: block; }
+html[data-lang="en"] [data-lang-block="en"] { display: block; }
+
+.lang-block-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border-hairline);
+  padding: 2px 7px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.entity-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  padding: 26px;
+}
+
+.entity-card .entity-flag-bar {
+  height: 3px;
+  width: 40px;
+  margin-bottom: 18px;
+}
+
+.entity-card h4 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.entity-card .entity-role {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-gold);
+  margin-bottom: 14px;
+}
+
+.entity-card p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

@@ -1,0 +1,932 @@
+.legacy-arena[hidden] {
+  display: none !important;
+}
+
+.arena-page {
+  --arena-blue: #1747e8;
+  --arena-blue-dark: #071b55;
+  --arena-red: #f04455;
+  --arena-ink: #071126;
+  --arena-white: #f5f7ff;
+  --arena-muted: #aab6d7;
+  background: var(--arena-ink);
+  color: var(--arena-white);
+  overflow: hidden;
+}
+
+.arena-page h1,
+.arena-page h2,
+.arena-page h3 {
+  color: inherit;
+}
+
+.arena-hero {
+  min-height: 100dvh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  isolation: isolate;
+}
+
+.arena-hero-photo,
+.arena-hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.arena-hero-photo {
+  background:
+    linear-gradient(90deg, rgba(7, 17, 38, 0.2), rgba(7, 17, 38, 0.08)),
+    url("../assets/images/arena/mbappe.jpg") 73% 22% / min(48vw, 650px) auto no-repeat,
+    linear-gradient(112deg, #071126 0 52%, #1539ae 52% 76%, #f04455 76%);
+  filter: saturate(0.92) contrast(1.05);
+}
+
+.arena-hero-shade {
+  background:
+    linear-gradient(180deg, rgba(7, 17, 38, 0.06) 34%, rgba(7, 17, 38, 0.94) 100%),
+    linear-gradient(90deg, rgba(7, 17, 38, 0.98) 0 38%, transparent 68%);
+  z-index: 1;
+}
+
+.arena-hero-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.55fr);
+  gap: 8vw;
+  align-items: end;
+  padding-top: 148px;
+  padding-bottom: 70px;
+  z-index: 2;
+}
+
+.arena-kicker {
+  margin-bottom: 22px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #86a4ff;
+}
+
+.arena-hero h1 {
+  max-width: 760px;
+  font-size: clamp(4.3rem, 8.8vw, 9.2rem);
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.arena-hero h1 em,
+.athlete-story h2 em,
+.wemby-copy h2 em {
+  display: inline-block;
+  color: transparent;
+  font-style: italic;
+  line-height: 1.1;
+  padding-bottom: 0.06em;
+  -webkit-text-stroke: 1.5px rgba(245, 247, 255, 0.86);
+}
+
+.arena-hero-lede {
+  max-width: 610px;
+  margin-top: 28px;
+  color: #d7def4;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.arena-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.arena-btn {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.arena-btn:hover {
+  transform: translateY(-2px);
+}
+
+.arena-btn:active {
+  transform: translateY(1px);
+}
+
+.arena-btn-primary {
+  border-color: var(--arena-white);
+  background: var(--arena-white);
+  color: var(--arena-ink);
+}
+
+.arena-btn-quiet:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.arena-hero-score {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(4, 13, 39, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.score-status {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  color: #9eb4f6;
+  letter-spacing: 0.12em;
+}
+
+.arena-hero-score > strong {
+  display: block;
+  margin: 24px 0 30px;
+  font-size: clamp(3rem, 5.2vw, 5.4rem);
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+
+.arena-hero-score dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.arena-hero-score dt {
+  color: var(--arena-muted);
+  font-size: 0.72rem;
+}
+
+.arena-hero-score dd {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-align: right;
+}
+
+.arena-index {
+  position: sticky;
+  top: 76px;
+  z-index: 20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(7, 17, 38, 0.9);
+  backdrop-filter: blur(16px);
+}
+
+.arena-index .wrap {
+  display: flex;
+  gap: 34px;
+  overflow-x: auto;
+}
+
+.arena-index a {
+  flex: 0 0 auto;
+  padding: 17px 0 14px;
+  border-bottom: 3px solid transparent;
+  color: #aab6d7;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.arena-index a:hover {
+  color: #fff;
+  border-bottom-color: var(--arena-red);
+}
+
+.arena-section {
+  position: relative;
+  padding: 120px 0;
+}
+
+.arena-title-stack {
+  max-width: 820px;
+  margin-bottom: 64px;
+}
+
+.arena-title-stack > span,
+.legacy-statement > span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #6e8df0;
+}
+
+.arena-title-stack h2,
+.legacy-statement h2 {
+  margin: 16px 0 20px;
+  font-size: clamp(2.8rem, 6vw, 6.6rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.arena-title-stack p {
+  max-width: 680px;
+  color: #aebbdc;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.world-cup-section {
+  background:
+    linear-gradient(135deg, rgba(23, 71, 232, 0.14), transparent 45%),
+    #071126;
+}
+
+.fixture-board {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.fixture {
+  min-height: 290px;
+  padding: 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+.fixture:last-child {
+  border-right: 0;
+}
+
+.fixture-featured {
+  background: var(--arena-blue);
+}
+
+.fixture-date {
+  color: #b8c5e8;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.fixture-featured .fixture-date {
+  color: #d9e0ff;
+}
+
+.fixture-match {
+  display: flex;
+  flex-direction: column;
+  margin: 34px 0 28px;
+  font-size: clamp(1.5rem, 2.6vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.fixture-match span {
+  margin: 8px 0;
+  color: var(--arena-red);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.fixture-featured .fixture-match span {
+  color: #fff;
+}
+
+.fixture p {
+  margin-top: auto;
+  color: #aebbdc;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.fixture-featured p {
+  color: #e7ebff;
+}
+
+.squad-strip {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px 28px;
+  margin-top: 42px;
+  align-items: baseline;
+}
+
+.squad-strip > span {
+  color: #6e8df0;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.squad-strip > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.squad-strip b {
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+}
+
+.squad-strip p {
+  grid-column: 2;
+  color: #7483aa;
+  font-size: 0.72rem;
+}
+
+.mbappe-section {
+  background: #f5f7ff;
+  color: #071126;
+}
+
+.mbappe-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(40px, 8vw, 120px);
+  align-items: center;
+}
+
+.athlete-image {
+  position: relative;
+  min-height: 690px;
+  overflow: hidden;
+  background: #dce4ff;
+}
+
+.athlete-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 690px;
+  object-fit: cover;
+  object-position: 52% 18%;
+  filter: grayscale(100%) contrast(1.08);
+}
+
+.athlete-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 54%, rgba(23, 71, 232, 0.8));
+  mix-blend-mode: multiply;
+}
+
+.athlete-number {
+  position: absolute;
+  right: -2px;
+  bottom: -42px;
+  z-index: 2;
+  color: #fff;
+  font-size: clamp(9rem, 18vw, 18rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.12em;
+}
+
+.athlete-story .arena-kicker {
+  color: var(--arena-blue);
+}
+
+.athlete-story h2,
+.wemby-copy h2 {
+  font-size: clamp(4rem, 8vw, 8.6rem);
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+
+.athlete-story h2 em {
+  -webkit-text-stroke-color: var(--arena-blue);
+}
+
+.athlete-intro {
+  max-width: 590px;
+  margin: 32px 0;
+  color: #384664;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.athlete-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #bdc6dc;
+  border-bottom: 1px solid #bdc6dc;
+}
+
+.athlete-facts div {
+  padding: 24px 18px 22px 0;
+}
+
+.athlete-facts strong,
+.athlete-facts span {
+  display: block;
+}
+
+.athlete-facts strong {
+  color: var(--arena-blue);
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  line-height: 1;
+}
+
+.athlete-facts span {
+  margin-top: 7px;
+  color: #65708b;
+  font-size: 0.68rem;
+}
+
+.athlete-story blockquote {
+  max-width: 530px;
+  margin-top: 34px;
+  padding-left: 20px;
+  border-left: 4px solid var(--arena-red);
+  color: #15203a;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.wemby-section {
+  min-height: 920px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 76% 50%, rgba(23, 71, 232, 0.42), transparent 33%),
+    #030919;
+}
+
+.wemby-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+  align-items: center;
+  gap: 30px;
+}
+
+.wemby-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.wemby-copy h2 em {
+  font-size: 0.78em;
+  -webkit-text-stroke-color: #8ea8ff;
+}
+
+.wemby-copy > p:not(.arena-kicker) {
+  max-width: 590px;
+  margin: 32px 0;
+  color: #b4c0df;
+  line-height: 1.8;
+}
+
+.wemby-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 590px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wemby-data div {
+  padding: 18px 14px 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wemby-data dt {
+  color: #6e8df0;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+}
+
+.wemby-data dd {
+  margin-top: 5px;
+  font-weight: 800;
+}
+
+.wemby-visual {
+  position: relative;
+  min-height: 680px;
+}
+
+.wemby-visual img {
+  position: absolute;
+  right: 0;
+  bottom: -120px;
+  z-index: 1;
+  width: min(100%, 610px);
+  max-height: 850px;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(100%) contrast(1.12);
+  -webkit-mask-image: linear-gradient(to bottom, #000 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 75%, transparent 100%);
+}
+
+.wemby-word {
+  position: absolute;
+  top: 80px;
+  right: -4vw;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: clamp(7rem, 14vw, 13rem);
+  font-weight: 900;
+  letter-spacing: -0.1em;
+  writing-mode: vertical-rl;
+}
+
+.sports-map-section {
+  background: #f5f7ff;
+  color: #071126;
+}
+
+.sports-map-section .arena-title-stack > span {
+  color: var(--arena-blue);
+}
+
+.sports-map-section .arena-title-stack p {
+  color: #4d5b77;
+}
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr 0.9fr;
+  grid-template-rows: 330px 300px;
+  gap: 1px;
+  background: #aeb9d1;
+  border: 1px solid #aeb9d1;
+}
+
+.sport-cell {
+  position: relative;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: #fff;
+}
+
+.sport-cell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background: repeating-linear-gradient(135deg, var(--arena-blue) 0 2px, transparent 2px 22px);
+}
+
+.sport-cell > * {
+  position: relative;
+}
+
+.sport-cell span {
+  margin-bottom: auto;
+  color: var(--arena-blue);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.sport-cell h3 {
+  font-size: clamp(1.5rem, 2.7vw, 2.8rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.sport-cell p {
+  max-width: 420px;
+  margin-top: 14px;
+  color: #50607e;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.sport-rugby {
+  grid-row: span 2;
+  color: #fff;
+  background: var(--arena-blue);
+}
+
+.sport-rugby::before {
+  opacity: 0.2;
+  background:
+    radial-gradient(circle at 75% 18%, transparent 0 70px, rgba(255,255,255,.7) 72px 74px, transparent 76px),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.2) 0 1px, transparent 1px 28px);
+}
+
+.sport-rugby span,
+.sport-rugby p {
+  color: #dfe5ff;
+}
+
+.sport-cycling {
+  grid-column: span 2;
+  background: #071126;
+  color: #fff;
+}
+
+.sport-cycling::before {
+  opacity: 0.36;
+  background: linear-gradient(112deg, transparent 0 48%, var(--arena-red) 48% 52%, transparent 52%);
+}
+
+.sport-cycling p {
+  color: #b7c2dd;
+}
+
+.legacy-section {
+  background:
+    linear-gradient(135deg, rgba(240, 68, 85, 0.1), transparent 36%),
+    #071126;
+}
+
+.legacy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.75fr);
+  gap: 9vw;
+}
+
+.legacy-statement {
+  position: sticky;
+  top: 170px;
+  align-self: start;
+}
+
+.legacy-statement h2 {
+  max-width: 760px;
+}
+
+.legacy-points article {
+  position: relative;
+  padding: 38px 0 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.legacy-points b {
+  color: var(--arena-red);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.legacy-points h3 {
+  margin: 14px 0 12px;
+  font-size: 2rem;
+}
+
+.legacy-points p {
+  color: #aebbdc;
+  line-height: 1.7;
+}
+
+.arena-closing {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--arena-blue);
+}
+
+.arena-closing .wrap {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.arena-closing p {
+  font-size: clamp(3.6rem, 9vw, 9rem);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+}
+
+.arena-closing a {
+  flex: 0 0 auto;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.arena-page + .site-footer {
+  margin-top: 0;
+  background: #030919;
+}
+
+@media (max-width: 980px) {
+  .arena-hero-grid,
+  .mbappe-layout,
+  .wemby-layout,
+  .legacy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .arena-hero-photo {
+    background:
+      linear-gradient(180deg, rgba(7, 17, 38, 0.04), rgba(7, 17, 38, 0.94)),
+      url("../assets/images/arena/mbappe.jpg") 75% 12% / auto 78% no-repeat,
+      linear-gradient(112deg, #071126 0 42%, #1539ae 42% 76%, #f04455 76%);
+  }
+
+  .arena-hero-grid {
+    gap: 42px;
+  }
+
+  .arena-hero-score {
+    max-width: 520px;
+  }
+
+  .fixture-board {
+    grid-template-columns: 1fr;
+  }
+
+  .fixture {
+    min-height: 240px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .fixture:last-child {
+    border-bottom: 0;
+  }
+
+  .athlete-image,
+  .athlete-image img {
+    min-height: 620px;
+  }
+
+  .wemby-section {
+    padding-bottom: 0;
+  }
+
+  .wemby-visual {
+    min-height: 760px;
+  }
+
+  .wemby-visual img {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .sports-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(280px, auto));
+  }
+
+  .sport-rugby {
+    grid-row: span 2;
+  }
+
+  .sport-cycling {
+    grid-column: span 1;
+  }
+
+  .legacy-statement {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .arena-body .brand-text {
+    display: none;
+  }
+
+  .arena-body .site-header .wrap {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .arena-body .nav-utility {
+    gap: 10px;
+  }
+
+  .arena-hero-grid {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+
+  .arena-hero h1 {
+    font-size: clamp(3.7rem, 18vw, 5.8rem);
+  }
+
+  .arena-hero-photo {
+    background:
+      linear-gradient(180deg, rgba(7, 17, 38, 0.08), rgba(7, 17, 38, 0.96)),
+      url("../assets/images/arena/mbappe.jpg") 74% 8% / auto 62% no-repeat,
+      linear-gradient(112deg, #071126 0 34%, #1539ae 34% 74%, #f04455 74%);
+  }
+
+  .arena-hero-actions,
+  .arena-btn {
+    width: 100%;
+  }
+
+  .arena-index {
+    top: 76px;
+  }
+
+  .arena-section {
+    padding: 86px 0;
+  }
+
+  .arena-title-stack {
+    margin-bottom: 42px;
+  }
+
+  .arena-title-stack h2,
+  .legacy-statement h2 {
+    font-size: clamp(2.8rem, 14vw, 4.6rem);
+  }
+
+  .fixture {
+    padding: 26px 22px;
+  }
+
+  .squad-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .squad-strip p {
+    grid-column: 1;
+  }
+
+  .athlete-image,
+  .athlete-image img {
+    min-height: 520px;
+  }
+
+  .athlete-story h2,
+  .wemby-copy h2 {
+    font-size: clamp(3.6rem, 18vw, 5.5rem);
+  }
+
+  .athlete-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .athlete-facts div {
+    border-bottom: 1px solid #bdc6dc;
+  }
+
+  .athlete-facts div:last-child {
+    border-bottom: 0;
+  }
+
+  .wemby-data,
+  .sports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wemby-visual {
+    min-height: 620px;
+  }
+
+  .wemby-visual img {
+    width: 120%;
+    max-width: none;
+    bottom: -80px;
+  }
+
+  .sports-grid {
+    grid-template-rows: none;
+  }
+
+  .sport-cell,
+  .sport-rugby,
+  .sport-cycling {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 300px;
+  }
+
+  .arena-closing .wrap {
+    min-height: 230px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .arena-page .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 700ms ease, transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .arena-page .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .athlete-image img,
+  .wemby-visual img {
+    transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1), filter 500ms ease;
+  }
+
+  .athlete-image:hover img {
+    transform: scale(1.025);
+    filter: grayscale(60%) contrast(1.08);
+  }
+}

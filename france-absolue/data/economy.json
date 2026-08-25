@@ -1,0 +1,58 @@
+{
+  "metrics": [
+    { "value": "$3T", "label": { "zh": "GDP · 欧元区第二", "fr": "PIB · 2e zone euro", "en": "GDP · 2nd in eurozone" } },
+    { "value": "N°1", "label": { "zh": "全球奢侈品工业领导者", "fr": "Leader mondial du luxe", "en": "Global luxury industry leader" } },
+    { "value": "1ER", "label": { "zh": "欧盟最大农业出口国", "fr": "1er exportateur agricole UE", "en": "EU's top agricultural exporter" } },
+    { "value": "9000万", "label": { "zh": "年均游客人次 · 全球第一", "fr": "Visiteurs/an · 1er mondial", "en": "Annual visitors · World's #1" } }
+  ],
+  "sections": [
+    {
+      "icon": "💎",
+      "title": { "zh": "奢侈品工业的全球垄断", "fr": "L'hégémonie mondiale du luxe", "en": "Global Luxury Hegemony" },
+      "subtitle": "LVMH · Kering · Hermès",
+      "text": {
+        "zh": "LVMH旗下拥有75个品牌，是全球最大奢侈品集团。贝尔纳·阿尔诺曾一度成为全球首富。法国在高定、香水、皮具领域保持绝对领导地位。",
+        "fr": "LVMH possède 75 marques, le plus grand groupe de luxe mondial. Bernard Arnault a été un temps l'homme le plus riche du monde.",
+        "en": "LVMH owns 75 brands, the world's largest luxury group. Bernard Arnault was once the world's richest person."
+      }
+    },
+    {
+      "icon": "✈",
+      "title": { "zh": "航空航天工业核心", "fr": "Cœur de l'industrie aérospatiale", "en": "Aerospace Industry Core" },
+      "subtitle": "Airbus · Dassault · Safran",
+      "text": {
+        "zh": "图卢兹是欧洲航空航天之都，空客总装线、泰雷兹、赛峰共同构成完整产业链，是欧洲航空工业最重要的集群。",
+        "fr": "Toulouse est la capitale aérospatiale européenne. Airbus, Thales et Safran forment ensemble une chaîne industrielle complète.",
+        "en": "Toulouse is Europe's aerospace capital. Airbus, Thales, and Safran together form a complete industrial chain."
+      }
+    },
+    {
+      "icon": "🌾",
+      "title": { "zh": "农业出口大国", "fr": "Grande puissance agricole", "en": "Agricultural Powerhouse" },
+      "subtitle": "AOC · 葡萄酒 · 农产品",
+      "text": {
+        "zh": "法国是欧盟最大农业生产国，AOC体系保护地理标志产品。葡萄酒年出口额约120亿欧元，农民抗议是法国政治生活的传统组成部分。",
+        "fr": "La France est le premier producteur agricole de l'UE. Le système AOC protège les indications géographiques. Les exportations viticoles atteignent 12 milliards d'euros par an.",
+        "en": "France is the EU's leading agricultural producer. The AOC system protects geographical indications. Wine exports reach approximately €12 billion annually."
+      }
+    },
+    {
+      "icon": "🏨",
+      "title": { "zh": "全球第一旅游目的地", "fr": "1ère destination touristique mondiale", "en": "World's #1 Tourist Destination" },
+      "subtitle": "巴黎 · 蔚蓝海岸 · 卢瓦尔河谷",
+      "text": {
+        "zh": "法国年均接待8000-9000万游客，是全球最受欢迎的旅游目的地。巴黎单独贡献了其中相当大的比例，旅游业是法国服务业的重要支柱。",
+        "fr": "La France accueille 80-90 millions de visiteurs par an, la première destination touristique mondiale.",
+        "en": "France welcomes 80-90 million visitors annually, the world's most popular tourist destination."
+      }
+    }
+  ],
+  "cac40Highlights": [
+    { "name": "LVMH", "sector": { "zh": "奢侈品", "fr": "Luxe", "en": "Luxury" } },
+    { "name": "TotalEnergies", "sector": { "zh": "能源", "fr": "Énergie", "en": "Energy" } },
+    { "name": "Airbus", "sector": { "zh": "航空航天", "fr": "Aérospatiale", "en": "Aerospace" } },
+    { "name": "Sanofi", "sector": { "zh": "制药", "fr": "Pharmacie", "en": "Pharmaceuticals" } },
+    { "name": "L'Oréal", "sector": { "zh": "美妆", "fr": "Cosmétiques", "en": "Cosmetics" } },
+    { "name": "BNP Paribas", "sector": { "zh": "金融", "fr": "Finance", "en": "Finance" } }
+  ]
+}

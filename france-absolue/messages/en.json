@@ -1,0 +1,42 @@
+{
+  "site": {
+    "name": "FRANCE ABSOLUE",
+    "tagline": "The Grand Imperial Republic · G.R.I.F.",
+    "country": "The Grand Imperial Republic of France",
+    "abbr": "G.R.I.F.",
+    "slogan": "From Gaul to Empire · The Republic · Eternity"
+  },
+  "nav": {
+    "home": "Home",
+    "arsenal": "Arsenal",
+    "statecraft": "Statecraft",
+    "epochs": "Epochs",
+    "territories": "Territories",
+    "sport": "Sport",
+    "aesthetics": "Aesthetics",
+    "science": "Science",
+    "economy": "Economy",
+    "francophonie": "Francophonie",
+    "search": "Search",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "home": {
+    "hero_eyebrow": "France under every angle",
+    "hero_title_1": "France is not a country,",
+    "hero_title_2": "it is an idea",
+    "hero_desc": "From Gaul to space, from the ocean depths to the peaks of thought — explore every dimension of France and its influence on the world.",
+    "hero_cta": "Begin exploration",
+    "dimensions_label": "France in 7 dimensions",
+    "rif_badge": "⚠ GDN-2040 · Alternate universe",
+    "rif_title": "The Grand Imperial Republic",
+    "rif_desc": "Military fiction — the complete R.I.F. armed forces in the GDN-2040 universe.",
+    "timeline_eyebrow": "The moments that shaped France",
+    "global_eyebrow": "A discreet empire",
+    "global_title": "A universal presence",
+    "global_desc": "From Europe to the Atlantic, from the Indian Ocean to the Pacific, France deploys its territories and influence to every corner of the globe.",
+    "global_cta": "Explore the map",
+    "quote": "France is not a country, it is a civilisation.",
+    "quote_author": "— Charles de Gaulle"
+  }
+}

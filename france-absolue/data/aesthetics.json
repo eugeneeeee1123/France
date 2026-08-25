@@ -1,0 +1,72 @@
+{
+  "metrics": [
+    { "value": "A350", "label": { "zh": "复合材料航空平台", "fr": "Plateforme aéronautique composite", "en": "Composite aircraft platform" } },
+    { "value": "574.8", "label": { "zh": "TGV轮轨速度纪录 km/h", "fr": "Record TGV km/h", "en": "TGV speed record km/h" } },
+    { "value": "3★", "label": { "zh": "米其林最高评级", "fr": "Étoiles Michelin maximum", "en": "Maximum Michelin stars" } },
+    { "value": "Haute", "label": { "zh": "高级定制体系", "fr": "Système Haute Couture", "en": "Haute Couture system" } }
+  ],
+  "sections": [
+    {
+      "icon": "✈",
+      "title": { "zh": "空客的工业优雅", "fr": "L'élégance industrielle d'Airbus", "en": "Airbus's Industrial Elegance" },
+      "subtitle": "Airbus · Toulouse",
+      "text": {
+        "zh": "复合材料、空气动力学与跨国制造体系被转化为清晰、克制的欧洲工业形象。A350的复合材料比例达53%，燃效领先波音787。",
+        "fr": "Matériaux composites, aérodynamique et fabrication transnationale se traduisent en une image industrielle européenne sobre et claire.",
+        "en": "Composite materials, aerodynamics, and transnational manufacturing translate into a restrained, clear European industrial image."
+      }
+    },
+    {
+      "icon": "🚄",
+      "title": { "zh": "速度的公共设计", "fr": "Le design public de la vitesse", "en": "The Public Design of Speed" },
+      "subtitle": "TGV",
+      "text": {
+        "zh": "高速铁路将工程、国土规划与公共服务结合，车头轮廓成为法国现代化的视觉符号。1981年首条线路投入运营，2007年创下574.8km/h世界纪录。",
+        "fr": "Le TGV combine ingénierie, aménagement du territoire et service public. Sa silhouette est devenue un symbole visuel de la modernisation française.",
+        "en": "High-speed rail combines engineering, land planning, and public service. Its nose silhouette became a visual symbol of French modernisation."
+      }
+    },
+    {
+      "icon": "✦",
+      "title": { "zh": "标准制造稀缺", "fr": "Fabriquer la rareté standardisée", "en": "Manufacturing Standardised Scarcity" },
+      "subtitle": "Michelin · Haute Couture",
+      "text": {
+        "zh": "米其林与高级定制都通过严格认证、匿名评估和稀缺资格维持权威。全球三星餐厅约150家，高定客户全球仅约3000-4000人。",
+        "fr": "Michelin et la Haute Couture maintiennent leur autorité par certification stricte, évaluation anonyme et qualification rare.",
+        "en": "Michelin and Haute Couture maintain authority through strict certification, anonymous assessment, and rare qualification."
+      }
+    },
+    {
+      "icon": "🍷",
+      "title": { "zh": "地方性成为世界语言", "fr": "Le local devenu langage mondial", "en": "The Local Becomes a World Language" },
+      "subtitle": "Vin · Cuisine · Savoir-faire",
+      "text": {
+        "zh": "产区、工艺和生活方式被组织为可传播的文化资产，而不是单纯商品。AOC体系自1935年起保护地理标志，目前覆盖葡萄酒、奶酪、黄油等上千种产品。",
+        "fr": "Terroir, savoir-faire et art de vivre sont organisés comme un patrimoine culturel transmissible, non un simple produit.",
+        "en": "Terroir, craft, and lifestyle are organised as transmissible cultural assets, not mere commodities."
+      }
+    }
+  ],
+  "domains": [
+    {
+      "key": "philosophy",
+      "title": { "zh": "哲学", "fr": "Philosophie", "en": "Philosophy" },
+      "items": ["伏尔泰 · 卢梭 · 孟德斯鸠", "萨特 · 加缪 · 波伏瓦", "福柯 · 德里达 · 布迪厄"]
+    },
+    {
+      "key": "literature",
+      "title": { "zh": "文学", "fr": "Littérature", "en": "Literature" },
+      "items": ["雨果 · 福楼拜 · 普鲁斯特", "5 项诺贝尔文学奖", "新小说派 · 存在主义文学"]
+    },
+    {
+      "key": "cinema",
+      "title": { "zh": "电影", "fr": "Cinéma", "en": "Cinema" },
+      "items": ["新浪潮：戈达尔 · 特吕弗", "戛纳电影节 · 金棕榈", "1895年卢米埃兄弟首映"]
+    },
+    {
+      "key": "fashion",
+      "title": { "zh": "时尚", "fr": "Mode", "en": "Fashion" },
+      "items": ["香奈儿 · 迪奥 · 圣罗兰", "LVMH 全球最大奢侈品集团", "巴黎时装周 · 四大之一"]
+    }
+  ]
+}

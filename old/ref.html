@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Hexagone — Dark Mode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* 深色主题 + 三色旗强化 */
+            --bg-void: #050505;       /* 深渊黑 */
+            --bg-panel: #0f0f0f;      /* 面板黑 */
+            --bg-elevated: #1a1a1a;   /* 悬浮黑 */
+            
+            --bleu: #0055A4;          /* 法兰西蓝 */
+            --bleu-glow: #2d6fdb;     /* 蓝色辉光 */
+            --rouge: #EF4135;         /* 法兰西红 */
+            --rouge-glow: #ff5a4e;    /* 红色辉光 */
+            --blanc: #F5F5F5;         /* 结构白 */
+            
+            --text-main: #e0e0e0;
+            --text-dim: #888888;
+            --border-faint: #2a2a2a;
+
+            /* Typography */
+            --font-display: 'Playfair Display', serif;
+            --font-tech: 'Space Grotesk', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            --text-display: clamp(4rem, 9vw, 9rem);
+            --text-h2: clamp(2.5rem, 5vw, 5.5rem);
+            --text-h3: 1.2rem;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-tech);
+            background-color: var(--bg-void);
+            color: var(--text-main);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* 背景网格纹理 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* --- 导航栏 --- */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-faint);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 3rem;
+        }
+
+        .nav-logo {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            letter-spacing: -1px;
+            font-size: 1.1rem;
+        }
+        .nav-logo span:nth-child(1) { color: var(--bleu-glow); }
+        .nav-logo span:nth-child(2) { color: var(--blanc); }
+        .nav-logo span:nth-child(3) { color: var(--rouge-glow); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--blanc);
+            text-shadow: 0 0 8px rgba(245, 245, 245, 0.4);
+        }
+
+        /* --- HERO 首屏 --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 三色光晕背景 */
+        .hero::before, .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+        .hero::before { background: var(--bleu); top: 10%; left: -10%; }
+        .hero::after { background: var(--rouge); bottom: 10%; right: -10%; }
+
+        .hero-tag {
+            font-family: var(--font-mono);
+            color: var(--bleu-glow);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-tag::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--bleu-glow);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: var(--text-display);
+            line-height: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero h1 .blue { color: var(--bleu-glow); text-shadow: 0 0 20px rgba(45, 111, 219, 0.3); }
+        .hero h1 .red { color: var(--rouge-glow); font-style: italic; text-shadow: 0 0 20px rgba(255, 90, 78, 0.3); }
+
+        .hero-desc {
+            max-width: 600px;
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            border-left: 1px solid var(--border-faint);
+            padding-left: 1.5rem;
+        }
+
+        /* --- 模块网格 --- */
+        .modules-section {
+            padding: 8rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid var(--border-faint);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: var(--text-h2);
+            line-height: 1;
+        }
+
+        .section-meta {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1px;
+            background: var(--border-faint);
+            border: 1px solid var(--border-faint);
+        }
+
+        .module-card {
+            background: var(--bg-panel);
+            padding: 2.5rem;
+            text-decoration: none;
+            color: var(--text-main);
+            position: relative;
+            overflow: hidden;
+            transition: background 0.4s ease;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .module-card:hover {
+            background: var(--bg-elevated);
+        }
+
+        /* Hover 时的三色光效 */
+        .module-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--bleu) 33%, var(--blanc) 33%, var(--blanc) 66%, var(--rouge) 66%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .module-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .card-number {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .card-status {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--bleu-glow);
+            border: 1px solid var(--bleu);
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .card-subtitle {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--rouge-glow);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+        }
+
+        /* --- 体育 Banner --- */
+        .sports-banner {
+            display: flex;
+            height: 70vh;
+            position: relative;
+            border-top: 1px solid var(--border-faint);
+            border-bottom: 1px solid var(--border-faint);
+        }
+
+        .sports-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem 5rem;
+            position: relative;
+            overflow: hidden;
+            transition: flex 0.5s ease;
+        }
+
+        .sports-panel:hover {
+            flex: 1.2;
+        }
+
+        .panel-basketball {
+            background: var(--bleu);
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+        }
+
+        .panel-football {
+            background: var(--rouge);
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+        }
+
+        .sports-panel h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            margin-bottom: 2rem;
+            z-index: 2;
+            color: var(--blanc);
+        }
+
+        .sports-stats {
+            display: flex;
+            gap: 3rem;
+            z-index: 2;
+        }
+
+        .stat-item {
+            border-left: 1px solid rgba(255,255,255,0.4);
+            padding-left: 1rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: var(--blanc);
+        }
+
+        .stat-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+        }
+
+        /* 背景大号水印数字 */
+        .watermark {
+            position: absolute;
+            font-family: var(--font-display);
+            font-size: 25rem;
+            font-weight: 900;
+            color: rgba(0,0,0,0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            line-height: 0;
+            pointer-events: none;
+        }
+
+        /* 深度轴指示器 */
+        .depth-axis {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 40vh;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--bleu-glow), var(--text-dim), var(--rouge-glow));
+            z-index: 999;
+        }
+        .depth-axis::before {
+            content: 'ALTITUDE';
+            position: absolute;
+            top: -20px;
+            left: -40px;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            color: var(--text-dim);
+        }
+        .depth-axis::after {
+            content: 'ABYSS';
+            position: absolute;
+            bottom: -20px;
+            left: -30px;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            color: var(--text-dim);
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            .hero, .modules-section { padding: 6rem 1.5rem; }
+            .sports-banner { flex-direction: column; height: auto; }
+            .sports-panel { padding: 2rem; }
+            .depth-axis { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-logo">
+            <span>HEX</span><span>AG</span><span>ONE</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#modules">Modules</a></li>
+            <li><a href="arsenal.html">Arsenal</a></li>
+            <li><a href="epochs.html">Epochs</a></li>
+            <li><a href="aesthetics.html">Aesthetics</a></li>
+            <li><a href="#sport">Arena</a></li>
+        </ul>
+    </nav>
+
+    <!-- 深度轴视觉提示 -->
+    <div class="depth-axis"></div>
+
+    <!-- Hero 首屏 -->
+    <header class="hero">
+        <span class="hero-tag">SYS_ACTIVATE // FRENCH_REPUBLIC_ARCHIVES</span>
+        <h1>
+            <span class="blue">Liberté</span><br>
+            Égalité,<br>
+            <span class="red">Fraternité</span>
+        </h1>
+        <p class="hero-desc">
+            从核威慑的幽深矩阵到高定美学的纤细丝线，从海外领地的广阔专属经济区到哲学史的思想断裂。Project Hexagone 是解构法兰西国家机器的深度档案。
+        </p>
+    </header>
+
+    <!-- 模块网格预览 -->
+    <section class="modules-section" id="modules">
+        <div class="section-header">
+            <h2 class="section-title">体系架构 <span style="color:var(--rouge-glow);">/</span> Architecture</h2>
+            <span class="section-meta">06 ACTIVE MODULES</span>
+        </div>
+        <div class="grid-container">
+            <!-- Arsenal -->
+            <a href="arsenal.html" class="module-card">
+                <div class="card-top">
+                    <span class="card-number">// 01</span>
+                    <span class="card-status">LIVE</span>
+                </div>
+                <div>
+                    <h3 class="card-title">Arsenal</h3>
+                    <p class="card-subtitle">Tous Azimuts</p>
+                    <p class="card-desc">核三位一体、外籍军团、达索与MBDA军工体系。戴高乐主义的全方位威慑哲学。</p>
+                </div>
+            </a>
+            
+            <!-- Statecraft -->
+            <a href="statecraft.html" class="module-card">
+                <div class="card-top">
+                    <span class="card-number">// 02</span>
+                    <span class="card-status">LIVE</span>
+                </div>
+                <div>
+                    <h3 class="card-title">Statecraft</h3>
+                    <p class="card-subtitle">Diplomacy & Power</p>
+                    <p class="card-desc">第五共和国半总统制运作、安理会否决权历史、法德轴心与Françafrique地缘关系。</p>
+                </div>
+            </a>
+
+            <!-- Epochs -->
+            <a href="epochs.html" class="module-card">
+                <div class="card-top">
+                    <span class="card-number">// 03</span>
+                    <span class="card-status">LIVE</span>
+                </div>
+                <div>
+                    <h3 class="card-title">Epochs</h3>
+                    <p class="card-subtitle">1789 / 1815 / 1958</p>
+                    <p class="card-desc">从高卢罗马到第五共和国。以历史断裂点重构时间轴，对比"之前与之后"的剧变。</p>
+                </div>
+            </a>
+
+            <!-- Aesthetics -->
+            <a href="aesthetics.html" class="module-card">
+                <div class="card-top">
+                    <span class="card-number">// 04</span>
+                    <span class="card-status">LIVE</span>
+                </div>
+                <div>
+                    <h3 class="card-title">Aesthetics</h3>
+                    <p class="card-subtitle">Haute Couture</p>
+                    <p class="card-desc">新浪潮电影、印象派谱系、米其林体系、萨特与福柯的哲学脉络及高定运作机制。</p>
+                </div>
+            </a>
+
+            <!-- Territories -->
+            <a href="territories.html" class="module-card">
+                <div class="card-top">
+                    <span class="card-number">// 05</span>
+                    <span class="card-status">LIVE</span>
+                </div>
+                <div>
+                    <h3 class="card-title">Territories</h3>
+                    <p class="card-subtitle">11M km² EEZ</p>
+                    <p class="card-desc">本土大区划分、海外省独立Profile、全球第二大专属经济区及库鲁航天中心。</p>
+                </div>
+            </a>
+
+            <!-- Science -->
+            <a href="science.html" class="module-card">
+                <div class="card-top">
+                    <span class="card-number">// 06</span>
+                    <span class="card-status" style="color: var(--rouge-glow); border-color: var(--rouge);">NEW</span>
+                </div>
+                <div>
+                    <h3 class="card-title">Science</h3>
+                    <p class="card-subtitle">Ariane & CEA</p>
+                    <p class="card-desc">Ariane火箭主导权、CEA核工业链、CNRS体系及菲尔兹奖得主数量（全球第二）。</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 体育 Banner -->
+    <section class="sports-banner" id="sport">
+        <div class="sports-panel panel-basketball">
+            <span class="watermark">1</span>
+            <h2>Wembanyama</h2>
+            <div class="sports-stats">
+                <div class="stat-item">
+                    <div class="stat-value">21.4</div>
+                    <div class="stat-label">PPG</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">10.6</div>
+                    <div class="stat-label">RPG</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3.6</div>
+                    <div class="stat-label">BPG</div>
+                </div>
+            </div>
+        </div>
+        <div class="sports-panel panel-football">
+            <span class="watermark">10</span>
+            <h2>Mbappé</h2>
+            <div class="sports-stats">
+                <div class="stat-item">
+                    <div class="stat-value">48</div>
+                    <div class="stat-label">国际进球</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">2018</div>
+                    <div class="stat-label">世界杯冠军</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">37</div>
+                    <div class="stat-label">LaLiga 进球</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 监听鼠标移动，为 Hero 区域增加微光视差效果
+        const hero = document.querySelector('.hero');
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 20;
+            const y = (e.clientY / window.innerHeight - 0.5) * 20;
+            hero.style.setProperty('--mouse-x', `${x}px`);
+            hero.style.setProperty('--mouse-y', `${y}px`);
+            // 动态调整光晕位置
+            hero.style.setProperty('--glow-offset', `${x}px`);
+        });
+    </script>
+</body>
+</html>
