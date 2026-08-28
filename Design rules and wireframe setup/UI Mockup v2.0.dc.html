@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@500&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>body{margin:0}a{color:#EFB44B;text-decoration:none}a:hover{text-decoration:underline}</style>
+</helmet>
+<div style="--ink950:#00152C;--ink900:#001B39;--ink800:#04264B;--ink700:#12385F;--paper50:#F3EFE4;--paper300:#B9C3D1;--gold500:#EFB44B;--gold700:#B8863A;background:var(--ink950);color:var(--paper50);font-family:'Public Sans','Noto Sans SC',sans-serif">
+
+<div style="display:flex;gap:10px;align-items:center;padding:14px 28px;background:var(--ink800);border-bottom:1px solid var(--ink700);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--paper300)">
+  <span>UI Mockup · Top Nav variant (codex2)</span>
+  <a href="#screen-home" style="color:var(--paper50);padding:6px 14px;border:1px solid var(--ink700);border-radius:999px;text-decoration:none">Home</a>
+  <a href="#screen-module" style="color:var(--paper50);padding:6px 14px;border:1px solid var(--ink700);border-radius:999px;text-decoration:none">01 · Module detail</a>
+  <span style="margin-left:auto;color:var(--paper300)">Tweak: nav overflow · language · scenario label</span>
+</div>
+
+<div id="screen-home">
+  <div style="display:flex;align-items:center;gap:28px;padding:18px 40px;border-bottom:1px solid var(--ink700);position:sticky;top:0;background:var(--ink900);z-index:10">
+    <div style="display:flex;align-items:center;gap:10px;flex:none">
+      <div style="width:34px;height:34px;clip-path:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);border:1.5px solid var(--gold500);display:flex;align-items:center;justify-content:center"><span style="font-family:'Playfair Display',serif;color:var(--gold500);font-size:14px">H</span></div>
+      <div><div style="font-size:14px;font-weight:800;letter-spacing:.04em;line-height:1.1">HEXAGONE</div><div style="font-size:8.5px;color:var(--paper300);letter-spacing:.07em">FRANCE IN DEPTH</div></div>
+    </div>
+    <div style="display:flex;gap:26px;flex:1">
+      <a href="#" style="text-align:center;font-size:11px;font-weight:700;letter-spacing:.03em;color:var(--paper50);border-bottom:2px solid var(--gold500);padding-bottom:14px;text-decoration:none">{{ t.home }}<div style="font-size:9px;font-weight:400;color:var(--paper300);text-transform:none;letter-spacing:0;margin-top:2px">Overview</div></a>
+      <sc-for list="{{ navMainHome }}" as="m" hint-placeholder-count="7">
+        <a href="#" style="text-align:center;font-size:11px;font-weight:700;letter-spacing:.03em;color:{{ m.labelColor }};text-decoration:none;padding-bottom:14px;border-bottom:2px solid {{ m.underline }}">{{ m.n }} {{ m.name }}<div style="font-size:9px;font-weight:400;color:var(--paper300);text-transform:none;letter-spacing:0;margin-top:2px">{{ m.sub }}</div></a>
+      </sc-for>
+      <div style="position:relative">
+        <div style="text-align:center;font-size:11px;font-weight:700;letter-spacing:.03em;color:var(--paper300);border:1px solid var(--ink700);border-radius:14px;padding:6px 12px;cursor:pointer">+3 ▾</div>
+        <sc-if value="{{ overflowOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:calc(100% + 10px);left:0;background:var(--ink800);border:1px solid var(--ink700);padding:10px;display:flex;flex-direction:column;gap:2px;min-width:170px;z-index:20">
+            <sc-for list="{{ navOverflow }}" as="m" hint-placeholder-count="3">
+              <a href="#" style="display:flex;align-items:center;gap:8px;padding:8px 10px;font-size:12px;color:var(--paper50);text-decoration:none" style-hover="background:rgba(243,239,228,0.05)"><span style="font-family:'Playfair Display',serif;color:{{ m.hueColor }};font-size:13px">{{ m.n }}</span>{{ m.name }}</a>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex:none;font-size:12px;color:var(--paper300)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+      <span style="border-left:1px solid var(--ink700);padding-left:16px">{{ langCode }} ▾</span>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:48px;padding:64px 40px;align-items:center">
+    <div style="flex:1;max-width:460px">
+      <h1 style="font-family:'Playfair Display','Noto Serif SC',serif;font-weight:600;font-size:64px;line-height:1;margin:0 0 10px;text-transform:uppercase">La France</h1>
+      <h2 style="font-family:'Playfair Display','Noto Serif SC',serif;font-weight:500;font-size:26px;margin:0 0 20px;color:var(--paper300);text-transform:uppercase;letter-spacing:.02em">Une civilisation, un destin</h2>
+      <div style="display:flex;gap:5px;width:170px;margin-bottom:22px"><span style="height:4px;flex:1;background:#2F4A8C"></span><span style="height:4px;flex:1;background:#F3EFE4"></span><span style="height:4px;flex:1;background:#A8402F"></span></div>
+      <p style="font-size:15.5px;line-height:1.7;color:rgba(243,239,228,0.85);margin:0 0 30px">{{ t.bodyHero }}</p>
+      <div style="display:flex;gap:28px;border-top:1px solid var(--ink700);padding-top:20px">
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">551,695</div><div style="font-size:10.5px;color:var(--paper300);margin-top:4px">km² {{ t.statMetropole }}</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">11,000,000</div><div style="font-size:10.5px;color:var(--paper300);margin-top:4px">km² {{ t.statZee }}</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">57</div><div style="font-size:10.5px;color:var(--paper300);margin-top:4px">{{ t.statInfluence }}</div></div>
+      </div>
+    </div>
+    <div style="flex:1;position:relative;height:520px">
+      <image-slot id="tn-hero-photo" shape="rect" placeholder="Paris skyline / Eiffel Tower — cool navy photo grade"></image-slot>
+      <div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,21,44,0.35) 0%,rgba(0,21,44,0) 45%);pointer-events:none"></div>
+      <div style="position:absolute;top:24px;right:24px;display:flex;flex-direction:column;gap:12px;width:250px">
+        <div style="background:rgba(4,38,75,0.88);border:1px solid var(--ink700);padding:12px 14px;display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EFB44B" stroke-width="1.5" style="flex:none;margin-top:2px"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path></svg><div><div style="font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:3px">Puissance militaire</div><div style="font-size:10.5px;color:var(--paper300);line-height:1.4">Force de frappe nucléaire, indépendance stratégique</div></div></div>
+        <div style="background:rgba(4,38,75,0.88);border:1px solid var(--ink700);padding:12px 14px;display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EFB44B" stroke-width="1.5" style="flex:none;margin-top:2px"><path d="M12 3l2.5 5.6 6.1.6-4.6 4.1 1.3 6-5.3-3.1-5.3 3.1 1.3-6-4.6-4.1 6.1-.6z"></path></svg><div><div style="font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:3px">Membre permanent</div><div style="font-size:10.5px;color:var(--paper300);line-height:1.4">Conseil de sécurité de l'ONU, droit de veto</div></div></div>
+        <div style="background:rgba(4,38,75,0.88);border:1px solid var(--ink700);padding:12px 14px;display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EFB44B" stroke-width="1.5" style="flex:none;margin-top:2px"><path d="M4 5c2-1 5-1 8 0v14c-3-1-6-1-8 0V5zM20 5c-2-1-5-1-8 0v14c3-1 6-1 8 0V5z"></path></svg><div><div style="font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:3px">Patrimoine culturel</div><div style="font-size:10.5px;color:var(--paper300);line-height:1.4">Art, philosophie, littérature, rayonnement universel</div></div></div>
+        <div style="background:rgba(4,38,75,0.88);border:1px solid var(--ink700);padding:12px 14px;display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EFB44B" stroke-width="1.5" style="flex:none;margin-top:2px"><path d="M12 2c2 2 3 5 3 8 0 2-1 4-3 6-2-2-3-4-3-6 0-3 1-6 3-8z"></path><path d="M9 14l-2 4M15 14l2 4"></path></svg><div><div style="font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:3px">Innovation & science</div><div style="font-size:10.5px;color:var(--paper300);line-height:1.4">Ariane, nucléaire, mathématiques</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:center;gap:16px;padding:20px 24px 36px">
+    <span style="width:100px;height:1px;background:var(--ink700)"></span>
+    <span style="font-size:12px;letter-spacing:.1em;color:var(--paper300);text-transform:uppercase">{{ t.eyebrowGrid }}</span>
+    <span style="width:100px;height:1px;background:var(--ink700)"></span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding:0 40px 72px">
+    <sc-for list="{{ gridModules }}" as="m" hint-placeholder-count="10">
+      <a href="#" style="display:flex;flex-direction:column;border:1px solid var(--ink700);text-decoration:none;overflow:hidden;background:var(--ink800)" style-hover="border-color:var(--gold500)">
+        <div style="height:130px;position:relative"><image-slot id="tn-thumb-{{ m.key }}" shape="rect" placeholder="{{ m.name }} — photo, cool navy grade"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,21,44,0.85) 0%,rgba(0,21,44,0) 60%);pointer-events:none"></div>
+          <span style="position:absolute;left:10px;bottom:8px;font-family:'Playfair Display',serif;font-size:22px;color:{{ m.hueColor }}">{{ m.n }}</span>
+        </div>
+        <div style="padding:14px;flex:1;display:flex;flex-direction:column">
+          <div style="font-size:13px;font-weight:700;letter-spacing:.03em;color:var(--paper50);text-transform:uppercase;margin-bottom:8px">{{ m.name }}</div>
+          <div style="font-size:11px;color:var(--paper300);line-height:1.7;margin-bottom:8px">{{ m.b1 }}<br>{{ m.b2 }}<br>{{ m.b3 }}<br>{{ m.b4 }}</div>
+          <div style="text-align:right;margin-top:auto;color:var(--paper300)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+
+  <div style="border-top:1px solid var(--ink700);padding:44px 40px;position:relative">
+    <div style="position:absolute;left:40px;right:40px;top:58px;height:1px;background:var(--ink700)"></div>
+    <div style="display:flex;justify-content:space-between;position:relative">
+      <div style="text-align:center;max-width:110px"><div style="width:10px;height:10px;border-radius:50%;background:var(--paper300);margin:0 auto 10px"></div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px">-52</div><div style="font-size:11px;color:var(--paper300);margin-top:6px">Victoire d'Alésia</div></div>
+      <div style="text-align:center;max-width:110px"><div style="width:10px;height:10px;border-radius:50%;background:var(--paper300);margin:0 auto 10px"></div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px">1789</div><div style="font-size:11px;color:var(--paper300);margin-top:6px">Révolution française</div></div>
+      <div style="text-align:center;max-width:110px"><div style="width:10px;height:10px;border-radius:50%;background:var(--paper300);margin:0 auto 10px"></div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px">1815</div><div style="font-size:11px;color:var(--paper300);margin-top:6px">Congrès de Vienne</div></div>
+      <div style="text-align:center;max-width:110px"><div style="width:10px;height:10px;border-radius:50%;background:var(--paper300);margin:0 auto 10px"></div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px">1870</div><div style="font-size:11px;color:var(--paper300);margin-top:6px">IIIe République</div></div>
+      <div style="text-align:center;max-width:110px"><div style="width:10px;height:10px;border-radius:50%;background:var(--paper300);margin:0 auto 10px"></div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px">1940</div><div style="font-size:11px;color:var(--paper300);margin-top:6px">Seconde Guerre mondiale</div></div>
+      <div style="text-align:center;max-width:110px"><div style="width:10px;height:10px;border-radius:50%;background:var(--paper300);margin:0 auto 10px"></div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px">1958</div><div style="font-size:11px;color:var(--paper300);margin-top:6px">Ve République</div></div>
+      <div style="text-align:center;max-width:110px"><div style="width:10px;height:10px;border-radius:50%;background:var(--gold500);margin:0 auto 10px"></div><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:var(--gold500)">Aujourd'hui</div><div style="font-size:11px;color:var(--paper300);margin-top:6px">Une France mondiale</div></div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--ink700);border-top:1px solid var(--ink700)">
+    <div style="background:var(--ink900);padding:26px"><div style="font-size:11px;letter-spacing:.08em;color:var(--paper300);text-transform:uppercase;margin-bottom:14px">Carte interactive</div><div style="height:150px;margin-bottom:14px"><image-slot id="tn-map-world" shape="rect" placeholder="Carte du monde en ligne fine, territoires français en points lumineux"></image-slot></div><a href="#" style="font-size:12px">Explorer la carte →</a></div>
+    <div style="background:var(--ink900);padding:26px"><div style="font-size:11px;letter-spacing:.08em;color:var(--paper300);text-transform:uppercase;margin-bottom:14px">Chiffres clés</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div><div style="font-family:'IBM Plex Mono',monospace;color:var(--gold500);font-size:16px">67M+</div><div style="font-size:10px;color:var(--paper300)">population</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;color:var(--gold500);font-size:16px">2e</div><div style="font-size:10px;color:var(--paper300)">puissance maritime</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;color:var(--gold500);font-size:16px">57</div><div style="font-size:10px;color:var(--paper300)">pays francophones</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;color:var(--gold500);font-size:16px">5e</div><div style="font-size:10px;color:var(--paper300)">économie UE</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;color:var(--gold500);font-size:16px">300+</div><div style="font-size:10px;color:var(--paper300)">fromages AOC</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;color:var(--gold500);font-size:16px">P5</div><div style="font-size:10px;color:var(--paper300)">membre ONU</div></div>
+      </div>
+    </div>
+    <div style="background:var(--ink900);padding:26px;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;opacity:.25"><image-slot id="tn-quote-portrait" shape="rect" placeholder="Portrait, dimmed background"></image-slot></div>
+      <div style="position:relative"><p style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.5;margin:0 0 10px">La grandeur de la France ne se mesure pas seulement à ce qu'elle possède, mais à ce qu'elle apporte au monde.</p><div style="border-top:1px solid var(--gold700);padding-top:8px;width:fit-content;font-size:12px;color:var(--paper300)">Charles de Gaulle</div></div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--ink700);background:var(--ink950);padding:44px 40px 24px">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:28px">
+      <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:24px;height:24px;clip-path:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);border:1.5px solid var(--paper50);display:flex;align-items:center;justify-content:center"><span style="font-family:'Playfair Display',serif;font-size:10px">H</span></div><span style="font-weight:800;letter-spacing:.04em;font-size:13px">HEXAGONE</span></div><p style="font-size:12px;color:var(--paper300);line-height:1.6;max-width:220px;margin:0">Comprendre la France dans toute sa complexité, sa richesse et son influence.</p></div>
+      <div><div style="font-size:11px;letter-spacing:.06em;color:var(--paper300);text-transform:uppercase;margin-bottom:12px">Navigation</div><div style="display:flex;flex-direction:column;gap:9px;font-size:13px"><a href="#">{{ t.footerNav1 }}</a><a href="#">{{ t.footerNav2 }}</a><a href="#">{{ t.footerNav3 }}</a><a href="#">{{ t.footerNav4 }}</a></div></div>
+      <div><div style="font-size:11px;letter-spacing:.06em;color:var(--paper300);text-transform:uppercase;margin-bottom:12px">Suivez-nous</div><div style="display:flex;gap:10px">
+        <span style="width:28px;height:28px;border:1px solid var(--ink700);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B9C3D1" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4V5z"></path></svg></span>
+        <span style="width:28px;height:28px;border:1px solid var(--ink700);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B9C3D1" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="3"></rect><circle cx="12" cy="12" r="3.5"></circle></svg></span>
+        <span style="width:28px;height:28px;border:1px solid var(--ink700);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B9C3D1" stroke-width="1.5"><path d="M8 5l11 7-11 7V5z"></path></svg></span>
+      </div></div>
+      <div><div style="font-size:11px;letter-spacing:.06em;color:var(--paper300);text-transform:uppercase;margin-bottom:12px">Langue</div><div style="display:flex;gap:12px;font-size:13px"><span style="color:{{ langFrColor }}">FR</span><span style="color:{{ langEnColor }}">EN</span><span style="color:{{ langZhColor }}">中</span></div></div>
+    </div>
+    <div style="border-top:1px solid var(--ink700);padding:18px 0;text-align:center;font-size:11.5px;color:var(--paper300)">© Hexagone. Projet éditorial indépendant.</div>
+  </div>
+</div>
+
+<div id="screen-module" style="border-top:2px solid var(--ink700)">
+  <div style="display:flex;align-items:center;gap:28px;padding:18px 40px;border-bottom:1px solid var(--ink700);position:sticky;top:0;background:var(--ink900);z-index:10">
+    <div style="display:flex;align-items:center;gap:10px;flex:none">
+      <div style="width:34px;height:34px;clip-path:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);border:1.5px solid var(--gold500);display:flex;align-items:center;justify-content:center"><span style="font-family:'Playfair Display',serif;color:var(--gold500);font-size:14px">H</span></div>
+      <div><div style="font-size:14px;font-weight:800;letter-spacing:.04em">HEXAGONE</div></div>
+    </div>
+    <div style="display:flex;gap:26px;flex:1">
+      <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.03em;color:var(--paper300);text-decoration:none">{{ t.home }}</a>
+      <sc-for list="{{ navMainModule }}" as="m" hint-placeholder-count="7">
+        <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.03em;color:{{ m.labelColor }};text-decoration:none;padding-bottom:14px;border-bottom:2px solid {{ m.underline }}">{{ m.n }} {{ m.name }}</a>
+      </sc-for>
+    </div>
+    <div style="font-size:12px;color:var(--paper300)">{{ langCode }} ▾</div>
+  </div>
+
+  <main style="padding:32px 40px 0">
+    <div style="font-size:12px;color:var(--paper300);margin-bottom:20px">{{ t.breadcrumb }} / 01 ARSENAL</div>
+    <div style="display:flex;gap:24px;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid var(--ink700)">
+      <div style="font-family:'Playfair Display',serif;font-size:56px;font-weight:600;color:oklch(68% 0.1 236);line-height:1">01</div>
+      <div style="flex:1">
+        <h1 style="font-family:'Playfair Display','Noto Serif SC',serif;font-size:34px;font-weight:600;margin:0 0 4px;text-transform:uppercase">Arsenal</h1>
+        <div style="font-size:14px;color:var(--paper300);margin-bottom:14px">Puissance militaire</div>
+        <p style="font-size:15px;line-height:1.65;color:rgba(243,239,228,0.85);max-width:640px;margin:0 0 16px">Depuis la force de frappe gaullienne jusqu'aux appareils de nouvelle génération, l'Arsenal français conjugue dissuasion nucléaire, industrie souveraine et projection de force.</p>
+        <sc-if value="{{ showScenario }}" hint-placeholder-val="{{ true }}">
+          <div style="display:inline-block;border:1px solid var(--gold700);color:var(--paper300);padding:7px 14px;font-size:11px;letter-spacing:.04em;max-width:520px;line-height:1.5">{{ t.scenario }}</div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div style="height:220px;margin:28px 0"><image-slot id="tn-module-hero-arsenal" shape="rect" placeholder="Concept art requis — Rafale F5, vue trois quarts (matériel spéculatif, §7)"></image-slot></div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;border-top:1px solid var(--ink700);border-bottom:1px solid var(--ink700);padding:32px 0;margin-bottom:32px">
+      <div><div style="font-size:12px;letter-spacing:.06em;color:oklch(68% 0.1 236);margin-bottom:10px">{{ t.why }}</div><p style="font-size:14px;line-height:1.6;color:rgba(243,239,228,0.85);margin:0">Parce que la dissuasion nucléaire et une armée expéditionnaire restent, pour la France, la garantie ultime de sa liberté d'action.</p></div>
+      <div><div style="font-size:12px;letter-spacing:.06em;color:oklch(68% 0.1 236);margin-bottom:10px">{{ t.how }}</div><p style="font-size:14px;line-height:1.6;color:rgba(243,239,228,0.85);margin:0">Une dissuasion océanique et aéroportée, une industrie de défense souveraine, des forces projetables sur tous les théâtres.</p></div>
+      <div><div style="font-size:12px;letter-spacing:.06em;color:oklch(68% 0.1 236);margin-bottom:10px">{{ t.what }}</div><p style="font-size:14px;line-height:1.6;color:rgba(243,239,228,0.85);margin:0">Un scénario prospectif 2035-2040 : sous-marins de nouvelle génération, Rafale F5, un second porte-avions.</p></div>
+    </div>
+
+    <div style="display:flex;border:1px solid var(--ink700);margin-bottom:32px">
+      <div style="flex:1;padding:18px;border-right:1px solid var(--ink700);text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">290</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">têtes nucléaires (scénario)</div></div>
+      <div style="flex:1;padding:18px;border-right:1px solid var(--ink700);text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">4</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">SNLE nouvelle génération</div></div>
+      <div style="flex:1;padding:18px;border-right:1px solid var(--ink700);text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">225</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">Rafale F5 (scénario 2035)</div></div>
+      <div style="flex:1;padding:18px;text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">2</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">groupes aéronavals</div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:32px;margin-bottom:36px">
+      <p style="font-size:14.5px;line-height:1.7;color:rgba(243,239,228,0.85);margin:0">Le scénario prospectif présenté ici prolonge les programmes déjà engagés (Rafale F5, sous-marins Suffren, futur porte-avions) jusqu'à un horizon 2035-2040, pour explorer ce que pourrait être la puissance française si ces trajectoires se confirment.</p>
+      <div style="height:200px"><image-slot id="tn-module-diagram-arsenal" shape="rect" placeholder="Diagramme ou photo de référence"></image-slot></div>
+    </div>
+
+    <div style="display:flex;gap:20px;align-items:center;padding:18px 0;border-top:1px solid var(--ink700);font-size:13px">
+      <span style="font-weight:600;letter-spacing:.04em;color:var(--paper300);text-transform:uppercase;font-size:11px">{{ t.related }}</span>
+      <a href="#">02 STATECRAFT →</a><a href="#">08 ECONOMY →</a><a href="#">09 FRANCOPHONIE →</a>
+    </div>
+
+    <div style="border-top:1px solid var(--ink700);background:var(--ink950);margin:0 -40px;padding:36px 40px 24px">
+      <div style="text-align:center;font-size:11.5px;color:var(--paper300)">© Hexagone. Projet éditorial indépendant.</div>
+    </div>
+  </main>
+</div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1600,&quot;height&quot;:1000},&quot;overflowOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Navigation&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;fr&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;fr&quot;,&quot;en&quot;,&quot;zh&quot;],&quot;section&quot;:&quot;Navigation&quot;},&quot;showScenarioLabel&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Module detail&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const mk = (n, key, name, sub, hue, b) => ({ n, key, name, sub, hue, hueColor: `oklch(68% 0.1 ${hue})`, b1: b[0], b2: b[1], b3: b[2], b4: b[3] });
+    const modules = [
+      mk('01', 'arsenal', 'ARSENAL', 'Military', 236, ['Arme nucléaire', 'Forces armées', 'Industrie de défense', "OPEX & Légion étrangère"]),
+      mk('02', 'statecraft', 'STATECRAFT', 'Politics', 272, ['Ve République', 'Politique étrangère', 'Union européenne', 'Francophonie & influence']),
+      mk('03', 'epochs', 'EPOCHS', 'History', 56, ["Des Gaulois à aujourd'hui", 'Révolutions & Empires', 'Deux guerres mondiales', 'La France contemporaine']),
+      mk('04', 'territories', 'TERRITORIES', 'Geography', 200, ['Hexagone & régions', 'Outre-mer & territoires', 'ZEE & espaces maritimes', 'Exploration & recherche']),
+      mk('05', 'arena', 'ARENA', 'Sport', 20, ['Football & Coupe du monde', 'Tour de France', 'Roland Garros & tennis', 'JO & champions français']),
+      mk('06', 'aesthetics', 'AESTHETICS', 'Culture', 344, ['Art & architecture', 'Cinéma & littérature', 'Mode & luxe', 'Gastronomie française']),
+      mk('07', 'science', 'SCIENCE', 'Innovation', 164, ['Ariane & espace', 'Nucléaire & énergie', 'Mathématiques', 'Recherche & CNRS']),
+      mk('08', 'economy', 'ECONOMY', 'Industry', 308, ['CAC 40 & multinationales', 'Luxe & savoir-faire', 'Agriculture & vin', 'Transports & infrastructures']),
+      mk('09', 'francophonie', 'FRANCOPHONIE', 'Language', 128, ['Langue française', '57 pays membres', 'Influence culturelle', 'Avenir & perspectives']),
+      mk('10', 'industry', 'INDUSTRY', 'Sovereignty', 92, ['Défense & aéronautique', 'Énergie & nucléaire civil', 'Souveraineté technologique', 'Réindustrialisation']),
+    ];
+    const navItem = (m, active) => ({ ...m, labelColor: active ? '#F3EFE4' : '#B9C3D1', underline: active ? '#EFB44B' : 'transparent' });
+    const navMainHome = modules.slice(0, 7).map(m => navItem(m, false));
+    const navMainModule = modules.slice(0, 7).map((m, i) => navItem(m, i === 0));
+    const navOverflow = modules.slice(7);
+
+    const DICT = {
+      fr: { home: 'Home', breadcrumb: 'Home', bodyHero: "De la Gaule à l'espace, des profondeurs océaniques aux sommets de la pensée, explorez toutes les dimensions de la France et de son influence dans le monde.", eyebrowGrid: 'Explorez la France dans toutes ses dimensions', statMetropole: 'Métropole', statZee: '2ème mondiale', statInfluence: 'pays, Francophonie', related: 'Modules liés', footerNav1: 'À propos', footerNav2: 'Sources', footerNav3: 'Contact', footerNav4: 'Mentions légales', scenario: 'Scénario prospectif 2035-2040. Ces chiffres décrivent un scénario, pas la situation actuelle.', why: 'Pourquoi', how: 'Comment', what: 'Quoi' },
+      en: { home: 'Home', breadcrumb: 'Home', bodyHero: "From Gaul to space, from ocean trenches to the summits of thought, explore every dimension of France and its influence in the world.", eyebrowGrid: 'Explore every dimension of France', statMetropole: 'Mainland', statZee: "World's 2nd", statInfluence: 'countries, Francophonie', related: 'Related modules', footerNav1: 'About', footerNav2: 'Sources', footerNav3: 'Contact', footerNav4: 'Legal', scenario: 'Speculative scenario 2035-2040. These figures describe a scenario, not current reality.', why: 'Why', how: 'How', what: 'What' },
+      zh: { home: '首页', breadcrumb: '首页', bodyHero: '从高卢到太空，从深海到思想的顶峰，探索法国及其世界影响力的方方面面。', eyebrowGrid: '探索法国的方方面面', statMetropole: '本土', statZee: '世界第二', statInfluence: '个法语国家', related: '相关板块', footerNav1: '关于', footerNav2: '资料来源', footerNav3: '联系我们', footerNav4: '法律声明', scenario: '前瞻情景 2035-2040。以下数字描述的是一种情景，并非当前现实。', why: '为什么', how: '如何', what: '是什么' },
+    };
+    const lang = this.props.lang ?? 'fr';
+    const t = DICT[lang] || DICT.fr;
+
+    return {
+      navMainHome, navMainModule, navOverflow, gridModules: modules, t,
+      overflowOpen: this.props.overflowOpen ?? false,
+      showScenario: this.props.showScenarioLabel ?? true,
+      langCode: lang === 'zh' ? '中' : lang.toUpperCase(),
+      langFrColor: lang === 'fr' ? '#F3EFE4' : '#B9C3D1',
+      langEnColor: lang === 'en' ? '#F3EFE4' : '#B9C3D1',
+      langZhColor: lang === 'zh' ? '#F3EFE4' : '#B9C3D1',
+    };
+  }
+}
+
+</script>
+</body>
+</html>

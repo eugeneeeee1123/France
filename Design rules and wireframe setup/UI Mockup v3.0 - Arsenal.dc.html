@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@500&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>body{margin:0}a{color:#EFB44B;text-decoration:none}a:hover{text-decoration:underline}</style>
+</helmet>
+<div style="--ink950:#00152C;--ink900:#001B39;--ink800:#04264B;--ink700:#12385F;--paper50:#F3EFE4;--paper300:#B9C3D1;--gold500:#EFB44B;--gold700:#B8863A;background:var(--ink950);color:var(--paper50);font-family:'Public Sans','Noto Sans SC',sans-serif">
+
+<div style="display:flex;gap:10px;align-items:center;padding:14px 28px;background:var(--ink800);border-bottom:1px solid var(--ink700);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--paper300)">
+  <span>UI Mockup v3.0 · Arsenal — module page template</span>
+  <a href="./UI Mockup v3.0.dc.html" style="color:var(--paper50);padding:6px 14px;border:1px solid var(--ink700);border-radius:999px;text-decoration:none">← Home</a>
+  <span style="margin-left:auto;color:var(--paper300)">Tweak: nav overflow · language · scenario label</span>
+</div>
+
+<div>
+  <div style="display:flex;align-items:center;gap:26px;padding:16px 40px;border-bottom:1px solid var(--ink700);position:sticky;top:0;background:var(--ink900);z-index:10">
+    <div style="display:flex;align-items:center;gap:10px;flex:none"><div style="width:32px;height:32px;clip-path:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);border:1.5px solid var(--gold500);display:flex;align-items:center;justify-content:center"><span style="font-family:'Playfair Display',serif;color:var(--gold500);font-size:13px">H</span></div><div style="font-size:13px;font-weight:800;letter-spacing:.04em">HEXAGONE</div></div>
+    <div style="display:flex;gap:24px;flex:1">
+      <a href="./UI Mockup v3.0.dc.html" style="font-size:11px;font-weight:700;color:var(--paper300);text-decoration:none">{{ t.home }}</a>
+      <sc-for list="{{ navMainModule }}" as="m" hint-placeholder-count="7">
+        <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.03em;color:{{ m.labelColor }};text-decoration:none;padding-bottom:13px;border-bottom:2px solid {{ m.underline }}">{{ m.n }} {{ m.name }}</a>
+      </sc-for>
+      <div style="position:relative">
+        <div style="font-size:11px;font-weight:700;color:var(--paper300);border:1px solid var(--ink700);border-radius:14px;padding:5px 12px">+3 ▾</div>
+        <sc-if value="{{ overflowOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:calc(100% + 10px);left:0;background:var(--ink800);border:1px solid var(--ink700);padding:8px;display:flex;flex-direction:column;min-width:170px;z-index:20">
+            <sc-for list="{{ navOverflow }}" as="m" hint-placeholder-count="3">
+              <a href="#" style="display:flex;align-items:center;gap:8px;padding:8px 10px;font-size:12px;color:var(--paper50);text-decoration:none"><span style="font-family:'Playfair Display',serif;color:{{ m.hueColor }};font-size:13px">{{ m.n }}</span>{{ m.name }}</a>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+    <div style="font-size:12px;color:var(--paper300)">{{ langCode }} ▾</div>
+  </div>
+
+  <main style="padding:32px 40px 0">
+    <div style="font-size:12px;color:var(--paper300);margin-bottom:20px">{{ t.breadcrumb }} / 01 ARSENAL</div>
+    <div style="display:flex;gap:24px;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid var(--ink700)">
+      <div style="font-family:'Playfair Display',serif;font-size:56px;font-weight:600;color:oklch(68% 0.1 236);line-height:1">01</div>
+      <div style="flex:1">
+        <h1 style="font-family:'Playfair Display','Noto Serif SC',serif;font-size:34px;font-weight:600;margin:0 0 4px;text-transform:uppercase">Arsenal</h1>
+        <div style="font-size:14px;color:var(--paper300);margin-bottom:14px">Puissance militaire</div>
+        <p style="font-size:15px;line-height:1.65;color:rgba(243,239,228,0.85);max-width:640px;margin:0 0 16px">Depuis la force de frappe gaullienne jusqu'aux appareils de nouvelle génération, l'Arsenal français conjugue dissuasion nucléaire, industrie souveraine et projection de force.</p>
+        <sc-if value="{{ showScenario }}" hint-placeholder-val="{{ true }}">
+          <div style="display:inline-block;border:1px solid var(--gold700);color:var(--paper300);padding:7px 14px;font-size:11px;letter-spacing:.04em;max-width:520px;line-height:1.5">{{ t.scenario }}</div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div style="height:220px;margin:28px 0"><image-slot id="cb-module-hero-arsenal" shape="rect" placeholder="Concept art requis — Rafale F5, vue trois quarts (matériel spéculatif, §7)"></image-slot></div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;border-top:1px solid var(--ink700);border-bottom:1px solid var(--ink700);padding:32px 0;margin-bottom:32px">
+      <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(68% 0.1 236)" stroke-width="1.5" style="margin-bottom:12px;display:block"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-2 6-6 2 2-6 6-2z"></path></svg><div style="font-size:12px;letter-spacing:.06em;color:oklch(68% 0.1 236);margin-bottom:10px">{{ t.why }}</div><p style="font-size:14px;line-height:1.6;color:rgba(243,239,228,0.85);margin:0">Parce que la dissuasion nucléaire et une armée expéditionnaire restent, pour la France, la garantie ultime de sa liberté d'action.</p></div>
+      <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(68% 0.1 236)" stroke-width="1.5" style="margin-bottom:12px;display:block"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"></path></svg><div style="font-size:12px;letter-spacing:.06em;color:oklch(68% 0.1 236);margin-bottom:10px">{{ t.how }}</div><p style="font-size:14px;line-height:1.6;color:rgba(243,239,228,0.85);margin:0">Une dissuasion océanique et aéroportée, une industrie de défense souveraine, des forces projetables sur tous les théâtres.</p></div>
+      <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(68% 0.1 236)" stroke-width="1.5" style="margin-bottom:12px;display:block"><path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v4h4"></path><path d="M9 13h6M9 17h6"></path></svg><div style="font-size:12px;letter-spacing:.06em;color:oklch(68% 0.1 236);margin-bottom:10px">{{ t.what }}</div><p style="font-size:14px;line-height:1.6;color:rgba(243,239,228,0.85);margin:0">Un scénario prospectif 2035-2040 : sous-marins de nouvelle génération, Rafale F5, un second porte-avions.</p></div>
+    </div>
+
+    <div style="display:flex;border:1px solid var(--ink700);margin-bottom:32px">
+      <div style="flex:1;padding:18px;border-right:1px solid var(--ink700);text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">290</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">têtes nucléaires (scénario)</div></div>
+      <div style="flex:1;padding:18px;border-right:1px solid var(--ink700);text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">4</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">SNLE nouvelle génération</div></div>
+      <div style="flex:1;padding:18px;border-right:1px solid var(--ink700);text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">225</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">Rafale F5 (scénario 2035)</div></div>
+      <div style="flex:1;padding:18px;text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:19px;color:var(--gold500)">2</div><div style="font-size:10.5px;color:var(--paper300);margin-top:5px">groupes aéronavals</div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:32px;margin-bottom:36px">
+      <p style="font-size:14.5px;line-height:1.7;color:rgba(243,239,228,0.85);margin:0">Le scénario prospectif présenté ici prolonge les programmes déjà engagés (Rafale F5, sous-marins Suffren, futur porte-avions) jusqu'à un horizon 2035-2040, pour explorer ce que pourrait être la puissance française si ces trajectoires se confirment.</p>
+      <div style="height:200px"><image-slot id="cb-module-diagram-arsenal" shape="rect" placeholder="Diagramme ou photo de référence"></image-slot></div>
+    </div>
+
+    <div style="display:flex;gap:20px;align-items:center;padding:18px 0;border-top:1px solid var(--ink700);font-size:13px">
+      <span style="font-weight:600;letter-spacing:.04em;color:var(--paper300);text-transform:uppercase;font-size:11px">{{ t.related }}</span>
+      <a href="#">02 STATECRAFT →</a><a href="#">08 ECONOMY →</a><a href="#">09 FRANCOPHONIE →</a>
+    </div>
+
+    <div style="border-top:1px solid var(--ink700);background:var(--ink950);margin:0 -40px;padding:44px 40px 24px">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:28px">
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:24px;height:24px;clip-path:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);border:1.5px solid var(--paper50);display:flex;align-items:center;justify-content:center"><span style="font-family:'Playfair Display',serif;font-size:10px">H</span></div><span style="font-weight:800;letter-spacing:.04em;font-size:13px">HEXAGONE</span></div><p style="font-size:12px;color:var(--paper300);line-height:1.6;max-width:220px;margin:0">Comprendre la France dans toute sa complexité, sa richesse et son influence.</p></div>
+        <div><div style="font-size:11px;letter-spacing:.06em;color:var(--paper300);text-transform:uppercase;margin-bottom:12px">Navigation</div><div style="display:flex;flex-direction:column;gap:9px;font-size:13px"><a href="#">{{ t.footerNav1 }}</a><a href="#">{{ t.footerNav2 }}</a><a href="#">{{ t.footerNav3 }}</a><a href="#">{{ t.footerNav4 }}</a></div></div>
+        <div><div style="font-size:11px;letter-spacing:.06em;color:var(--paper300);text-transform:uppercase;margin-bottom:12px">Suivez-nous</div><div style="display:flex;gap:10px">
+          <span style="width:28px;height:28px;border:1px solid var(--ink700);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B9C3D1" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4V5z"></path></svg></span>
+          <span style="width:28px;height:28px;border:1px solid var(--ink700);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B9C3D1" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="3"></rect><circle cx="12" cy="12" r="3.5"></circle></svg></span>
+          <span style="width:28px;height:28px;border:1px solid var(--ink700);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B9C3D1" stroke-width="1.5"><path d="M8 5l11 7-11 7V5z"></path></svg></span>
+        </div></div>
+        <div><div style="font-size:11px;letter-spacing:.06em;color:var(--paper300);text-transform:uppercase;margin-bottom:12px">Langue</div><div style="display:flex;gap:12px;font-size:13px"><span style="color:{{ langFrColor }}">FR</span><span style="color:{{ langEnColor }}">EN</span><span style="color:{{ langZhColor }}">中</span></div></div>
+      </div>
+      <div style="border-top:1px solid var(--ink700);padding:18px 0;text-align:center;font-size:11.5px;color:var(--paper300)">© Hexagone. Projet éditorial indépendant.</div>
+    </div>
+  </main>
+</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1600,&quot;height&quot;:1000},&quot;overflowOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Navigation&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;fr&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;fr&quot;,&quot;en&quot;,&quot;zh&quot;],&quot;section&quot;:&quot;Navigation&quot;},&quot;showScenarioLabel&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Module detail&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const mk = (n, key, name, hue) => ({ n, key, name, hue, hueColor: `oklch(68% 0.1 ${hue})` });
+    const modules = [
+      mk('01', 'arsenal', 'ARSENAL', 236), mk('02', 'statecraft', 'STATECRAFT', 272), mk('03', 'epochs', 'EPOCHS', 56),
+      mk('04', 'territories', 'TERRITORIES', 200), mk('05', 'arena', 'ARENA', 20), mk('06', 'aesthetics', 'AESTHETICS', 344),
+      mk('07', 'science', 'SCIENCE', 164), mk('08', 'economy', 'ECONOMY', 308), mk('09', 'francophonie', 'FRANCOPHONIE', 128),
+      mk('10', 'industry', 'INDUSTRY', 92),
+    ];
+    const navMainModule = modules.slice(0, 7).map((m, i) => ({ ...m, labelColor: i === 0 ? '#F3EFE4' : '#B9C3D1', underline: i === 0 ? '#EFB44B' : 'transparent' }));
+    const navOverflow = modules.slice(7);
+
+    const DICT = {
+      fr: { home: 'Home', breadcrumb: 'Home', related: 'Modules liés', footerNav1: 'À propos', footerNav2: 'Sources', footerNav3: 'Contact', footerNav4: 'Mentions légales', scenario: 'Scénario prospectif 2035-2040. Ces chiffres décrivent un scénario, pas la situation actuelle.', why: 'Pourquoi', how: 'Comment', what: 'Quoi' },
+      en: { home: 'Home', breadcrumb: 'Home', related: 'Related modules', footerNav1: 'About', footerNav2: 'Sources', footerNav3: 'Contact', footerNav4: 'Legal', scenario: 'Speculative scenario 2035-2040. These figures describe a scenario, not current reality.', why: 'Why', how: 'How', what: 'What' },
+      zh: { home: '首页', breadcrumb: '首页', related: '相关板块', footerNav1: '关于', footerNav2: '资料来源', footerNav3: '联系我们', footerNav4: '法律声明', scenario: '前瞻情景 2035-2040。以下数字描述的是一种情景，并非当前现实。', why: '为什么', how: '如何', what: '是什么' },
+    };
+    const lang = this.props.lang ?? 'fr';
+    const t = DICT[lang] || DICT.fr;
+
+    return {
+      navMainModule, navOverflow, t,
+      overflowOpen: this.props.overflowOpen ?? false,
+      showScenario: this.props.showScenarioLabel ?? true,
+      langCode: lang === 'zh' ? '中' : lang.toUpperCase(),
+      langFrColor: lang === 'fr' ? '#F3EFE4' : '#B9C3D1',
+      langEnColor: lang === 'en' ? '#F3EFE4' : '#B9C3D1',
+      langZhColor: lang === 'zh' ? '#F3EFE4' : '#B9C3D1',
+    };
+  }
+}
+
+</script>
+</body>
+</html>
