@@ -1,0 +1,3 @@
+# INDEX UI Kit
+
+Homepage recreation matching the user-supplied prototype (`uploads/protoype_index_final.png`) as ground truth: nav with logo lockup + links + search + CTA, split hero (headline + hero collage image, cropped from the prototype), a sidebar module list with thumbnail photos, a 6-stat strip, a 6-up module row (bento cards with real thumbnail imagery), and a 4-up bottom panel (map teaser, news, timeline, citation with the de Gaulle portrait). All photography is cropped directly from the prototype (`assets/thumb-*.jpg`, `assets/hero-collage.jpg`, `assets/degaulle-portrait.jpg`, `assets/logo-lockup.png`) except the 3 "À la une" news thumbnails, which are placeholders (picsum) pending real assets.

@@ -1,0 +1,27 @@
+@font-face{font-family:"Playfair Display";src:url("https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2") format("woff2");font-weight:400 900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Playfair Display";src:url("https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXBTs2wbmjWBN2PKdFvXDXbtM.woff2") format("woff2");font-weight:400 900;font-style:italic;font-display:swap;}
+@font-face{font-family:"Noto Serif SC";src:url("https://fonts.gstatic.com/s/notoserifsc/v22/H4c0BXKPl9QIvB0BuVFmxbXH0kOc4RUlUZDGDvIhpAvHrCEmy1M.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Inter";src:url("https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+:root{
+--font-display:"Playfair Display","Noto Serif SC",serif;
+--font-serif-body:"Playfair Display","Noto Serif SC",Georgia,serif;
+--font-sans-ui:"Inter","Noto Serif SC",-apple-system,sans-serif;
+--text-hero:clamp(3.5rem,14vw,11rem);
+--text-h1:clamp(2.5rem,6vw,4.5rem);
+--text-h2:clamp(1.75rem,3.5vw,2.75rem);
+--text-h3:clamp(1.25rem,2vw,1.75rem);
+--text-body-lg:1.25rem;
+--text-body:1.0625rem;
+--text-small:0.875rem;
+--text-micro:0.75rem;
+--tracking-monument:0.05em;
+--tracking-label:0.12em;
+--tracking-tight:-0.01em;
+--leading-tight:1.05;
+--leading-heading:1.15;
+--leading-body:1.65;
+--weight-regular:400;
+--weight-medium:500;
+--weight-bold:700;
+--weight-black:900;
+}

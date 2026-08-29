@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="omelette-print-source" content="v1788000920112753 ui_kits/index/index.html">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="./doc-page.js"></script>
+<style>
+*{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+*{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}
+doc-page:not(:defined){visibility:hidden}
+.grain::after{display:none}
+</style>
+</head>
+<body>
+<doc-page width="1440px" height="1620px" margin="0">
+<div id="root"></div>
+</doc-page>
+<script type="text/babel" src="./Homepage.jsx"></script>
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById("root")).render(<Homepage />);
+</script>
+</body>
+</html>

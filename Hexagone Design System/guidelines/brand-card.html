@@ -1,0 +1,19 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Card Anatomy" subtitle="Double-bezel: hairline outer shell + inset core, hover lift and glow" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="background:var(--surface-page);padding:20px;min-height:200px"></div>
+<script type="text/babel">
+const { ModuleCard } = window.HexagoneDesignSystem_e9210e;
+function Demo(){
+  return (
+    <div style={{display:"flex",gap:16}}>
+      <div style={{width:240,height:160}}><ModuleCard number="01" title="ARSENAL" titleFr="军工战略沙盘" description="悬停以查看抬升与光晕。" accent="#EFB44B" /></div>
+      <div style={{width:240,height:160}}><ModuleCard number="03" title="TERRITORIES" titleFr="Territoires" description="带图片的单元格。" accent="#EFB44B" image="https://picsum.photos/seed/hexagone-card-demo/480/320" /></div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+</script>

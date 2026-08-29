@@ -1,0 +1,26 @@
+:root{
+--color-navy:#001B39;
+--color-navy-deep:#000D1F;
+--color-gold:#EFB44B;
+--color-gold-bright:#F6C868;
+--color-copper:#B87333;
+--color-red:#E3051C;
+--color-white:#F8F6F2;
+--color-ink:#000D1F;
+--surface-page:var(--color-navy);
+--surface-page-deep:var(--color-navy-deep);
+--surface-card:rgba(248,246,242,0.04);
+--surface-card-border:rgba(239,180,75,0.18);
+--surface-paper:var(--color-white);
+--text-primary:var(--color-white);
+--text-primary-on-paper:var(--color-ink);
+--text-muted:rgba(248,246,242,0.62);
+--text-muted-on-paper:rgba(0,13,31,0.6);
+--text-accent:var(--color-gold);
+--accent-primary:var(--color-gold);
+--accent-secondary:var(--color-red);
+--border-hairline:rgba(239,180,75,0.22);
+--border-hairline-on-paper:rgba(0,13,31,0.12);
+--focus-ring:var(--color-gold);
+--grain-opacity:0.04;/* @kind other */
+}

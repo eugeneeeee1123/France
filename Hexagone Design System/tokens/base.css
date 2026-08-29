@@ -1,0 +1,5 @@
+*{box-sizing:border-box;}
+body{background:var(--surface-page);color:var(--text-primary);font-family:var(--font-sans-ui);margin:0;}
+.grain::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:var(--grain-opacity);z-index:9999;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+a{color:var(--color-gold);text-decoration:none;}
+a:hover{color:var(--color-gold-bright);}

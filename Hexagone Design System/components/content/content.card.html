@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x380" name="Content: ModuleCard / StatBlock / WhyHowWhat / Tag" subtitle="Content-page primitives" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="background:var(--surface-page);padding:24px;min-height:380px"></div>
+<script type="text/babel">
+const { ModuleCard, StatBlock, WhyHowWhat, Tag } = window.HexagoneDesignSystem_e9210e;
+function Demo(){
+  return (
+    <div style={{display:"flex",flexDirection:"column",gap:24}}>
+      <div style={{display:"flex",gap:16}}>
+        <div style={{width:260}}><ModuleCard number="01" title="ARSENAL" titleFr="L'Arsenal souverain" description="独立核威慑体系 + 全谱系自研装备工业链。" accent="#EFB44B" /></div>
+        <div style={{display:"flex",gap:32}}>
+          <StatBlock value="11M km²" label="Zone Économique Exclusive" />
+          <StatBlock value="≈700" label="Têtes Nucléaires" />
+        </div>
+      </div>
+      <WhyHowWhat why="最终的国家安全，不能外包给盟友或市场。" how="独立核威慑体系（tous azimuts）+ 全谱系自研装备工业链。" what="约700枚核弹头、8 艘 SNLE、Rafale 全系列。" />
+      <div style={{display:"flex",gap:8}}>
+        <Tag active>问候</Tag><Tag>致谢</Tag><Tag>餐厅</Tag>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+</script>
