@@ -7,37 +7,37 @@
 
 ## Day 1–2：地基 — modules.ts + 共享组件
 
-- [ ] 创建 `lib/content/modules.ts`，写入 `Module` interface
-- [ ] 补全 11 个模块的 why/how/what/links/era 数据（对照"00·全站叙事框架"Why→How→What 总览表）
-- [ ] 实现 `getModule(id)` 工具函数
-- [ ] 实现 `getRelatedModules(id)` 工具函数
-- [ ] 创建 `components/shared/WhyHowWhat.tsx`
-- [ ] 创建 `components/shared/RelatedCapabilities.tsx`
-- [ ] 在 INDEX 页面顶部/底部接入 WhyHowWhat / RelatedCapabilities
-- [ ] 在 ARSENAL 页面接入
-- [ ] 在 STATECRAFT 页面接入
-- [ ] 在 TERRITORIES 页面接入
-- [ ] 在 SPORT 页面接入
-- [ ] 在 EPOCHS 页面接入
-- [ ] 在 AESTHETICS 页面接入
-- [ ] 在 SCIENCE 页面接入
-- [ ] 在 ECONOMY 页面接入
-- [ ] 在 FRANCOPHONIE 页面接入
-- [ ] 确认接入后不改动任何页面正文内容，只加头尾组件
+- [x] 创建 `lib/content/modules.ts`，写入 `Module` interface
+- [x] 补全 11 个模块的 why/how/what/links/era 数据（对照"00·全站叙事框架"Why→How→What 总览表）
+- [x] 实现 `getModule(id)` 工具函数
+- [x] 实现 `getRelatedModules(id)` 工具函数
+- [x] 创建 `components/shared/WhyHowWhat.tsx`
+- [x] 创建 `components/shared/RelatedCapabilities.tsx`
+- [x] 在 INDEX 页面顶部/底部接入 WhyHowWhat / RelatedCapabilities
+- [x] 在 ARSENAL 页面接入
+- [x] 在 STATECRAFT 页面接入
+- [x] 在 TERRITORIES 页面接入
+- [x] 在 SPORT 页面接入
+- [x] 在 EPOCHS 页面接入
+- [x] 在 AESTHETICS 页面接入
+- [x] 在 SCIENCE 页面接入
+- [x] 在 ECONOMY 页面接入
+- [x] 在 FRANCOPHONIE 页面接入
+- [x] 确认接入后不改动任何页面正文内容，只加头尾组件
 
 ---
 
 ## Day 3–5：INDUSTRY.HTML 新页面
 
-- [ ] 创建 `app/[locale]/industry/page.tsx`
-- [ ] 创建 `lib/content/industry-network.ts`（六大产业集群 + 二级企业节点数据）
-- [ ] 创建 `components/industry/IndustryNetworkGraph.tsx`（react-force-graph-2d）
-- [ ] 中心节点 FRANCE 固定坐标（`fx: 0, fy: 0`）
-- [ ] 点击二级节点滑入详情卡 + 连线高亮
-- [ ] 右下角图例（military / aerospace / softpower 三色）
-- [ ] Dassault 节点"查看 Rafale →"跳转按钮，ARSENAL 页面 Rafale 段落加 `id="rafale"` 锚点
-- [ ] 脆弱性 vs 韧性表格实装
-- [ ] Vautour / Corbeau 等最新增补机型数据同步进 industry-network.ts（如涉及军工集群）
+- [x] 创建 `app/industry/page.tsx`
+- [x] 创建 `lib/content/industry-network.ts`（六大产业集群 + 二级企业节点数据）
+- [x] 创建 `components/industry/IndustryNetworkGraph.tsx`（react-force-graph-2d）
+- [x] 中心节点 FRANCE 固定坐标（`fx: 0, fy: 0`）
+- [x] 点击二级节点滑入详情卡 + 连线高亮
+- [x] 右下角图例（military / aerospace / softpower / energy / tech 五色）
+- [x] Dassault 节点"查看 Rafale →"跳转按钮，ARSENAL 页面 Rafale 段落加 `id="rafale"` 锚点
+- [x] 脆弱性 vs 韧性表格实装
+- [x] Vautour / Corbeau 等最新增补机型数据同步进 industry-network.ts（如涉及军工集群）
 
 ---
 

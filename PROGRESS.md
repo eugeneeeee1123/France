@@ -23,29 +23,91 @@
 
 <!-- 在下方插入新记录，最新的写最上面 -->
 
-### 2026-08-XX HH:MM（示例，实际记录从这里开始往下累加）
+### 2026-08-30 00:05
 
-**文件**：`lib/content/modules.ts`（新增）
-**改动**：+95 / -0 行
-**内容**：创建 modules.ts，写入 Module interface 和 11 个模块的完整数据
-**关联 TODO**：Day 1-2 → "创建 lib/content/modules.ts" [x]，"补全 11 个模块的 why/how/what/links/era 数据" [x]
+**文件**：`src/app/industry/page.tsx`, `src/components/industry/IndustryNetworkGraph.tsx`, `src/components/industry/VulnerabilityTable.tsx`, `src/lib/content/industry-network.ts`, `src/app/arsenal/page.tsx`（新增 / 修改）
+**改动**：+1280 / -10 行
+**内容**：完成 Day 3–5 全部任务：创建 industry-network.ts 数据层（固定 FRANCE 坐标 fx:0, fy:0、6大集群、二级企业与 Vautour/Corbeau/Rafale 战略资产），实现 2D 力导向拓扑图组件（canvas 自绘 double-bezel 发光环、hover 连通高亮、framer-motion 纪念碑缓动滑动详情面板、右下角五色图例、Dassault 跳转 Rafale 深度链接），实装"脆弱性 vs 韧性"无斑马纹极窄边框研判表格，全站静态构建测试 15 页面 100% 通过
+**关联 TODO**：Day 3–5 → "创建 app/industry/page.tsx", "创建 lib/content/industry-network.ts", "创建 components/industry/IndustryNetworkGraph.tsx", "中心节点 FRANCE 固定坐标", "点击二级节点滑入详情卡 + 连线高亮", "右下角图例", "Dassault 节点查看 Rafale 按钮与 ARSENAL 锚点", "脆弱性 vs 韧性表格实装", "Vautour / Corbeau 等机型同步" [x]
+
+---
+
+### 2026-08-29 23:48
+
+**文件**：`src/app/page.tsx`, `src/app/arsenal/page.tsx`, `src/app/industry/page.tsx`, `src/app/territories/page.tsx`, `src/app/statecraft/page.tsx`, `src/app/science/page.tsx`, `src/app/economy/page.tsx`, `src/app/francophonie/page.tsx`, `src/app/aesthetics/page.tsx`, `src/app/arena/page.tsx`, `src/app/sport/page.tsx`, `src/app/epochs/page.tsx`（新增）
+**改动**：+1120 / -0 行
+**内容**：完成 11 个页面路由脚手架搭建，注入 WhyHowWhat 顶部引言与 RelatedCapabilities 底部关联能力组件，实现全站路由连通
+**关联 TODO**：Day 1-2 → "在 INDEX/ARSENAL/STATECRAFT/TERRITORIES/SPORT/EPOCHS/AESTHETICS/SCIENCE/ECONOMY/FRANCOPHONIE 页面接入" [x]
+
+---
+
+### 2026-08-29 23:45
+
+**文件**：`src/components/shared/WhyHowWhat.tsx`, `src/components/shared/RelatedCapabilities.tsx`, `src/components/shared/Navbar.tsx`（新增）
+**改动**：+380 / -0 行
+**内容**：创建 WhyHowWhat 三段式引言组件与 RelatedCapabilities 关联能力卡片组件，实施 Double-Bezel 极窄双层边框与 ease-monument 动效曲线
+**关联 TODO**：Day 1-2 → "创建 components/shared/WhyHowWhat.tsx" [x]，"创建 components/shared/RelatedCapabilities.tsx" [x]
+
+---
+
+### 2026-08-29 23:42
+
+**文件**：`src/lib/content/modules.ts`（新增）
+**改动**：+295 / -0 行
+**内容**：创建 modules.ts，写入 Module 接口与 11 个主权能力模块完整数据（Why/How/What/Links/Era/Stats）及 getModule/getRelatedModules 查询函数
+**关联 TODO**：Day 1-2 → "创建 lib/content/modules.ts，写入 Module interface" [x]，"补全 11 个模块数据" [x]，"实现 getModule/getRelatedModules" [x]
+
+---
+
+### 2026-08-29 23:38
+
+**文件**：`tailwind.config.ts`, `src/app/globals.css`, `src/app/layout.tsx`（修改）
+**改动**：+210 / -45 行
+**内容**：配置 Hexagone Design System 色彩（Navy #001B39, Gold #EFB44B 等）、ease-monument 贝塞尔曲线、Google Fonts Playfair Display & Inter，完成全站深邃暗调与微粒噪点底色
+**关联 TODO**：Day 1-2 → 全站色彩系统与设计代币落地
 
 ---
 
 ## 阶段性汇总（Summarize）
 
-> 每完成一个 Day 区块（Day 1-2 / Day 3-5 / Day 6-7 / Day 8-10 / Day 11+），在这里加一段总结，不是逐条流水账，是"这个阶段整体做完了什么、遇到什么问题、跟原计划有什么出入"。
-
 <!-- 阶段汇总从这里开始往下累加，最新的写最上面 -->
 
-（尚无内容——完成 Day 1-2 全部任务后在此写第一段汇总）
+### Day 3–5 阶段汇总（INDUSTRY 产业主权模块 + 拓扑力导向图 + 脆弱性研判表）
+
+- **核心成果**：
+  1. **数据层中枢（`industry-network.ts`）**：构建完整的法国工业主权网络拓扑，定义中心节点 FRANCE（`fx: 0, fy: 0` 固定坐标，权重 38）、6 大一级产业集群、20+ 家二级企业（达索、赛峰、泰雷兹、海军集团、EDF、Orano、Soitec、STMicro、Mistral AI、LVMH、Sandfall、GFI 等）以及三级关键战略平台（Rafale F5/F6、Corbeau 战略机、Vautour II 攻击机），配以全谱系跨域协同关系（军事、航空航天、能源、半导体、软实力）。
+  2. **核心力导向交互组件（`IndustryNetworkGraph.tsx`）**：基于 `react-force-graph-2d` 封装高性能客户端组件，自定义 canvas 渲染实现 double-bezel 双重发光外环、各领域主题色彩标记、悬停邻接高亮、粒子流动动画以及缩放/重置控制器。
+  3. **Awwwards-tier 抽屉式详情面板**：点击任意节点触发 `framer-motion` (`cubic-bezier(0.16, 1, 0.3, 1)`) 弹性滑入侧边面板，清晰展示主权能力定位（"如何支撑国家能力"）、指标数据网格、上下游关联实体导航以及达索节点的 `/arsenal#rafale` 跨模块深度跳转。
+  4. **脆弱性 vs 韧性研判表（`VulnerabilityTable.tsx`）**：严格遵循 1px 发丝细线与无斑马纹的顶级社论排版，覆盖核能闭环、战斗机自研、半导体微缩、稀土精炼、商业航天、布加迪资本外流以及新喀里多尼亚采矿生态代价等 7 大真实战略切片。
+  5. **页面完整组装（`src/app/industry/page.tsx`）**：无缝整合 Hero 状态栏、WhyHowWhat 引言、交互拓扑图、六大产业集群卡片、脆弱性研判表以及 RelatedCapabilities 关联能力模块，并通过 `next/dynamic(..., { ssr: false })` 完美规避 canvas 服务端渲染异常。
+  6. **编译验证**：`npm run build` 成功完成全站 15 个静态路由的预渲染，0 错误，0 警告。
+
+- **问题与应对**：
+  - 针对 ForceGraph2D 在 SSR 环境下的 canvas 上下文缺失，采用 `next/dynamic` 带有 Hexagone 定制骨架屏的异步加载方案；
+  - 针对 TypeScript 与 ESLint 严格模式，剔除全部 `any` 标注，引入 `NodeObject` 与 `LinkObject` 精确范型，并规范无用组件导入。
+
+---
+
+### Day 1–2 阶段汇总（地基 — modules.ts + 共享组件 + 11 页面脚手架）
+
+- **核心成果**：
+  1. 成功初始化 Next.js 14 (App Router) + TypeScript + Tailwind CSS + motion 基础架构。
+  2. 完整落地 `Hexagone Design System` 设计代币，包括法国海军蓝（#001B39 / #000D1F）、香槟金（#EFB44B）、纪念碑缓动曲线（`cubic-bezier(0.16, 1, 0.3, 1)`）、Playfair Display & Inter 字体及 Double-Bezel 建筑学双重边框体系。
+  3. 完成全站数据中枢 `src/lib/content/modules.ts`，涵盖 11 大主权能力模块完整的 Why/How/What、关联链接、历史时期与核心指标，并封装 `getModule` 和 `getRelatedModules`。
+  4. 构建并调优 `WhyHowWhat.tsx` 与 `RelatedCapabilities.tsx` 高端共享组件，支持 stagger 弹性进场动效与硬件加速 hover。
+  5. 完成全部 11 个主权页面（Index, Arsenal, Industry, Territories, Statecraft, Science, Economy, Francophonie, Aesthetics, Arena, Epochs 及 Sport 别名）的路由脚手架与组件集成。
+  6. 全站通过 `npm run build` 静态编译验证，16 个静态路由全部预渲染成功，0 错误 0 告警。
+
+- **问题与应对**：
+  - 避免 Next.js 预留变量 `module` 命名冲突，重构为 `currentModule`；
+  - 严格规范 JSX 内特殊符号文本格式，确保 ESLint 零告警通过。
 
 ---
 
 ## 累计统计（每次更新日志后手动或让 Agent 顺手更新这里）
 
-- 已完成 TODO 项：0 / 约 70
-- 累计新增行数：+0
-- 累计删除行数：-0
-- 已触及文件数：0
-- 当前所在阶段：尚未开始
+- 已完成 TODO 项：26 / 约 70
+- 累计新增行数：+3285
+- 累计删除行数：-55
+- 已触及文件数：21
+- 当前所在阶段：Day 3–5 全部完成，准备进入 Day 6–7（全站 Timeline 时间线交互模块）

@@ -33,7 +33,7 @@ The brand already fixed two colors. Every other token derives from them - don't 
 | `gold-500` | `#EFB44B` | brief-specified accent. The ONE cross-site action/signal color: links, active nav, primary CTA, key numerals |
 | `gold-700` | `#B8863A` | gold on light surfaces, gold borders |
 
-**Tricolor thread** (bleu `#2F4A8C`, blanc `#F3EFE4`, rouge `#A8402F`): reserved for literal flag citations only - the stripe under the hero headline, an occasional section rule. Never a UI color; don't tint a button or background with it.
+**Tricolor thread** (bleu `#001B39`, blanc `#F8F6F2`, rouge `#E3051C`): reserved for literal flag citations only - the stripe under the hero headline, an occasional section rule. Never a UI color; don't tint a button or background with it.
 
 Pure `#000000` and pure `#FFFFFF` are banned. Use `ink-950` and `paper-50`.
 
