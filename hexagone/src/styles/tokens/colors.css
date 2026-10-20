@@ -1,0 +1,69 @@
+/* Hexagone color tokens. Source: France/Design rules and wireframe setup/design.md §3 + UI Mockup v3.0 */
+:root{
+/* Ink (navy) ramp — dark-only site */
+--ink-950:#00152C;
+--ink-900:#001B39;
+--ink-800:#04264B;
+--ink-700:#12385F; /* Paper (warm off-white) — never pure white */
+--paper-50:#F3EFE4;
+--paper-300:#B9C3D1;
+--paper-50-85:rgba(243,239,228,0.85); /* Gold — the ONE action/signal color */
+--gold-500:#EFB44B;
+--gold-700:#B8863A; /* Brief-specified brand values (content plan) */
+--brand-navy:#001B39;
+--brand-gold:#EFB44B;
+--brand-red:#E3051C;
+--brand-white:#F8F6F2;
+--brand-ink:#000D1F; /* Tricolor thread — literal flag citations only (hero stripe, section rule). Muted values as rendered in mockup v3 */
+--tricolor-bleu:#2F4A8C;
+--tricolor-blanc:#F3EFE4;
+--tricolor-rouge:#A8402F; /* Module accent rotation: oklch(68% 0.1 h) on dark, oklch(30% 0.05 h) hover fill */
+--hue-arsenal:236; /* @kind other */
+--hue-statecraft:272; /* @kind other */
+--hue-epochs:56; /* @kind other */
+--hue-territories:200; /* @kind other */
+--hue-arena:20; /* @kind other */
+--hue-aesthetics:344; /* @kind other */
+--hue-science:164; /* @kind other */
+--hue-economy:308; /* @kind other */
+--hue-francophonie:128; /* @kind other */
+--hue-industry:92; /* @kind other */
+--mod-arsenal:oklch(68% 0.1 236);
+--mod-statecraft:oklch(68% 0.1 272);
+--mod-epochs:oklch(68% 0.1 56);
+--mod-territories:oklch(68% 0.1 200);
+--mod-arena:oklch(68% 0.1 20);
+--mod-aesthetics:oklch(68% 0.1 344);
+--mod-science:oklch(68% 0.1 164);
+--mod-economy:oklch(68% 0.1 308);
+--mod-francophonie:oklch(68% 0.1 128);
+--mod-industry:oklch(68% 0.1 92);
+--mod-arsenal-fill:oklch(30% 0.05 236);
+--mod-statecraft-fill:oklch(30% 0.05 272);
+--mod-epochs-fill:oklch(30% 0.05 56);
+--mod-territories-fill:oklch(30% 0.05 200);
+--mod-arena-fill:oklch(30% 0.05 20);
+--mod-aesthetics-fill:oklch(30% 0.05 344);
+--mod-science-fill:oklch(30% 0.05 164);
+--mod-economy-fill:oklch(30% 0.05 308);
+--mod-francophonie-fill:oklch(30% 0.05 128);
+--mod-industry-fill:oklch(30% 0.05 92); /* Semantic aliases */
+--surface-page:var(--ink-950);
+--surface-base:var(--ink-900);
+--surface-raised:var(--ink-800);
+--surface-overlay:rgba(4,38,75,0.85);
+--surface-chip-scrim:rgba(0,21,44,0.55);
+--border-hairline:var(--ink-700);
+--border-accent:var(--gold-500);
+--border-quiet-gold:var(--gold-700);
+--text-primary:var(--paper-50);
+--text-body:var(--paper-50-85);
+--text-secondary:var(--paper-300);
+--text-accent:var(--gold-500);
+--text-disabled:var(--ink-700);
+--action:var(--gold-500);
+--action-on-light:var(--gold-700);
+--focus-ring:var(--gold-500); /* Image protection scrims (the only sanctioned gradients) */
+--scrim-hero:linear-gradient(0deg,#00152C 0%,rgba(0,21,44,0.1) 40%,rgba(0,21,44,0.3) 100%); /* @kind color */
+--scrim-thumb:linear-gradient(0deg,rgba(0,21,44,0.85) 0%,rgba(0,21,44,0) 60%); /* @kind color */
+}

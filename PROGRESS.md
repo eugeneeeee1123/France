@@ -23,6 +23,69 @@
 
 <!-- 在下方插入新记录，最新的写最上面 -->
 
+### 2026-10-21 00:41
+
+**文件**：`hexagone/messages/zh.json`（修改）
+**改动**：+7 / -7 行
+**内容**：按 /ponytail /humanizer /avoid-ai-writing 彻底剔除 INDEX 模块标题与导言的中二宣誓腔和 GPT 营销句式（“十个角度，看法国拒绝中等地位”修正为克制档案体“战略自主的十个维度”；消除“命脉”、“决不让渡/摆布”、“深层骨架”等空洞宏大叙事与虚假排比）；`npm run verify` 全检 100% 通过
+**关联 TODO**：无直接对应条目（INDEX 首页文案中二/AI 腔清理）
+
+---
+
+### 2026-10-19 14:55
+
+**文件**：`hexagone/messages/zh.json`（修改）
+**改动**：约 +40 / -40 行
+**内容**：按 /humanizer /humanize-chinese /avoid-ai-writing 重写 INDEX 首页及十模块卡片中文文案：根除“系统解析/立国支柱/不仅关乎胜负更是试金石/贯穿全书/完整有机体”等机器生成腔与陈词滥调，统一国家档案与学术图册级书面语，戴高乐经典引言按权威史籍译法修正；`npm run verify` 全检 100% 通过
+**关联 TODO**：无直接对应条目（INDEX 首页文案去 AI 化重写）
+
+---
+
+### 2026-10-17 13:10
+
+**文件**：`hexagone/src/components/content/ModuleCard.tsx`（新增）、`hexagone/src/components/index/MatrixSection.tsx`（修改）、`hexagone/messages/*.json`（新增 how / what 等 26 个 key）、`hexagone/docs/HERO-IMAGE-PROMPT.json`（新增）
+**改动**：约 +180 / -40 行
+**内容**：首页矩阵按 wireframe 1b 改为 10 张等权卡片（≥1024px 5×2，移植 DS ModuleCard，悬停显示模块色）；中途误按 1d 做的六边形方案已撤销删除；首页 hero 图片给出 3:2 比例与 JSON prompt（卢浮宫、自由法兰西号航母、凯旋级 SSBN、10 号球员背影、《自由引导人民》），待用户出图替换 `public/images/hero-collage.jpg`
+**关联 TODO**：无直接对应条目（INDEX 首页迭代）
+
+---
+
+### 2026-10-17 10:30
+
+**文件**：`hexagone/src/app/[locale]/{layout,page}.tsx`、`hexagone/src/app/globals.css`、`hexagone/src/styles/entry-motion.css`、`hexagone/src/lib/fonts-{latin,cjk}.ts`、`hexagone/src/components/{navigation/*,actions/CtaLink,data/*,content/ModuleRow,editorial/{QuoteBlock.tsx,DisplayTitle.css},index/*}`、`hexagone/messages/*.json`、`hexagone/package.json`、`hexagone/scripts/check-static-html.mjs`（修改）；`hexagone/docs/{REVIEW-BRIEF-CODE,REVIEW-CODE-INDEX,COPY-DELTA-3}.md`（新增）
+**改动**：约 +260 / -70 行
+**内容**：INDEX 代码 4-agent review（Claude / Antigravity / Codex / Grok + impeccable detector）后修复 29 项：页脚第二处 GDN-2040 提示删除、fr/en 不再加载约 100KB 的中文字体 CSS、字体预加载 12→3、中文行高 1.8 生效、无障碍（队徽链接尺寸与名称、页脚导航名称、菜单焦点、打印、减弱动效）、设计还原（导航居中、次要 CTA、S5 引言栏、GRANDEUR 行高）；新增 `npm run verify` 一键全检，已全部通过
+**关联 TODO**：Day 11+ → "Emil Design Eng Skill 审查全部新组件" 未勾（本次为 4-agent review，非该 skill）；收尾检查 → "全站 GDN-2040 世界观提示语（仅需页面顶部一处）" 仅 INDEX 达成，保持 [ ]
+
+---
+
+### 2026-10-17 01:30
+
+**文件**：`hexagone/src/components/index/{HeroSection,DepthAxis,HeroCollage,StatsSection,MatrixSection,ManifestoSection,ChronologySection,HeroScene,EiffelScene}.tsx`、`hexagone/src/app/[locale]/page.tsx`、`hexagone/src/styles/entry-motion.css`、`hexagone/src/i18n/paths.ts`、`hexagone/public/models/eiffel.glb`、`hexagone/scripts/{check-banned,check-js-budget,check-static-html,prepare-eiffel-glb}.mjs`（新增）；`hexagone/src/app/[locale]/layout.tsx`、`hexagone/src/app/globals.css`（修改）
+**改动**：约 +1900 / -60 行（hexagone 内 src + scripts + messages 合计 3586 行，70 个文件）
+**内容**：INDEX 首页按 wireframe 1b+1c / UI Mockup 实装完成：导航（FFF 队徽回首页）、GRANDEUR 英雄区 + 深度轴、GDN-2040 说明 + R.I.F. 数字快照、10 模块矩阵、三条宣言、时间线 + 戴高乐引言、页脚；纯 CSS 入场动效（服务端终态，无 JS 也完整）；桌面端 Three.js 铁塔懒加载岛（可拖拽、弹簧、不循环）；三语言全部静态生成，build 0 错误 0 警告
+**关联 TODO**：全站色彩系统 → "INDEX 首页 GRANDEUR 大字排版实装" [x]、"Favicon 版本导出" [x]；3D → "安装 @react-three/fiber + drei" [x]、"React.lazy + Suspense 按需加载" [~]；Day 11+ → Stagger / viewport once / 硬件加速 [~]（仅 INDEX）
+
+---
+
+### 2026-10-17 00:31
+
+**文件**：`hexagone/src/components/{brand,actions,icons,navigation,content,editorial,data}/*.tsx`、`hexagone/src/lib/brand.ts`、`hexagone/src/components/cx.ts`（新增）
+**改动**：约 +1100 / -0 行
+**内容**：Hexagone Design System 15 个 React 组件移植为 TSX 服务端组件（保留组件名与视觉 props，hover/press 改 CSS，回调改 href），新增 ModuleRow
+**关联 TODO**：（TODO 无对应条目，属于 INDEX 前置工作）
+
+---
+
+### 2026-10-17 00:22
+
+**文件**：新建 `hexagone/`（Next.js 16.4 + React 19 + Tailwind 4 + next-intl 4）：`src/app/[locale]/**`、`src/i18n/*`、`src/proxy.ts`、`src/lib/fonts-*.ts`、`src/styles/tokens/*`（设计系统原样复制）、`src/app/icon.png`、`messages/{fr,en,zh}.json`、`docs/*`；`France/PRODUCT.md`（新增）
+**改动**：约 +600 行代码 + 775 行文档
+**内容**：项目地基：三语言路由与静态生成、设计 tokens 与字体、队徽 favicon、10 个模块占位页；INDEX 架构文档 v0.2（经 Grok / Antigravity / Codex / Claude 四方 review）；文案由 Antigravity 撰写
+**关联 TODO**：全站色彩系统 → "`:root` CSS 变量写入" [x]、"全站字体接入" [x]
+
+---
+
 ### 2026-08-30 00:05
 
 **文件**：`src/app/industry/page.tsx`, `src/components/industry/IndustryNetworkGraph.tsx`, `src/components/industry/VulnerabilityTable.tsx`, `src/lib/content/industry-network.ts`, `src/app/arsenal/page.tsx`（新增 / 修改）
@@ -106,8 +169,8 @@
 
 ## 累计统计（每次更新日志后手动或让 Agent 顺手更新这里）
 
-- 已完成 TODO 项：26 / 约 70
-- 累计新增行数：+3285
-- 累计删除行数：-55
-- 已触及文件数：21
-- 当前所在阶段：Day 3–5 全部完成，准备进入 Day 6–7（全站 Timeline 时间线交互模块）
+- 已完成 TODO 项：31 / 约 70（另有 4 项进行中 [~]）
+- 累计新增行数：+6871（含新 hexagone 项目 3586 行）
+- 累计删除行数：-115
+- 已触及文件数：91
+- 当前所在阶段：新项目 `hexagone/` 的 INDEX 首页完成（Next.js 16），下一步：INDEX 4-agent 代码 review，然后 Day 6–7 Timeline

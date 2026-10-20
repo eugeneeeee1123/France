@@ -1,0 +1,8 @@
+{
+  "for_generator": {
+    "aspect_ratio": "3:2",
+    "size_px": [3000, 2000],
+    "prompt": "Epic painterly poster of France, oil-painting texture with vivid cinematic sunset light, highly detailed, all elements blended into one dense collage. Left 40% of the image: deep navy textured parchment with a faint gold map of France and its regions drawn in thin gold lines and a gold compass rose in the lower left, mostly empty and dark, fading smoothly into the collage on the right. Right 60%: at the top centre, Liberty from Delacroix's 'Liberty Leading the People' raising a large French tricolour flag, holding a musket, painted in rich oil colours. In front of her on the left side of the collage, Kylian Mbappé, face clearly visible and recognisable, determined expression looking to the right, wearing the official France national football team home jersey: dark blue shirt with the FFF rooster crest on the chest and a small tricolour detail at the collar. Top right: two Dassault Rafale fighter jets flying with white contrails. On the right: the Eiffel Tower glowing gold against a dramatic orange and gold sunset sky with blue clouds. Lower centre: the Louvre palace and its glass pyramid lit warm gold, reflected in water. Right, on the sea at sunset: the French nuclear aircraft carrier 'France Libre' under way. Foreground at the bottom: a French Triomphant-class ballistic missile submarine surfacing through dark blue waves with white spray. Palette: deep navy, royal blue, gold and warm sunset orange with tricolour red and blue accents.",
+    "negative_prompt": "text, letters, captions, watermark, signature, extra logos, frames, borders, separate panels, blurry, low detail, cartoon, anime"
+  }
+}

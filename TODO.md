@@ -73,31 +73,31 @@
 - [ ] Sketchfab 下载：凯旋门（.glb）
 - [ ] Sketchfab 下载：Rafale 战机（.glb, 4k 贴图，23MB 版本）
 - [ ] 埃菲尔铁塔：BlenderMCP 程序化生成（规格见文档"埃菲尔铁塔 BlenderMCP 程序化建模详细规格"）
-- [ ] 安装 `@react-three/fiber` + `@react-three/drei`
+- [x] 安装 `@react-three/fiber` + `@react-three/drei`
 - [ ] 四个模型统一材质校验（`<Environment preset="city">` 或 `"studio"`，检查金属高光是否正常）
 - [ ] 日夜模式 `lightingPresets` 实装
 - [ ] 移动端降级版本（1k 贴图）就位
 - [ ] 4 个模型分配到对应页面（铁塔→INDEX/AESTHETICS，凯旋门→EPOCHS/STATECRAFT，Rafale→ARSENAL，航母→ARSENAL/TERRITORIES）
-- [ ] `React.lazy` + `Suspense` 按需加载确认，不在首屏预加载全部模型
+- [~] `React.lazy` + `Suspense` 按需加载确认，不在首屏预加载全部模型
 
 ---
 
 ## 全站色彩系统 / 品牌视觉（可与上方任务并行）
 
-- [ ] `:root` CSS 变量写入（`--color-navy` `#001B39` / `--color-gold` `#EFB44B` / `--color-red` `#E3051C` / `--color-white` `#F8F6F2` / `--color-ink` `#000D1F`）
-- [ ] 全站字体接入（Playfair Display / 思源宋体 / Neue Haas Grotesk）
+- [x] `:root` CSS 变量写入（`--color-navy` `#001B39` / `--color-gold` `#EFB44B` / `--color-red` `#E3051C` / `--color-white` `#F8F6F2` / `--color-ink` `#000D1F`）
+- [x] 全站字体接入（Playfair Display / 思源宋体 / Neue Haas Grotesk）
 - [ ] Logo 原创设计落地（高卢公鸡，见文档 Logo 章节 prompt）
-- [ ] Favicon 版本导出
-- [ ] INDEX 首页 GRANDEUR 大字排版实装
+- [x] Favicon 版本导出
+- [x] INDEX 首页 GRANDEUR 大字排版实装
 
 ---
 
 ## Day 11+：动效与质量打磨
 
 - [ ] 组件入场弹性动画（spring 参数 `stiffness: 120, damping: 14` 起调）
-- [ ] Stagger 间隔统一 50–100ms
-- [ ] `viewport={{ once: true }}` 全站排查（禁止重复触发）
-- [ ] 硬件加速排查（禁止 width/height/top/left 动画）
+- [~] Stagger 间隔统一 50–100ms
+- [~] `viewport={{ once: true }}` 全站排查（禁止重复触发）
+- [~] 硬件加速排查（禁止 width/height/top/left 动画）
 - [ ] Emil Design Eng Skill 审查全部新组件
 - [ ] Hero 背景效果实装（方案 A Shader 或方案 B Ken Burns，二选一先跑通）
 - [ ] 页面切换转场（View Transitions API）

@@ -1,0 +1,128 @@
+[
+ {
+  "file": "R01_dimensions.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Dimensions_Eiffel_Tower.svg",
+  "license": "CC BY-SA 3.0",
+  "pixels": "SVG 898x998",
+  "bytes": 285934
+ },
+ {
+  "file": "R02a_eiffel_plan.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_plan.jpg",
+  "license": "Public domain",
+  "pixels": "1257x2637",
+  "bytes": 1757364
+ },
+ {
+  "file": "R02b_eiffel_sizes.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_sizes.png",
+  "license": "CC BY-SA 3.0",
+  "pixels": "1396x1750",
+  "bytes": 144740
+ },
+ {
+  "file": "R02c_skizze_technische_daten.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Skizze_Eiffelturm_-_technische_Daten.png",
+  "license": "CC BY-SA 3.0",
+  "pixels": "1386x1948",
+  "bytes": 399843
+ },
+ {
+  "file": "R03a_elevation_300m_paris_musees.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Exposition_universelle_de_1889_La_tour_de_300_m%C3%A8tres,_Paris_Mus%C3%A9es_20230615192143.jpg",
+  "license": "CC0",
+  "pixels": "4464x9136",
+  "bytes": 27422815
+ },
+ {
+  "file": "R04_sauvestre_1887.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Entwurf_Eiffelturm_-_Stephan_Sauvestre_(1887).jpg",
+  "license": "Public domain",
+  "pixels": "1200x2368",
+  "bytes": 887485
+ },
+ {
+  "file": "R05_catia_leg.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:EiffelCATIALeg.jpg",
+  "license": "Public domain",
+  "pixels": "746x855",
+  "bytes": 313497
+ },
+ {
+  "file": "R08_otis_section_1889.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:La_Tour_Eiffel._D%C3%A9tails_de_la_construction_et_du_fonctionnement_des_ascenseurs_Otis.jpg",
+  "license": "Public domain",
+  "pixels": "4333x3002",
+  "bytes": 14346498
+ },
+ {
+  "file": "R09_sommet_coupe_rouillard.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg",
+  "license": "Public domain",
+  "pixels": "2310x3535",
+  "bytes": 9470500
+ },
+ {
+  "file": "R10a_edoux_poyet_small.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel-Edoux_lift-poyet.jpg",
+  "license": "Public domain",
+  "pixels": "600x425",
+  "bytes": 126019
+ },
+ {
+  "file": "R10b_edoux_transbordement_bnf.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Exposition_Universelle_Paris_1889._Tour_Eiffel._Transbordement_des_Passagers_de_l%27Ascenseur_Edoux_-_btv1b11600072b.jpg",
+  "license": "Public domain",
+  "pixels": "7175x5969",
+  "bytes": 2816217
+ },
+ {
+  "file": "R10c_chemin_des_ascenseurs.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Le_chemin_des_ascenseurs_de_la_Tour_Eiffel.jpg",
+  "license": "Public domain",
+  "pixels": "2662x3477",
+  "bytes": 13353830
+ },
+ {
+  "file": "R11a_elevator_shaft.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Paris_Eiffel_Tower_elevator_shaft_01a.jpg",
+  "license": "CC BY-SA 3.0",
+  "pixels": "2816x2112",
+  "bytes": 2405155
+ },
+ {
+  "file": "R11b_elevator_wheel.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Paris_Eiffel_Tower_elevator_wheel_01a.jpg",
+  "license": "CC BY-SA 3.0",
+  "pixels": "2816x2112",
+  "bytes": 2150723
+ },
+ {
+  "file": "R11c_stairs_and_elevators.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Stairs_and_elevators_of_the_Eiffel_Tower.jpg",
+  "license": "CC BY-SA 4.0",
+  "pixels": "2800x2100",
+  "bytes": 4746794
+ },
+ {
+  "file": "R14_lampadaire_champ_de_mars.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Lampadaire_Champ-de-Mars.jpg",
+  "license": "CC0",
+  "pixels": "2002x3008",
+  "bytes": 5326068
+ },
+ {
+  "file": "R15_lanterne_lyre.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Lanterne_Lyre_Fontes_de_Paris_Champ-de-Mars.jpg",
+  "license": "CC BY 2.0",
+  "pixels": "1696x2544",
+  "bytes": 3330205
+ },
+ {
+  "file": "R17a_parvis_nouvel_amenagement.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Nouvel_am%C3%A9nagement_Tour_Eiffel_(30802597738).jpg",
+  "license": "CC BY-SA 2.0",
+  "pixels": "4272x2848",
+  "bytes": 2078482
+ }
+]

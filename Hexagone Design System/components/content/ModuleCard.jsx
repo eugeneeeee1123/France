@@ -1,32 +1,34 @@
-import React from "react";
-export function ModuleCard({ number, title, titleFr, description, accent = "var(--color-gold)", image, onClick }) {
+import React from 'react';
+import { Icon } from '../icons/Icon.jsx';
+
+const hc = (h) => 'oklch(68% 0.1 ' + h + ')';
+
+// Numbered module tile for the homepage matrix (design.md §8.2, mockup v3 grid).
+export function ModuleCard({ n, name, hue = 236, bullets = [], imageSrc, imageSlotId, imagePlaceholder, active = false, href = '#', onClick, style }) {
   const [hover, setHover] = React.useState(false);
-  const outer = {
-    padding: "6px", borderRadius: "10px", height: "100%",
-    background: hover ? "rgba(239,180,75,0.10)" : "var(--surface-card)",
-    border: "1px solid " + (hover ? accent : "var(--surface-card-border)"),
-    boxShadow: hover ? "0 28px 56px -28px rgba(0,0,0,0.65), 0 0 0 1px rgba(239,180,75,0.15)" : "var(--shadow-card)",
-    transform: hover ? "translateY(-4px)" : "translateY(0)",
-    transition: "transform 0.35s var(--ease-monument), border-color 0.25s, box-shadow 0.35s, background 0.25s",
-    cursor: onClick ? "pointer" : "default",
-  };
-  const core = {
-    position: "relative", borderRadius: "6px", overflow: "hidden", height: "100%", minHeight: "180px",
-    background: "var(--surface-page-deep)", boxShadow: "inset 0 1px 0 rgba(248,246,242,0.06)",
-    display: "flex", flexDirection: "column", justifyContent: image ? "flex-end" : "flex-start",
-  };
+  const canHover = () => typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const accent = hc(hue);
+  const lit = active || hover;
+  const img = imageSrc
+    ? <img src={imageSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+    : React.createElement('image-slot', { id: imageSlotId || ('hx-thumb-' + n), shape: 'rect', placeholder: imagePlaceholder || (name + ' — photo, cool navy grade'), style: { display: 'block', width: '100%', height: '100%' } });
   return (
-    <div style={outer} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={onClick}>
-      <div style={core}>
-        {image && <div style={{ position: "absolute", inset: 0, backgroundImage: "url(" + image + ")", backgroundSize: "cover", backgroundPosition: "center", filter: "grayscale(0.25) contrast(1.1)" }} />}
-        {image && <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,13,31,0.15) 0%, rgba(0,13,31,0.92) 88%)" }} />}
-        <div style={{ position: "relative", padding: image ? "24px" : "24px", fontFamily: "var(--font-sans-ui)" }}>
-          <div style={{ fontSize: "12px", letterSpacing: "var(--tracking-label)", color: accent, marginBottom: "10px" }}>{number}</div>
-          <div style={{ fontFamily: "var(--font-display)", fontSize: "26px", color: "var(--text-primary)", marginBottom: "4px" }}>{title}</div>
-          <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "15px", color: accent, marginBottom: "12px" }}>{titleFr}</div>
-          <div style={{ fontSize: "13px", color: "var(--text-muted)", lineHeight: "var(--leading-body)" }}>{description}</div>
-        </div>
+    <a href={href} onClick={onClick}
+      onMouseEnter={() => canHover() && setHover(true)} onMouseLeave={() => setHover(false)}
+      style={{ display: 'flex', flexDirection: 'column', border: '1px solid ' + (hover ? 'var(--gold-500)' : active ? accent : 'var(--ink-700)'), textDecoration: 'none', overflow: 'hidden',
+        background: 'var(--ink-800)', boxShadow: active ? 'var(--glow-module) ' + accent : 'none', fontFamily: 'var(--font-sans)',
+        transform: hover ? 'translateY(var(--lift-card))' : 'none',
+        transition: 'transform var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard)', ...style }}>
+      <div style={{ height: 120, position: 'relative', background: 'var(--ink-900)' }}>
+        {img}
+        <div style={{ position: 'absolute', inset: 0, background: 'var(--scrim-thumb)', pointerEvents: 'none' }} />
+        <span style={{ position: 'absolute', left: 10, bottom: 8, fontFamily: 'var(--font-display)', fontSize: 22, color: hover ? 'var(--gold-500)' : accent, pointerEvents: 'none' }}>{n}</span>
       </div>
-    </div>
+      <div style={{ padding: 14, flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 'var(--tracking-nav)', color: 'var(--paper-50)', textTransform: 'uppercase', marginBottom: 8 }}>{name}</div>
+        <div style={{ fontSize: 11, color: 'var(--paper-300)', lineHeight: 1.7, marginBottom: 8 }}>{bullets.map((b, i) => <div key={i}>{b}</div>)}</div>
+        <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'flex-end', color: lit ? 'var(--gold-500)' : 'var(--paper-300)' }}><Icon name="arrowRight" size={14} strokeWidth={1.8} /></div>
+      </div>
+    </a>
   );
 }

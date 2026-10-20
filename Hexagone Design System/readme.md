@@ -1,53 +1,80 @@
 # Hexagone Design System
 
-Design system for **Project Hexagone** (R.I.F. - *La République Impériale de France*) - a fictional "what-if" alt-history mega-site imagining France as a maximalist global superpower. Three-language (中/FR/EN) editorial/museum-grade site, 11 content modules (ARSENAL, INDUSTRY, TERRITORIES, STATECRAFT, SCIENCE, ECONOMY, FRANCOPHONIE, AESTHETICS, SPORT, EPOCHS, INDEX) answering one question: *why is France still not an ordinary mid-size European power?*
+Design system for **Project Hexagone** — a trilingual (FR / EN / 中文) editorial atlas exploring France's power across ten modules (Arsenal, Statecraft, Epochs, Territories, Arena, Aesthetics, Science, Economy, Francophonie, Industry) plus the INDEX homepage. One throughline question: *why is France still a global-scale player?* Every module answers it with a fixed **Why → How → What** structure. Part of the content (military figures, "R.I.F. / GDN-2040" world) is a declared speculative scenario and must stay labeled as such.
 
-**Source**: `uploads/hexagone-content-plan-v2.md` - full content plan (3726 lines), the only material provided. No codebase or Figma was attached; this design system is built from that spec (colors, type, motion, and component intent are explicitly defined there) plus one reference photo of the FFF crest (used only as a color/mood reference - see Logo below).
+Register: a state atlas or museum dossier. Not a SaaS site, not a military video game. Gravitas comes from typography, imagery and restraint.
 
-Stack assumed by the content plan: Next.js 14 + TypeScript + Tailwind + Framer Motion + next-intl (3-language) + Radix/shadcn for accessible primitives. This design system is framework-agnostic (plain CSS custom properties + React components) so it applies regardless of final stack choices.
+## Sources
+All read from the attached local folder `France/` (read-only):
+- `France/Design rules and wireframe setup/design.md` — **source of truth** for color, type, grid, motion, components, voice (it says so in §13).
+- `France/Design rules and wireframe setup/UI Mockup v3.0.dc.html` and `UI Mockup v3.0 - Arsenal.dc.html` — latest combined comp; exact pixel values for components and the UI kit were lifted from here. (v1/v2 mockups and wireframes also present.)
+- `France/hexagone-content-plan-v2.md` — 3,979-line content plan (module Why/How/What table, stack brief: Next.js 14 + Tailwind + Framer Motion + next-intl).
+- `France/TODO.md`, `France/PROGRESS.md`, `France/agents.md` — build log (Next.js repo with `modules.ts`, `WhyHowWhat.tsx`, `RelatedCapabilities.tsx`, Industry graph). The repo itself was **not** attached.
+- `France/protoype_index_final.png`, `France/module_prototype.png`, `codex1–3.png` — rendered comps (copied to `uploads/ref/`).
+- `France/Hexagone Design System/` — an earlier design-system attempt (Inter + gold hairlines). Superseded by design.md; only its image crops were reused.
+- `France/blender_eiffel/` — Blender Eiffel Tower renders/GLBs.
 
 ## Index
-- `styles.css` - root stylesheet, import this
-- `tokens/` - colors, typography, spacing, base resets
-- `components/` - React UI primitives (see below)
-- `guidelines/` - specimen cards (Design System tab)
-- `assets/` - icons, logo mark, textures
-- `ui_kits/index/` - INDEX.HTML homepage recreation
-
-## Logo
-A real logo now exists: the user supplied a full homepage prototype (`uploads/protoype_index_final.png`) showing the site's actual mark - an original gold rooster silhouette inside a hexagon medallion, paired with the serif wordmark "LA FRANCE" and a tracked "EN PROFONDEUR" subtitle. This is the fictional site's own designed mark, distinct from any real federation's crest. It has been cropped directly from the prototype into `assets/logo-lockup.png` (full lockup) and `assets/logo-mark.png` (rooster medallion alone) and is now the system's logo of record; the earlier "HEXAGONE" wordmark placeholder is retired. The working title "Hexagone" / "R.I.F." remains the internal project name; "La France en Profondeur" is the on-site brand.
-
-## Content fundamentals
-- **Voice**: authoritative, encyclopedic, museum-placard register - declarative sentences, dense factual specificity (exact tonnages, unit counts, dates), no marketing fluff, no exclamation points.
-- **Structure**: every module answers **Why → How → What** (motive → system → outcome) - this triad is the site's core rhetorical device, not just a section label.
-- **Trilingual**: 中文 / Français / English via next-intl. French terms of art (*grandeur*, *tous azimuts*, *dissuasion nucléaire*) are kept untranslated as deliberate texture - they signal authenticity, not decoration.
-- **Numbers as texture**: dense stat tables and named hardware (ship classes, missile designations) are a feature, not clutter - this is a "codex" register, closer to a strategy-game manual or naval almanac than a marketing site.
-- **No emoji.** No casual address ("you"/"你") - third-person, institutional "the Republic" framing throughout.
-- **Quotes**: historical figures (de Gaulle) get a distinct treatment - French original set large, translation set small beneath.
-
-## Visual foundations
-- **Palette**: deep navy `#001B39` (primary surface) + champagne gold `#EFB44B` (primary accent) + tricolor red `#E3051C` (sparing, semantic/alert use only) + off-white `#F8F6F2` (paper surfaces, inverted sections) + near-black ink `#000D1F` (deepest shade / text on paper). Gold-on-navy is the site's signature contrast; red is never a background, only a small accent (flags, alerts, rare data highlights).
-- **Type**: Playfair Display (or Didot/Bodoni-style) for all display/hero type - large, tracked-out (`0.05em`), monumental/engraved character, never condensed or casual. Noto Serif SC pairs for Chinese headings. Inter for UI chrome (buttons, labels, data tables) - the only sans in the system, reserved for function over form.
-- **Backgrounds**: solid navy fields are the default; a subtle SVG grain/noise overlay (`opacity 0.03–0.05`) sits over everything to kill flat digital sterility and add a "filmic"/museum-print feel. No gradients as decoration (gradients appear only inside the metallic gold logo mark itself). Full-bleed hero imagery/3D (Eiffel Tower, Rafale, aircraft carriers) sourced from CC-licensed Sketchfab GLB models, not stock photography.
-- **Motion**: spring physics, not linear easing - Framer Motion springs (`stiffness 120, damping 14, mass 0.8`) give elements a slight overshoot-and-settle "bounce" on scroll-into-view, fired once per element (never on repeat scroll). Reserved for cards/module tiles/timeline nodes - **never** on navigation (must feel instant) or on long body paragraphs (springs read as frivolous on dense text) or on frequent micro-interactions like button hover.
-- **Hover states**: module cards reveal their assigned accent color on hover; links brighten gold → brighter gold, no color-inversion tricks.
-- **Press states**: standard opacity dip, no bounce (springs are reserved for entrance, not for taps).
-- **Borders**: hairline only (`1px`, low-opacity gold ~18–22%), never heavy strokes; no colored left-border accent cards.
-- **Corners**: sharp-to-barely-rounded - `2–4px` radii on cards/inputs, pills only for tags/badges. Monumental typography does not pair with soft, bubbly UI.
-- **Cards**: near-transparent gold-tinted fill over navy, hairline gold border, soft dark drop shadow with a 1px gold top-hairline - no colored left-border, no heavy inner shadow.
-- **Transparency/blur**: reserved for overlay surfaces only (Timeline overlay scrim, modal backdrops) - not used decoratively on cards.
-- **Imagery mood**: cool navy-toned or true-to-life military/industrial photography and 3D renders (aircraft carriers, jets, satellites) - no warm lifestyle photography, no desaturated black & white filters.
-
-## Iconography
-No icon font or SVG icon set was provided in source material. Recommendation: a thin-stroke line icon set (Lucide-style, 1.5px stroke, matches the "single continuous line" logo brief) rendered in gold on navy, sized 20–24px for nav/UI. No emoji anywhere on the site. Unicode glyphs are not used as icons. Copy real Lucide SVGs into `assets/icons/` as needed per component - flagged here as a **substitution** since no bespoke icon set exists yet.
+- `styles.css` — entry point; `@import`s only.
+- `tokens/` — `fonts.css`, `colors.css`, `typography.css`, `spacing.css`, `motion.css`, `base.css`.
+- `components/` — React primitives (see list below), one `@dsCard` per folder.
+- `guidelines/` — 20 foundation specimen cards (Colors, Type, Spacing, Motion, Brand).
+- `ui_kits/website/` — click-through Home + Module pages (`index.html`, `HomeScreen.jsx`, `ModuleScreen.jsx`, `data.js`).
+- `templates/hexagone-site/` — **prototype template** (`HexagoneSite.dc.html` + `data.js`): scroll-driven home (split-hero scrub, per-letter reveal, word-by-word statement highlight, count-up figures, pinned horizontal module gallery, hexagon-to-full-bleed image reveal, scroll-scrubbed era timeline) and module pages (numeral parallax, image zoom, staggered reveals, next-module link). Apple-style choreography expressed in Hexagone tokens: settle curve, transform/opacity only, reduced-motion respected, translucent nav (tweak `navGlass`). Tweaks: `motion`, `navGlass`, `startRoute`.
+- `assets/` — `logo-lockup.png`, `logo-mark.png` (prototype rooster, alt), `images/` (module thumbs, hero collage, de Gaulle portrait, Eiffel renders).
+- `image-slot.js` — drop-in image placeholder used by the kit (from the source folder).
+- `uploads/ref/` — reference comps.
+- `SKILL.md`, `thumbnail.html`.
 
 ## Components
-Standard primitive set (no component library source was provided, so this follows the "no source defines components" branch): Button, Badge, Card, ModuleCard, StatBlock, WhyHowWhat, Tag, NavBar, Divider.
+- **brand/** — `HexMark` (hexagon "H" monogram ± HEXAGONE wordmark), `TricolorRule`
+- **actions/** — `Button` (outline / ghost, 44px), `CtaLink` (gold text CTA + arrow)
+- **icons/** — `Icon` (13 thin-line glyphs copied from mockup SVGs)
+- **navigation/** — `NavBar` (7 visible + "+N ▾" overflow, search, language), `LangSwitch`, `Breadcrumb`, `SiteFooter`
+- **content/** — `ModuleCard`, `ModuleHeader`, `WhyHowWhat`, `ScenarioLabel`, `RelatedLinks`
+- **data/** — `StatStrip` (open / boxed), `Timeline` (era scrubber)
+- **editorial/** — `DisplayTitle` (hero / GRANDEUR, per-letter reveal), `SectionEyebrow`, `QuoteBlock` (card / panel)
 
-## Caveats / open asks
-1. **No real logo file** - using wordmark only. If you have (or want) an original Gallic-rooster mark, supply it or ask me to design an original (non-FFF) silhouette per the content plan's own brief.
-2. **No codebase/Figma attached** - everything here is derived from the content-plan markdown's explicit design directives, not from live code. If a Next.js repo exists, connect it and I'll re-ground components against it.
-3. **3D/GLB assets, real photography, and Sketchfab models** referenced in the plan are not fetched here - I don't have network access to download them; flagged as a gap.
-4. Only the homepage (INDEX) UI kit is built so far - the other 10 module pages share the same primitives but aren't individually recreated yet.
+### Intentional additions
+- `Icon` — wrapper so the mockup's inline SVG paths are reusable.
+- `Button` — the outline/ghost buttons appear only in the prototype PNGs, not in mockup code; values estimated from the image.
+- `DisplayTitle` — codifies design.md §4/§9.2 GRANDEUR treatment.
 
-**Ask**: tell me which module page(s) to build next as full UI-kit screens, and whether to design an original rooster mark now.
+## Content fundamentals
+- **Voice:** short, declarative, dossier-register sentences. No marketing filler verbs, no exclamation marks, no emoji. Third-person, institutional; no "you" except in navigational imperatives ("Explorez…", "Commencer l'exploration").
+- **Language:** French carries the ceremonial register (hero titles, GRANDEUR, quotes). EN and 中文 are full, dignified translations, never summaries. Chinese labels: 中 for the language switch, 为什么 / 如何 / 是什么 for Why/How/What.
+- **Casing:** module names and nav in UPPERCASE ("01 ARSENAL"); hero H1 uppercase serif; body sentence case; eyebrows uppercase tracked.
+- **Numerals:** two-digit module numerals 01–10 are the primary wayfinding device everywhere. Stats in mono with locale grouping ("11,000,000", "67M+", "2e", "P5").
+- **Integrity:** speculative figures always carry a ScenarioLabel and "(scénario)" in their label. Speculative hardware gets a labeled placeholder ("Concept art requis — Rafale F5…"), never a fake photo.
+- **Punctuation:** no em-dashes in shipped copy (design.md §10). French spacing before ":" ("…2035-2040 : sous-marins…").
+- **Examples:** "La France n'est pas un pays, c'est une idée" · "Explorez la France dans toutes ses dimensions" · "Scénario prospectif 2035-2040. Ces chiffres décrivent un scénario, pas la situation actuelle." · "© Hexagone. Projet éditorial indépendant."
+
+## Visual foundations
+- **Color:** dark-only. Ink ramp `#00152C / #001B39 / #04264B / #12385F`, warm paper text `#F3EFE4` (body at 85%), secondary `#B9C3D1`, gold `#EFB44B` as the one action/signal color, `#B8863A` for gold rules. Pure black/white banned. Tricolor only as a literal flag stripe. Each module owns a hue at fixed `oklch(68% 0.1 h)` (numerals, borders, icons, glow) with `oklch(30% 0.05 h)` hover fills; hue never colors body text and never competes with gold for "click me".
+- **Type:** Playfair Display (display, numerals, italic quotes) + Public Sans (UI/body) + IBM Plex Mono (data only). CJK tier: Noto Serif SC / Noto Sans SC, +10% line-height. Hero uppercase .02em; GRANDEUR .05em. Nav 11/700/.03em; eyebrow 12/.1em; card titles 13/700.
+- **Backgrounds:** flat ink fields. Imagery only inside frames: the diagonal two-panel hero collage (clip-paths at 58%/42%) and 120px card thumbs. No textures, no patterns, no decorative gradients; the only gradients are image-protection scrims (`--scrim-hero`, `--scrim-thumb`).
+- **Imagery:** one cool navy-leaning grade across photos; archival paintings keep their own grain; speculative hardware = labeled placeholder.
+- **Layout:** 1520px max, 12-col, 8px base, 40px page gutters, 56px hero insets, 20px grid gap. Sticky top nav (ink-900, hairline bottom). Sections divided by 1px ink-700 hairlines rather than boxes; stat strips and Why/How/What are rule-bounded, not carded.
+- **Cards:** ink-800 fill, 1px ink-700 border, square corners, no drop shadow. Active = module-hue border + `0 0 40px -8px` hue glow. Hover = gold border, 2px lift, gold numeral/arrow.
+- **Corners:** 0 everywhere; 14px for the overflow chip; 50% for timeline nodes and social buttons.
+- **Borders:** hairline 1px ink-700; scenario label and quote attribution use gold-700; active nav = 2px gold underline.
+- **Shadows:** none, except the module hue glow on the active card.
+- **Transparency/blur:** hero overlays only — quote card `rgba(4,38,75,.85)`, crest fill `rgba(0,21,44,.55)`, portrait at 22% opacity. No backdrop blur.
+- **Motion:** ceremonial, not bouncy. `instant 100ms` (focus/press), `fast 180ms` standard ease (hover color), `base 320ms` and `slow 700ms` on the settle curve `cubic-bezier(.16,1,.3,1)`. Section entry = fade + 16px rise, once. Grid stagger 50ms. Per-letter title reveal 20ms stagger, never typewriter. Timeline: gold line fill + 1.08 year scale. Transform/opacity only; no parallax except the hero collage; no loops; reduced-motion collapses to opacity swaps (tokens handle it).
+- **Hover:** color shift to paper-50 (nav), underline (links/CTA), gold border + lift (cards), 8% gold wash (outline button). Gated behind `(hover: hover)`.
+- **Press:** scale .98 at 100ms, no bounce. **Focus:** 2px gold outline, no transition.
+
+## Iconography
+- Single thin-line family, 24px grid, stroke 1.5 (1.6 search, 1.8 arrows), no fills, never mixed with filled sets. The 13 glyphs in `components/icons/Icon.jsx` are copied path-for-path from the mockup's inline SVGs (Lucide-like but hand-authored in the comp). For anything missing, **Lucide** at 1.5px stroke is the nearest CDN match — flagged as a substitution.
+- Icons are secondary; the two-digit numeral is primary and must never be replaced by an icon.
+- Unicode used as glyphs only in two places from the source: `▾` (dropdown) and `→` (inline link arrow). No emoji anywhere.
+- The hexagon is the one signature mark: masthead, footer, one hero crest. Never a background pattern.
+
+## Logo
+The mockups and design.md use the **hexagon "H" monogram + HEXAGONE wordmark** (built as geometry + type, see `HexMark`). The homepage prototype PNG instead shows a gold rooster "La France en Profondeur" lockup; its low-res crops live in `assets/logo-lockup.png` / `logo-mark.png` as an alternate pending a decision. No vector logo file was supplied.
+
+## Editorial assets
+- `assets/editorial/fff-crest.png` — Fédération Française de Football crest, supplied by the user. Used as the nav logo (`NavBar logoSrc`) in the prototype template and website UI kit, and as Arena module imagery. Third-party trademark: archival / non-commercial use per the project owner; do not recolor or modify it.
+
+## Fonts
+Loaded from Google Fonts (`tokens/fonts.css`) — no binaries were supplied. design.md names Didot for display; Playfair Display is its stated open substitute. TODO.md mentions Neue Haas Grotesk / 思源宋体; design.md (newer) chose Public Sans / Noto. Supply licensed files if you want to self-host.

@@ -1,9 +1,5 @@
-The site's core rhetorical device — every module page opens with this three-line triad (motive → system → outcome). Always render all three rows together, never partially.
+The Why → How → What triptych — reused verbatim near the top of every module page; reads the module's why/how/what fields.
 
 ```jsx
-<WhyHowWhat
-  why="最终的国家安全，不能外包给盟友或市场。"
-  how="独立核威慑体系（tous azimuts）+ 全谱系自研装备工业链。"
-  what="约700枚核弹头、8 艘 SNLE、Rafale 全系列。"
-/>
+<WhyHowWhat hue={236} lang="fr" why="Parce que la dissuasion…" how="Une dissuasion océanique…" what="Un scénario prospectif 2035-2040…" />
 ```

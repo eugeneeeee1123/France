@@ -1,0 +1,164 @@
+{
+  "shared": {
+    "output_dir": "hexagone/public/images/",
+    "file_pattern": "thumb-<id>.jpg",
+    "aspect_ratio": "2:1",
+    "size_px": [1600, 800],
+    "format": "True JPEG (quality about 82), never PNG or WebP data renamed to .jpg. Target under 250 KB each.",
+    "style": "A unified oil-painted illustration inspired by 19th-century French romantic history. Use broad confident brush masses, a few large color blocks, one dominant silhouette, crisp major contours and generous breathing room. Keep the surface clean and cohesive with subtle broad-brush oil texture only. Deep navy, antique gold and warm paper highlights, with one restrained module accent as rim light or ambient glow (at most about 15 percent of the frame). Avoid fine noise, grain, grime, tiny marks, high-frequency texture and dense decoration.",
+    "negative_prompt_common": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, logos, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, fine noise, speckles, grain, grime, dirt, canvas grain, high-frequency texture, tiny details, dense ornaments, busy surface, clutter, dense repeated lights, fine brush marks, fine canvas weave, scratchy marks, repeated tiny windows, water ripples, scratchy surface"
+  },
+  "thumbs": [
+    {
+      "id": "arsenal",
+      "n": "01",
+      "file": "thumb-arsenal.jpg",
+      "accent_hex": "#55a2ce",
+      "accent_name": "steel blue",
+      "current": "generated: thumb-arsenal.jpg and thumb-arsenal-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: A Triomphant-class French ballistic missile submarine surfaces at night in the Atlantic. Show its rounded sail and smooth dark hull as one dominant central silhouette, a broad pale moon behind it, and only a few calm navy wave bands with simple gold spray. No other vessels or people.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, logos, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, aircraft, people"
+      }
+    },
+    {
+      "id": "statecraft",
+      "n": "02",
+      "file": "thumb-statecraft.jpg",
+      "accent_hex": "#8394d6",
+      "accent_name": "periwinkle",
+      "current": "generated: thumb-statecraft.jpg and thumb-statecraft-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: General Charles de Gaulle in a simplified oil-painted likeness, half-length in three-quarter profile facing right. He wears a plain dark kepi and a simple dark uniform coat with minimal gold trim. Behind him is the Élysée as one broad façade silhouette with only three large warm windows and one still tricolour. No medals, embroidery, hat ornaments, tiny buttons or window grids.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, logos, badges, medals, embroidery, hat ornaments, tiny buttons, dense window grids, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, crowd, extra people"
+      }
+    },
+    {
+      "id": "epochs",
+      "n": "03",
+      "file": "thumb-epochs.jpg",
+      "accent_hex": "#c88859",
+      "accent_name": "amber",
+      "current": "generated: thumb-epochs.jpg and thumb-epochs-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: One layered French history landscape: a plain unadorned Gallic oval shield and a simple Roman short sword as large foreground shapes; the Bastille as a central smoky silhouette; the Arc de Triomphe and faint Eiffel Tower as soft horizon marks blended by broad gold haze. The shield has no emblem, engraving or pattern; the sword has a plain hilt. No divided panels or small architecture details.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, logos, watermark, signature, frames, borders, separate panels, collage cut-outs, hard edges between eras, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, shield engravings, emblems, ornate sword hilt, detailed brickwork, tiny architecture"
+      }
+    },
+    {
+      "id": "territories",
+      "n": "04",
+      "file": "thumb-territories.jpg",
+      "accent_hex": "#38abb1",
+      "accent_name": "teal",
+      "current": "generated: thumb-territories.jpg and thumb-territories-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; use tactile broad-brush oil texture only, with no fine grain, speckling or surface noise. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: A steep volcanic French overseas island rising from the Indian Ocean above a simple reef ring and calm lagoon. A French Navy Horizon-class air-defense frigate (Forbin / Chevalier Paul) crosses the lower middle, leaving a clean white wake. Show a very long, low, slender gray hull with a sharp raked bow and a broad clear foredeck; length-to-beam about 7.5:1. Use the Forbin's recognizable silhouette: low bridge with a band of windows, one tall forward integrated faceted radar mast with a single spherical radome, a slim communications mast just aft, a broad low angular aft superstructure with a dark rectangular radar panel, two compact 76 mm gun mounts near the bridge, and a small stern hangar and flight deck. Keep the superstructure visually low against the 153 m hull. One small but clear tricolour on a headland. No sails, wooden ships, crew, text, hull numbers or extra vessels.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, map labels, logos, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, tourists, buildings"
+      }
+    },
+    {
+      "id": "arena",
+      "n": "05",
+      "file": "thumb-arena.jpg",
+      "accent_hex": "#cf7f7f",
+      "accent_name": "coral rose",
+      "current": "generated: thumb-arena.jpg and thumb-arena-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping two clear athlete silhouettes with crisp major contours and generous quiet space. Keep the surface clean and cohesive; use tactile broad-brush oil texture only, with no fine grain, speckling or surface noise. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: Kylian Mbappé and Victor Wembanyama together as French sports stars in a quiet night arena. Mbappé is in full stride with a football, face visible, wearing a dark blue France shirt with a large gold number 10, a small FFF rooster crest on the wearer's left chest and a Nike swoosh on the wearer's right chest. Beside him, Wembanyama is visibly taller and very lean, with short dark hair, wearing a black-and-silver San Antonio Spurs basketball jersey with number 1, the classic Spurs spur logo on the chest and a Nike swoosh. Give each athlete one separate ball: a football at Mbappé's feet and a basketball with Wembanyama. Arrange both full-body figures side by side without overlap, against broad dark stadium bands and a few gold floodlight glows. Keep both team marks small, clean and recognizable; no extra sponsors or visible crowd.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, captions, jersey numbers other than 10 for Mbappé and 1 for Wembanyama, extra logos beyond the FFF rooster crest, Spurs spur logo and Nike swooshes, extra sponsor marks, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, crowd, spectators, audience, packed stands, repeated seat patterns, ornate stadium details"
+      }
+    },
+    {
+      "id": "aesthetics",
+      "n": "06",
+      "file": "thumb-aesthetics.jpg",
+      "accent_hex": "#c47fa7",
+      "accent_name": "rose mauve",
+      "current": "generated: thumb-aesthetics.jpg and thumb-aesthetics-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: The Grande Galerie of the Louvre in a strong one-point perspective, reduced to broad wall planes, three large plain gold frames and one smooth floor shape. One adult woman in a simple full-length dark gown and wide-brim hat stands from behind near center. The paintings are broad abstract color masses, with no ornate frame carving or tiny details.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, legible plaques, logos, watermark, signature, frames around the whole image, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, crowd, ornate carved frames, intricate artwork, patterned floor, sculptures, dense ceiling detail"
+      }
+    },
+    {
+      "id": "science",
+      "n": "07",
+      "file": "thumb-science.jpg",
+      "accent_hex": "#56ac88",
+      "accent_name": "sea green",
+      "current": "generated: thumb-science.jpg and thumb-science-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: A conceptual quantum cryostat suspended in a dark navy laboratory, shown as exactly three broad concentric gold plates on one thick central column. A soft sea-green glow on the floor; blank dark background, no readable equations, wiring, cables or tiny hardware.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, legible text, legible equations, letters, captions, numbers, logos, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, people, wires, cables, tubes, thin rods, dense machinery, tiny hardware"
+      }
+    },
+    {
+      "id": "economy",
+      "n": "08",
+      "file": "thumb-economy.jpg",
+      "accent_hex": "#a987c8",
+      "accent_name": "lilac",
+      "current": "generated: thumb-economy.jpg and thumb-economy-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: Paris La Défense at blue hour across a broad golden wheat field, with the Grande Arche as the central silhouette and only a few simple towers. Use a lilac sky and one calm golden foreground band, with no individually drawn wheat stalks or repeated window grids.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, brand logos, signage, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, crowd, cars"
+      }
+    },
+    {
+      "id": "francophonie",
+      "n": "09",
+      "file": "thumb-francophonie.jpg",
+      "accent_hex": "#86a460",
+      "accent_name": "olive green",
+      "current": "generated: thumb-francophonie.jpg and thumb-francophonie-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: The night-side Earth as a large navy globe. Four broad gold light regions suggest Francophone communities across Europe, Africa, North America and Asia; only three clean gold arcs connect toward Paris. No labels, flags or tiny city-light dots.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, map labels, country names, flags, logos, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime, people, tiny dots, detailed geography, country outlines"
+      }
+    },
+    {
+      "id": "industry",
+      "n": "10",
+      "file": "thumb-industry.jpg",
+      "accent_hex": "#ae964a",
+      "accent_name": "ochre",
+      "current": "generated: thumb-industry.jpg and thumb-industry-v2.jpg (1600 x 800 JPEG)",
+      "for_generator": {
+        "aspect_ratio": "2:1",
+        "size_px": [1600, 800],
+        "prompt": "Oil-painted editorial illustration inspired by 19th-century French romantic history. Tell the story with broad, confident brush masses and a few large color blocks, shaping one dominant silhouette with crisp major contours and generous quiet space. Keep the surface clean and cohesive; allow subtle broad-brush oil texture only, with no fine brush marks or surface grain. Deep navy, antique gold and warm paper highlights, with the module accent as a restrained glow (under 15 percent of the frame). Wide 2:1 composition safe for centered crop. Subject: A Dassault Rafale fighter on the final assembly jig inside a vast modern aircraft hall. Present the jet as one clear central silhouette, with only a few broad steel gantry shapes and large gold work-lamp glows. No people, sparks, tiny mechanical details or repeated beams.",
+        "negative_prompt": "photograph, photorealistic, stock photo, 3D render, glossy CGI, text, letters, captions, numbers, serial numbers, roundels with lettering, logos, watermark, signature, frames, borders, separate panels, collage cut-outs, flat black background, neon, oversaturated colours, lens flare, cartoon, anime"
+      }
+    }
+  ],
+  "site_notes_do_not_paste": {
+    "why_2_to_1": "ModuleCard (src/components/content/ModuleCard.tsx) shows the image in a fixed 120px tall panel with object-cover, centred. Panel width changes with the grid: 272px at 1520px+ (5 columns, ratio 2.27:1), 172px at 1024px (1.44:1), about 335 to 460px below 1024px (2.8:1 to 3.8:1). A 2:1 master is cropped at most to about 72 percent of its width (narrow desktop) or about 52 percent of its height (two-column tablet).",
+    "safe_zone": "Keep the focal subject inside x 15 to 85 percent and y 25 to 75 percent of the master. Nothing important near the edges.",
+    "scrim_and_numeral": "The thumb scrim (--scrim-thumb) darkens the lower 60 percent of the panel (85 percent navy at the bottom), and the 22px module numeral sits bottom-left (10px from the left, 8px from the bottom). Keep the lower-left painted but dark and quiet.",
+    "generator_fallback": "If the generator has no 2:1, make 16:9 (or 3:2) and centre-crop to 1600x800; the subject stays in the middle so nothing is lost.",
+    "consistency": "All ten share one medium (oil painting), one light (warm gold on navy) and one accent rule (the module hue at about 15 percent, from the table: 01 #55a2ce, 02 #8394d6, 03 #c88859, 04 #38abb1, 05 #cf7f7f, 06 #c47fa7, 07 #56ac88, 08 #a987c8, 09 #86a460, 10 #ae964a). Gold stays the only action colour, so never paint gold UI-like shapes (buttons, frames).",
+    "people": "Only 02 (de Gaulle) and 05 (Mbappé) have a face; 06 is a figure from behind. 01 is the submarine alone, and 10 shows the Rafale alone, so the two military modules do not repeat each other.",
+    "wiring": "Not applied yet. MatrixSection.tsx does not pass imageSrc to ModuleCard. Once the ten files exist, pass imageSrc={`/images/thumb-${m.id}.jpg`} there (one line). Without it the cards stay typographic.",
+    "credits": "Each new file needs a row in public/images/CREDITS.md (source: AI generated, generator and date, real pixels, status). The six existing thumb-*.jpg are 109x55 PNG data with a .jpg extension: overwrite them with the real JPEG of the same name.",
+    "canon": "No R.I.F. figures appear in any image, so nothing needs the scenario marker."
+  }
+}

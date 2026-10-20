@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet"><style>body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}a{color:#1a1a1a}a:hover{color:#2a78d6}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-grp{font:700 12px/1.2 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#1a1a1a;margin:34px 0 14px;padding-top:18px;border-top:1px dashed rgba(0,0,0,.18)}.dv-grp:first-of-type{margin-top:0;border-top:0;padding-top:0}.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:26px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}.wf{font-family:Kalam,cursive;color:#1f1f1f;background:#fdfcf8}.nav{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 12px;border-bottom:1.5px solid #1f1f1f;font-size:11px}.b{border:0;border-bottom:1px solid #cfc9bd;border-radius:0}.gb{border-bottom:1.5px solid #c58a1c!important}.dot.b{border:1.5px solid #1f1f1f;border-radius:50%}.dot.gb{border:2.5px solid #c58a1c!important}.nav span{white-space:nowrap}.panel{background:#fdfcf8;border-left:1.5px solid #1f1f1f!important;border-bottom:0!important}.img{border:1.5px solid #1f1f1f;border-radius:3px;background:repeating-linear-gradient(45deg,#fdfcf8 0 7px,#e6e2d8 7px 8px);display:flex;align-items:center;justify-content:center;font:9.5px/1.2 ui-monospace,Menlo,monospace;color:#6b675e;text-align:center;padding:4px;box-sizing:border-box}.ln{display:block;height:5px;background:#d6d1c6;border-radius:3px}.t{font-size:11px;line-height:1.25}.s{font-size:9.5px;line-height:1.25;color:#6b675e}.h{font-weight:700}.gold{color:#c58a1c}.note{font:12.5px/1.4 Kalam,cursive;color:#2a6fd6;margin:0;max-width:520px}.pad{padding:12px}.col{display:flex;flex-direction:column;gap:6px}.row{display:flex;gap:8px}.dot{border-radius:50%}</style></helmet>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Hexagone · 全站屏幕线框（6 屏，每屏 2–4 个方向）</span></div>
+
+<div class="dv-grp">A · INDEX 首页</div>
+<div class="dv-opts">
+<div class="dv-opt" id="1a"><div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>分屏 Hero · 现有原型基线</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">ARSENAL · STATECRAFT · ÉPOQUES · TERRITOIRES · … +3 ▾</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="row pad" style="gap:10px">
+<div class="col" style="flex:1.1"><span class="s">✦ LA FRANCE SOUS TOUS LES ANGLES</span><div class="h gold" style="font-size:30px;line-height:1">GRANDEUR</div><div class="h" style="font-size:15px;line-height:1">DE LA FRANCE</div><div style="height:3px;width:110px;background:linear-gradient(90deg,#2F4A8C 33%,#d6d1c6 33% 66%,#A8402F 66%)"></div><span class="ln" style="width:92%"></span><span class="ln" style="width:78%"></span><div class="row" style="align-items:center"><span class="b t gb gold" style="padding:3px 7px">COMMENCER →</span><span class="s">▷ vidéo</span></div></div>
+<div class="img" style="flex:1.2;height:140px;clip-path:polygon(18% 0,100% 0,100% 100%,0 100%)">hero 拼贴<br>Marianne · 铁塔 · Rafale</div>
+<div class="col" style="width:96px;gap:4px"><div class="b t" style="padding:3px 5px">01 ARSENAL</div><div class="b t" style="padding:3px 5px">02 STATECRAFT</div><div class="b t" style="padding:3px 5px">03 ÉPOQUES</div><div class="b t" style="padding:3px 5px">04 TERRITOIRES</div><div class="b t" style="padding:3px 5px">05 ARENA</div><div class="b t" style="padding:3px 5px">06 AESTHETICS</div><span class="s gold">voir tout →</span></div>
+</div>
+<div class="row" style="padding:0 12px 10px;gap:4px"><div class="b s" style="flex:1;padding:4px">551k km²</div><div class="b s" style="flex:1;padding:4px">11M km² ZEE</div><div class="b s" style="flex:1;padding:4px">67M+</div><div class="b s" style="flex:1;padding:4px">57 pays</div><div class="b s" style="flex:1;padding:4px">P5</div></div>
+<div class="row" style="padding:0 12px 12px;gap:14px"><span class="s">CARTE →</span><span class="s">À LA UNE →</span><span class="s">CHRONOLOGIE →</span><span class="s">CITATION →</span></div>
+</div>
+<p class="note">信息密度最高，首屏即见全部入口。问题：GRANDEUR 被拼贴图抢戏；模块列表只露 6/10，INDUSTRY 不可见。</p></div>
+
+<div class="dv-opt" id="1b"><div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>纪念碑 · 居中巨字 + 10 格矩阵</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">01 02 03 04 05 06 07 +3 ▾</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div style="position:relative;height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-bottom:1.5px solid #1f1f1f">
+<div style="position:absolute;left:14px;top:18px;bottom:18px;width:1.5px;background:#1f1f1f"></div><span class="s" style="position:absolute;left:20px;top:14px">+400km</span><span class="s" style="position:absolute;left:20px;top:88px">0m</span><span class="s" style="position:absolute;left:20px;bottom:14px">−6000m</span>
+<span class="s">LA FRANCE EN PROFONDEUR</span><div class="h gold" style="font-size:58px;line-height:1;letter-spacing:.05em">GRANDEUR</div><span class="t">La France n’est pas un pays, c’est une idée.</span><span class="b t gb gold" style="padding:3px 8px">COMMENCER L’EXPLORATION →</span><span class="s">↓ scroll</span></div>
+<div class="row pad" style="gap:10px"><div class="col" style="flex:1"><span class="t h">Décision</span><span class="ln"></span></div><div class="col" style="flex:1"><span class="t h">Système</span><span class="ln"></span></div><div class="col" style="flex:1"><span class="t h">Projection</span><span class="ln"></span></div></div>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:5px;padding:0 12px 10px"><div class="b t" style="padding:6px 5px;height:34px">01<br>ARSENAL</div><div class="b t" style="padding:6px 5px;height:34px">02<br>STATECRAFT</div><div class="b t" style="padding:6px 5px;height:34px">03<br>ÉPOQUES</div><div class="b t" style="padding:6px 5px;height:34px">04<br>TERRITOIRES</div><div class="b t" style="padding:6px 5px;height:34px">05<br>ARENA</div><div class="b t" style="padding:6px 5px;height:34px">06<br>AESTHETICS</div><div class="b t" style="padding:6px 5px;height:34px">07<br>SCIENCE</div><div class="b t" style="padding:6px 5px;height:34px">08<br>ÉCONOMIE</div><div class="b t" style="padding:6px 5px;height:34px">09<br>FRANCO.</div><div class="b t gb" style="padding:6px 5px;height:34px">10<br>INDUSTRY</div></div>
+<div class="row" style="padding:0 12px 12px;gap:5px"><div class="b t" style="flex:1;padding:5px">11M km²</div><div class="b t" style="flex:1;padding:5px">~700 (scén.)</div><div class="b t" style="flex:1;padding:5px">57 pays</div><div class="b t" style="flex:1;padding:5px">6 continents</div></div>
+</div>
+<p class="note">最贴合内容规划：GRANDEUR 占 C 位，逐字母浮现；10 个模块平权展示，hover 显模块色。代价：首屏无图像，需靠字体撑场。</p></div>
+
+<div class="dv-opt" id="1c"><div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>深度轴 · 太空→海底滚动叙事</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">01 02 03 04 05 06 07 +3 ▾</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="row pad" style="gap:12px">
+<div style="position:relative;width:70px;height:290px"><div style="position:absolute;left:8px;top:0;bottom:0;width:1.5px;background:#1f1f1f"></div>
+<span class="s" style="position:absolute;left:16px;top:0">+400km</span><span class="s" style="position:absolute;left:16px;top:66px">+10km</span><span class="t h gold" style="position:absolute;left:16px;top:132px">● 0m</span><span class="s" style="position:absolute;left:16px;top:198px">−200m</span><span class="s" style="position:absolute;left:16px;top:270px">−6000m</span><span class="dot" style="position:absolute;left:3px;top:134px;width:12px;height:12px;background:#c58a1c"></span></div>
+<div class="col" style="flex:1;gap:8px"><span class="s">sticky · 滚动驱动 · 当前层：地面</span><div class="h" style="font-size:22px;line-height:1">0 m · LE SOL</div><span class="ln" style="width:85%"></span><span class="ln" style="width:60%"></span><div class="img" style="height:110px">本层主图（陆军 / 城市）</div><span class="t h">本层关联模块</span><div class="row" style="flex-wrap:wrap;gap:5px"><span class="b t" style="padding:2px 6px">01 ARSENAL</span><span class="b t" style="padding:2px 6px">04 TERRITOIRES</span><span class="b t" style="padding:2px 6px">05 ARENA</span></div><div class="b s" style="padding:6px">下一层 −200m：EEZ · 潜水员 · Ifremer ↓</div></div>
+</div>
+</div>
+<p class="note">把规划里的「垂直深度轴」当首页骨架：每个深度层挂对应模块。叙事最强、最难做；10 个模块入口要在末尾再汇总一次。</p></div>
+
+<div class="dv-opt" id="1d"><div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>六边形矩阵 · Hexagone 作为导航</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">01 02 03 04 05 06 07 +3 ▾</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="row pad" style="gap:14px;align-items:center">
+<div style="position:relative;width:270px;height:240px;flex:none">
+<div style="position:absolute;left:45px;top:33px;width:180px;height:156px;background:#1f1f1f;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)"></div><div style="position:absolute;left:47px;top:35px;width:176px;height:152px;background:#fdfcf8;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);display:flex;flex-direction:column;align-items:center;justify-content:center"><span class="h gold" style="font-size:20px">GRANDEUR</span><span class="s">survolez un côté</span></div>
+<span class="t" style="position:absolute;left:78px;top:12px">01</span><span class="t" style="position:absolute;left:176px;top:12px">02</span><span class="t" style="position:absolute;left:228px;top:66px">03</span><span class="t h gold" style="position:absolute;left:240px;top:110px">04 ←</span><span class="t" style="position:absolute;left:228px;top:156px">05</span><span class="t" style="position:absolute;left:176px;top:206px">06</span><span class="t" style="position:absolute;left:78px;top:206px">07</span><span class="t" style="position:absolute;left:26px;top:156px">08</span><span class="t" style="position:absolute;left:14px;top:110px">09</span><span class="t" style="position:absolute;left:26px;top:66px">10</span>
+</div>
+<div class="col" style="flex:1"><span class="s">04 · TERRITOIRES</span><div class="h" style="font-size:16px">领土纵深决定全球到达能力</div><span class="t">Why / How / What</span><span class="ln"></span><span class="ln" style="width:80%"></span><div class="img" style="height:70px">模块缩略图</div><span class="t gold">Explorer →</span></div>
+</div>
+<div class="row" style="padding:0 12px 12px;gap:5px"><div class="b t" style="flex:1;padding:5px">11M km²</div><div class="b t" style="flex:1;padding:5px">57 pays</div><div class="b t" style="flex:1;padding:5px">P5</div></div>
+</div>
+<p class="note">品牌记忆点最强：六边形=法国本土轮廓的别称。10 个点位围绕，hover 切右侧摘要。风险：六边形 6 边 vs 10 模块，需接受「点位」而非「边」。</p></div>
+</div>
+
+<div class="dv-grp">B · 模块页模板（以 ARSENAL 为例，10 页通用）</div>
+<div class="dv-opts">
+<div class="dv-opt" id="1e"><div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>档案式 · Why/How/What 横排</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">ACCUEIL · <u>ARSENAL</u> · STATECRAFT · … +3 ▾</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="pad col" style="gap:8px">
+<span class="s">ACCUEIL / ARSENAL</span>
+<div class="row" style="gap:10px"><div class="col" style="flex:1"><span class="h" style="font-size:44px;line-height:.9;color:#bbb">01</span><div class="h gold" style="font-size:26px;line-height:1">ARSENAL</div><span class="t">PUISSANCE MILITAIRE &amp; SOUVERAINETÉ</span><span class="ln" style="width:90%"></span><span class="b t gb gold" style="padding:3px 7px;align-self:flex-start">EXPLORER →</span></div><div class="img" style="flex:1.1;height:120px">hero · Rafale / SNLE</div><div class="col b" style="width:100px;padding:5px;gap:3px"><span class="s">01 Dissuasion</span><span class="s">02 Forces</span><span class="s">03 Industrie</span><span class="s">04 Maritime</span><span class="s">05 Projection</span></div></div>
+<div class="b s gold gb" style="padding:4px 6px">⚠ Scénario prospectif GDN-2040 · 页面顶部一处</div>
+<div class="row" style="gap:0;border-top:1.5px solid #1f1f1f;border-bottom:1.5px solid #1f1f1f"><div class="col" style="flex:1;padding:6px;border-right:1px solid #1f1f1f"><span class="t h">WHY</span><span class="ln"></span><span class="ln" style="width:70%"></span></div><div class="col" style="flex:1;padding:6px;border-right:1px solid #1f1f1f"><span class="t h">HOW</span><span class="ln"></span><span class="ln" style="width:70%"></span></div><div class="col" style="flex:1;padding:6px"><span class="t h">WHAT</span><span class="ln"></span><span class="ln" style="width:70%"></span></div></div>
+
+<span class="t h">正文章节 ×N …</span>
+<span class="t h">Capacités liées</span><div class="row" style="gap:5px"><div class="b t" style="flex:1;padding:6px">→ 10 INDUSTRY</div><div class="b t" style="flex:1;padding:6px">→ 04 TERRITOIRES</div><div class="b t" style="flex:1;padding:6px;text-align:right">下一模块 02 →</div></div>
+</div></div>
+<p class="note">最接近现有 module_prototype：结构清楚、易模板化。Why/How/What 三段等权，结论句不够突出。</p></div>
+
+<div class="dv-opt" id="1f"><div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>长文 · 左侧粘性章节栏</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">ACCUEIL · <u>ARSENAL</u> · STATECRAFT · … +3 ▾</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="row pad" style="gap:10px;align-items:flex-end;border-bottom:1.5px solid #1f1f1f"><span class="h" style="font-size:40px;line-height:.9;color:#bbb">01</span><div class="col" style="flex:1"><div class="h gold" style="font-size:24px;line-height:1">ARSENAL</div><span class="t">最终的国家安全，不能外包给盟友或市场。</span></div></div>
+<div class="row pad" style="gap:12px">
+<div class="col" style="width:110px;gap:5px;border-right:1.5px solid #1f1f1f;padding-right:8px"><span class="s">sticky</span><span class="t h gold">▍Why · How · What</span><span class="t">Dissuasion</span><span class="t">Marine nationale</span><span class="t">Air &amp; Espace</span><span class="t">Armée de Terre</span><span class="t">Chaîne nucléaire</span><span class="t">Capacités liées</span><div style="height:3px;background:#d6d1c6;margin-top:4px"><div style="width:30%;height:3px;background:#c58a1c"></div></div></div>
+<div class="col" style="flex:1;gap:7px"><span class="b s gold gb" style="padding:3px 6px">⚠ Scénario GDN-2040</span><div class="col" style="gap:3px"><span class="t h">WHY</span><span class="ln"></span><span class="t h">HOW</span><span class="ln" style="width:85%"></span><span class="t h">WHAT</span><span class="ln" style="width:70%"></span></div><div class="img" style="height:90px">章节图 · SNLE</div><span class="ln"></span><span class="ln" style="width:90%"></span><div class="row" style="gap:4px"><div class="b t" style="flex:1;padding:4px">8 SNLE</div><div class="b t" style="flex:1;padding:4px">~700</div><div class="b t" style="flex:1;padding:4px">4 composantes</div></div><div class="col" style="border-left:3px solid #c58a1c;padding-left:7px"><span class="t">« La grandeur… »</span><span class="s">— de Gaulle · 中文译文小字</span></div></div>
+</div></div>
+<p class="note">适合 ARSENAL 这种 3000+ 行内容：章节导航常驻、阅读进度可见。弱化了首屏冲击，更像研究报告。</p></div>
+
+<div class="dv-opt" id="1g"><div class="dv-olabel"><a class="dv-oid" href="#1g">1g</a>杂志式 · 全幅图 + 结论大字</div>
+<div class="dv-card wf" style="width:520px">
+<div class="img" style="height:150px;position:relative;align-items:flex-end;justify-content:flex-start;padding:12px;border:0;border-bottom:1.5px solid #1f1f1f"><div style="position:absolute;top:0;left:0;right:0" class="nav">⬡ HEXAGONE<span>01 02 03 … ▾</span><span>⌕ FR TL</span></div><div class="col" style="text-align:left;color:#1f1f1f;font-family:Kalam"><span class="h" style="font-size:30px;line-height:1">01 ARSENAL</span><span class="t">全幅图 · 底部 scrim</span></div></div>
+<div class="pad col" style="gap:10px">
+<div class="h" style="font-size:20px;line-height:1.15;max-width:420px">« 最终的国家安全，不能外包给盟友或市场。»</div><span class="s">WHY · 一句结论，占满一屏宽</span>
+<div class="row" style="gap:8px;align-items:center"><div class="b t" style="padding:6px">核威慑</div><span>→</span><div class="b t" style="padding:6px">自研装备链</div><span>→</span><div class="b t" style="padding:6px">四位一体</div><span class="s">HOW · 机制图</span></div>
+<div class="row" style="gap:8px"><div class="img" style="flex:1;height:70px">WHAT · Rafale</div><div class="col" style="flex:1"><span class="t h">Rafale F5 (scén.)</span><span class="ln"></span><span class="ln" style="width:70%"></span></div></div>
+<div class="row" style="gap:8px"><div class="col" style="flex:1"><span class="t h">Suffren SSN</span><span class="ln"></span><span class="ln" style="width:70%"></span></div><div class="img" style="flex:1;height:70px">WHAT · SSN</div></div>
+<div class="row" style="gap:5px"><div class="b t" style="flex:1;padding:6px">→ INDUSTRY</div><div class="b t" style="flex:1;padding:6px">→ TERRITOIRES</div></div>
+</div></div>
+<p class="note">Why 成为视觉主角，How 用流程图、What 图文交错。最有「展览」感；依赖高质量图片，推演装备需占位标注。</p></div>
+</div>
+
+<div class="dv-grp">C · INDUSTRY 产业主权（力导向图）</div>
+<div class="dv-opts">
+<div class="dv-opt" id="1h"><div class="dv-olabel"><a class="dv-oid" href="#1h">1h</a>图优先 · 全宽画布 + 右侧抽屉</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">… <u>INDUSTRY</u> …</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="row pad" style="gap:8px;align-items:flex-end"><div class="col" style="flex:1"><span class="h gold" style="font-size:20px;line-height:1">10 · L’INDUSTRIE SOUVERAINE</span><span class="t">从核燃料到芯片都能自己造的产业链</span></div></div>
+<div class="row" style="padding:0 12px 8px;gap:4px"><div class="b s" style="flex:1;padding:4px">ENERGY</div><div class="b s" style="flex:1;padding:4px">AERO &amp; DEF</div><div class="b s" style="flex:1;padding:4px">MOBILITY</div><div class="b s" style="flex:1;padding:4px">LUXURY CAP.</div></div>
+<div style="position:relative;height:200px;margin:0 12px 10px" class="b">
+<div class="dot" style="position:absolute;left:70px;top:30px;width:140px;height:140px;border:1.5px dashed #9a958b"></div>
+<div class="dot h t" style="position:absolute;left:117px;top:77px;width:46px;height:46px;background:#1f1f1f;color:#fdfcf8;display:flex;align-items:center;justify-content:center;font-size:9px">FRANCE</div>
+<div class="dot b" style="position:absolute;left:198px;top:88px;width:22px;height:22px"></div><div class="dot b gb" style="position:absolute;left:163px;top:28px;width:24px;height:24px;border-width:2.5px"></div><div class="dot b" style="position:absolute;left:93px;top:28px;width:22px;height:22px"></div><div class="dot b" style="position:absolute;left:60px;top:88px;width:22px;height:22px"></div><div class="dot b" style="position:absolute;left:93px;top:148px;width:22px;height:22px"></div><div class="dot b" style="position:absolute;left:163px;top:148px;width:22px;height:22px"></div>
+<span class="dot" style="position:absolute;left:190px;top:12px;width:8px;height:8px;background:#c58a1c"></span><span class="dot" style="position:absolute;left:200px;top:40px;width:8px;height:8px;background:#9a958b"></span><span class="dot" style="position:absolute;left:150px;top:8px;width:8px;height:8px;background:#9a958b"></span>
+<div class="col panel" style="position:absolute;right:0;top:0;bottom:0;width:150px;padding:7px;gap:4px"><span class="s">← slide-in</span><span class="t h">Dassault Aviation</span><span class="s">如何支撑国家能力</span><span class="ln"></span><span class="ln" style="width:80%"></span><div class="row" style="gap:3px"><span class="b s" style="padding:2px 4px">Rafale</span><span class="b s" style="padding:2px 4px">FCAS</span></div><span class="t gold">Voir Rafale →</span></div>
+<span class="s" style="position:absolute;left:8px;bottom:6px">● mil ● aéro ● soft · légende</span><span class="s" style="position:absolute;left:8px;top:6px">+ − ⟲</span>
+</div>
+
+<div class="col" style="padding:0 12px 12px;gap:3px"><span class="t h">Vulnérabilité vs Résilience</span><div class="row s" style="border-left:3px solid #4a8f5a;padding-left:5px">核能 · 高度自主</div><div class="row s" style="border-left:3px solid #4a8f5a;padding-left:5px">战斗机 / 导弹 · 高度自主</div><div class="row s" style="border-left:3px solid #d07a2a;padding-left:5px">先进半导体 · 依赖进口</div></div>
+</div>
+<p class="note">与已上线的 Day 3–5 实现一致。图是主角；抽屉会遮挡右侧节点，需让画布在抽屉打开时左移。</p></div>
+
+<div class="dv-opt" id="1i"><div class="dv-olabel"><a class="dv-oid" href="#1i">1i</a>分栏 · 图 + 粘性集群目录</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">… <u>INDUSTRY</u> …</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="pad"><span class="h gold" style="font-size:20px">10 · L’INDUSTRIE SOUVERAINE</span></div>
+<div class="row" style="padding:0 12px 10px;gap:10px">
+<div class="b" style="flex:1.5;height:210px;position:relative"><div class="dot" style="position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px;background:#1f1f1f"></div><div class="dot" style="position:absolute;left:50%;top:50%;width:150px;height:150px;margin:-75px;border:1.5px dashed #9a958b"></div><div class="dot b gb" style="position:absolute;left:62%;top:18%;width:26px;height:26px;border-width:2.5px"></div><span class="s" style="position:absolute;left:6px;bottom:6px">同步高亮 ⇄ 右侧目录</span></div>
+<div class="col" style="flex:1;gap:4px"><span class="s">sticky</span><div class="b t" style="padding:4px 6px">Énergie +</div><div class="b t gb" style="padding:4px 6px"><b>Aéro &amp; Défense −</b><div class="s">Dassault · Safran · Thales · MBDA · Naval Group</div></div><div class="b t" style="padding:4px 6px">Numérique +</div><div class="b t" style="padding:4px 6px">Mobilité +</div><div class="b t" style="padding:4px 6px">Prestige +</div><div class="b t" style="padding:4px 6px">Alimentaire +</div><div class="b t" style="padding:4px 6px">Créatif (GFI) +</div></div>
+</div>
+<div class="col" style="padding:0 12px 12px;gap:3px"><span class="t h">Vulnérabilité vs Résilience</span><div class="row s" style="gap:0;border-top:1px solid #1f1f1f;padding:2px 0"><span style="flex:1">领域</span><span style="flex:1">自主程度</span><span style="flex:2">说明</span></div><div class="row s" style="gap:0;border-top:1px solid #d6d1c6;padding:2px 0"><span style="flex:1">半导体</span><span style="flex:1">依赖进口</span><span class="ln" style="flex:2;margin-top:4px"></span></div><div class="row s" style="gap:0;border-top:1px solid #d6d1c6;padding:2px 0"><span style="flex:1">Bugatti</span><span style="flex:1">资本外流</span><span class="ln" style="flex:2;margin-top:4px"></span></div></div>
+</div>
+<p class="note">图不懂也能读：目录是可访问的文本替代，移动端只保留目录。详情卡在目录内展开，不遮图。</p></div>
+
+<div class="dv-opt" id="1j"><div class="dv-olabel"><a class="dv-oid" href="#1j">1j</a>链路图 · 产业 → 国家能力</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">… <u>INDUSTRY</u> …</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="pad col" style="gap:8px"><span class="h gold" style="font-size:20px;line-height:1">10 · L’INDUSTRIE SOUVERAINE</span><span class="t">法国靠什么维持前面十页的一切</span>
+<div class="row" style="gap:6px;align-items:stretch">
+<div class="col" style="flex:1;gap:4px"><span class="s">产业集群</span><div class="b t" style="padding:4px">Énergie</div><div class="b t gb" style="padding:4px;border-width:2.5px">Aéro &amp; Défense</div><div class="b t" style="padding:4px">Numérique</div><div class="b t" style="padding:4px">Mobilité</div><div class="b t" style="padding:4px">Prestige</div><div class="b t" style="padding:4px">Alimentaire</div></div>
+<div class="col" style="width:70px;justify-content:center;align-items:center;gap:10px"><span class="gold h">⟶</span><span class="gold h">⟶</span><span class="s" style="text-align:center">带宽=支撑权重</span><span>⟶</span></div>
+<div class="col" style="flex:1;gap:4px"><span class="s">企业</span><div class="b s" style="padding:4px">Dassault</div><div class="b s" style="padding:4px">Safran</div><div class="b s" style="padding:4px">Thales</div><div class="b s" style="padding:4px">Naval Group</div><div class="b s" style="padding:4px">MBDA</div></div>
+<div class="col" style="width:70px;justify-content:center;align-items:center;gap:10px"><span class="gold h">⟶</span><span class="gold h">⟶</span></div>
+<div class="col" style="flex:1;gap:4px"><span class="s">国家能力</span><div class="b t gb" style="padding:6px">01 ARSENAL</div><div class="b t" style="padding:6px">04 TERRITOIRES</div><div class="b t" style="padding:6px">07 SCIENCE</div><div class="b t" style="padding:6px">08 ÉCONOMIE</div></div>
+</div>
+<span class="s">[ Vue réseau ⇄ Vue chaîne ] 切换到力导向图</span>
+</div></div>
+<p class="note">直接回答本页的问题「靠什么支撑」，左→右可读、可打印、移动端可竖排。牺牲了网络图的「哇」。</p></div>
+</div>
+
+<div class="dv-grp">D · 全站 Timeline Overlay（导航 TL 图标呼出）</div>
+<div class="dv-opts">
+<div class="dv-opt" id="1k"><div class="dv-olabel"><a class="dv-oid" href="#1k">1k</a>右侧抽屉 · 竖轴</div>
+<div class="dv-card wf" style="width:400px">
+<div class="row" style="gap:0;height:290px">
+<div class="col pad" style="flex:1;background:#e9e6de;gap:6px"><span class="s">当前页（变暗，保留滚动位置）</span><span class="ln"></span><span class="ln" style="width:70%"></span><div class="img" style="height:60px;opacity:.6">page</div></div>
+<div class="col pad" style="width:220px;border-left:1.5px solid #1f1f1f;gap:6px;position:relative"><div class="row" style="justify-content:space-between"><span class="t h">CHRONOLOGIE</span><span class="t">✕</span></div>
+<div style="position:relative;padding-left:16px" class="col"><div style="position:absolute;left:4px;top:4px;bottom:4px;width:1.5px;background:#1f1f1f"></div><span class="t">○ −52 Alésia</span><span class="t">○ 1789 Révolution</span><span class="t">○ 1815</span><span class="t h gold">● 1958 Ve République</span><div class="b col" style="padding:5px;gap:3px;margin-left:-4px"><span class="ln"></span><span class="ln" style="width:70%"></span><div class="row" style="gap:3px"><span class="b s" style="padding:1px 4px">→ STATECRAFT</span><span class="b s" style="padding:1px 4px">→ ARSENAL</span></div></div><span class="t">○ 1960 Gerboise</span><span class="t">○ Aujourd’hui</span><span class="s gold">○ 2040 (scénario)</span></div>
+</div></div></div>
+<p class="note">复用 EPOCHS 断裂点轴，最不打断阅读。点击模块链接 → 关闭并跳转。</p></div>
+
+<div class="dv-opt" id="1l"><div class="dv-olabel"><a class="dv-oid" href="#1l">1l</a>全屏 · 横向刻度尺</div>
+<div class="dv-card wf" style="width:400px">
+<div class="col pad" style="height:266px;gap:10px"><div class="row" style="justify-content:space-between"><span class="t h">CHRONOLOGIE</span><span class="t">✕ esc</span></div>
+<div class="row" style="gap:4px;flex-wrap:wrap"><span class="b s gb" style="padding:2px 6px">Tout</span><span class="b s" style="padding:2px 6px">Antiquité</span><span class="b s" style="padding:2px 6px">Révolution</span><span class="b s" style="padding:2px 6px">XXe</span><span class="b s" style="padding:2px 6px">GDN-2040</span></div>
+<div style="position:relative;height:40px"><div style="position:absolute;left:0;right:0;top:12px;height:1.5px;background:#1f1f1f"></div><div style="position:absolute;left:0;width:55%;top:11px;height:3px;background:#c58a1c"></div><span class="s" style="position:absolute;left:0;top:20px">−52</span><span class="s" style="position:absolute;left:22%;top:20px">1789</span><span class="s" style="position:absolute;left:38%;top:20px">1940</span><span class="t h gold" style="position:absolute;left:52%;top:18px">1958</span><span class="s" style="position:absolute;left:75%;top:20px">2026</span><span class="s" style="position:absolute;right:0;top:20px">2040</span></div>
+<div class="row" style="gap:8px"><div class="img" style="width:110px;height:90px">archive</div><div class="col" style="flex:1"><span class="h" style="font-size:18px">1958</span><span class="ln"></span><span class="ln" style="width:80%"></span><div class="row" style="gap:3px"><span class="b s" style="padding:1px 4px">→ STATECRAFT</span><span class="b s" style="padding:1px 4px">→ ARSENAL</span></div></div></div>
+<span class="s">← → 键盘 · 拖动刻度</span></div></div>
+<p class="note">沉浸感最强、可当独立「展厅」。离开当前页上下文，关闭后需恢复 scrollY。</p></div>
+
+<div class="dv-opt" id="1m"><div class="dv-olabel"><a class="dv-oid" href="#1m">1m</a>底部抽屉 · 紧凑条</div>
+<div class="dv-card wf" style="width:400px">
+<div class="col" style="height:290px;gap:0">
+<div class="col pad" style="flex:1;background:#e9e6de;gap:6px"><span class="s">当前页仍可见上半部</span><span class="ln"></span><span class="ln" style="width:70%"></span></div>
+<div class="col pad" style="border-top:1.5px solid #1f1f1f;gap:8px;height:120px;box-sizing:border-box"><div class="row" style="justify-content:space-between"><span class="t h">CHRONOLOGIE · 与本页相关 3 / 全部 24</span><span class="t">✕</span></div>
+<div class="row" style="gap:6px;overflow:hidden"><div class="b t" style="padding:5px;width:70px;flex:none">1960<br><span class="s">Gerboise</span></div><div class="b t gb" style="padding:5px;width:70px;flex:none">1972<br><span class="s">1er SNLE</span></div><div class="b t" style="padding:5px;width:70px;flex:none">1996<br><span class="s">Albion</span></div><div class="b t" style="padding:5px;width:70px;flex:none">2040<br><span class="s gold">scén.</span></div></div></div>
+</div></div>
+<p class="note">按当前模块预过滤（ARSENAL 只显示核相关年份），最适合移动端。全量浏览较弱。</p></div>
+</div>
+
+<div class="dv-grp">E · TERRITOIRES 交互地球仪</div>
+<div class="dv-opts">
+<div class="dv-opt" id="1n"><div class="dv-olabel"><a class="dv-oid" href="#1n">1n</a>三栏仪表 · 列表 / 地球 / 信息</div>
+<div class="dv-card wf" style="width:520px">
+<div class="nav"><b>⬡ HEXAGONE</b><span class="s">… <u>TERRITOIRES</u> …</span><span class="s">⌕ · FR ▾ · TL</span></div>
+<div class="row pad" style="gap:10px">
+<div class="col" style="width:110px;gap:4px"><span class="s">ATLANTIQUE</span><span class="t">Guyane</span><span class="t">Antilles</span><span class="s">OCÉAN INDIEN</span><span class="t h gold">▍Réunion</span><span class="t">Mayotte</span><span class="s">PACIFIQUE</span><span class="t">N.-Calédonie</span><span class="t">Polynésie</span></div>
+<div style="flex:1;position:relative;height:200px;display:flex;align-items:center;justify-content:center"><div class="dot b" style="width:170px;height:170px;position:relative"><div class="dot" style="position:absolute;left:50px;top:-1px;width:68px;height:168px;border:1px solid #9a958b"></div><div style="position:absolute;left:0;right:0;top:84px;height:1px;background:#9a958b"></div><span class="dot" style="position:absolute;left:78px;top:40px;width:7px;height:7px;background:#1f1f1f"></span><span class="dot" style="position:absolute;left:120px;top:112px;width:10px;height:10px;background:#c58a1c"></span><div style="position:absolute;left:82px;top:24px;width:46px;height:60px;border-top:1.5px dashed #c58a1c;border-right:1.5px dashed #c58a1c;border-radius:0 40px 0 0"></div></div><span class="s" style="position:absolute;bottom:0">拖动旋转 · 点击飞行</span></div>
+<div class="col panel" style="width:120px;padding:6px 0 6px 10px;gap:4px"><span class="t h">La Réunion</span><div class="img" style="height:44px">photo</div><span class="s">ZEE · FAZSOI · population</span><span class="ln"></span><span class="ln" style="width:70%"></span><span class="t gold">→ ARSENAL</span></div>
+</div>
+<div class="row" style="padding:0 12px 12px;gap:4px"><div class="b t" style="flex:1;padding:4px">11M km² ZEE</div><div class="b t" style="flex:1;padding:4px">2ᵉ mondiale</div><div class="b t" style="flex:1;padding:4px">[ Globe | Carte EEZ ]</div></div>
+</div>
+<p class="note">一屏完成「看—选—读」。列表是 Globe 的键盘 / 读屏替代。</p></div>
+
+<div class="dv-opt" id="1o"><div class="dv-olabel"><a class="dv-oid" href="#1o">1o</a>滚动叙事 · 粘性地球 + 浮卡</div>
+<div class="dv-card wf" style="width:400px">
+<div class="nav"><b>⬡</b><span class="s">… <u>TERRITOIRES</u> …</span><span class="s">⌕ FR TL</span></div>
+<div style="position:relative;height:280px;display:flex;align-items:center;justify-content:center"><div class="dot b" style="width:210px;height:210px;position:relative"><div class="dot" style="position:absolute;left:70px;top:-1px;width:68px;height:208px;border:1px solid #9a958b"></div><span class="dot" style="position:absolute;left:150px;top:120px;width:10px;height:10px;background:#c58a1c"></span></div>
+<div class="col panel" style="position:absolute;left:12px;bottom:16px;width:150px;padding:7px;gap:4px"><span class="s">2 / 6</span><span class="t h">Guyane · Kourou</span><span class="ln"></span><span class="ln" style="width:70%"></span><span class="s">↓ 滚动 → 镜头飞向下一领土</span></div>
+<div class="col" style="position:absolute;right:12px;top:40%;gap:5px"><span class="dot b" style="width:7px;height:7px"></span><span class="dot" style="width:9px;height:9px;background:#c58a1c"></span><span class="dot b" style="width:7px;height:7px"></span><span class="dot b" style="width:7px;height:7px"></span></div></div>
+</div>
+<p class="note">电影感最强，可与首页深度轴呼应。顺序固定，不适合想直接查某一领土的读者，需加跳转索引。</p></div>
+</div>
+
+<div class="dv-grp">F · LA FRANCE DEMAIN 结尾页（不进 navbar）</div>
+<div class="dv-opts">
+<div class="dv-opt" id="1p"><div class="dv-olabel"><a class="dv-oid" href="#1p">1p</a>收束清单 · 十句话</div>
+<div class="dv-card wf" style="width:460px">
+<div class="pad col" style="gap:8px"><span class="s">FIN DU PARCOURS</span><div class="h gold" style="font-size:26px;line-height:1">LA FRANCE DEMAIN</div>
+<div class="col" style="gap:2px;border-top:1.5px solid #1f1f1f;padding-top:6px"><div class="row t"><span style="width:26px;color:#999">03</span>历史给它身份</div><div class="row t"><span style="width:26px;color:#999">10</span>工业给它能力</div><div class="row t"><span style="width:26px;color:#999">04</span>领土给它纵深</div><div class="row t"><span style="width:26px;color:#999">01</span>核武给它自主</div><div class="row t"><span style="width:26px;color:#999">09</span>文化给它影响力</div><div class="row t"><span style="width:26px;color:#999">05</span>体育给它认同的窗口</div><div class="row t"><span style="width:26px;color:#999">02</span>制度给它执行力</div><div class="row t"><span style="width:26px;color:#999">07</span>科研给它长期地基</div><div class="row t"><span style="width:26px;color:#999">08</span>经济给它筹码</div></div>
+<div class="b col gb" style="padding:7px;gap:3px"><span class="s gold">⚠ SCÉNARIO · GDN-2040</span><span class="t">如果这些能力持续叠加…</span><span class="ln"></span></div>
+<div class="row" style="gap:6px;border-top:1px solid #1f1f1f;padding-top:6px"><div class="col" style="flex:1"><span class="s">项目</span><span class="ln"></span></div><div class="col" style="flex:1"><span class="s">内容边界</span><span class="ln"></span></div><div class="col" style="flex:1"><span class="s">技术</span><span class="ln"></span></div></div>
+<span class="t gold">↺ Retour à l’accueil</span></div></div>
+<p class="note">直接用内容规划的结构参考，逐句淡入。朴素、可信，About 自然收在末尾。</p></div>
+
+<div class="dv-opt" id="1q"><div class="dv-olabel"><a class="dv-oid" href="#1q">1q</a>汇聚 · 十个编号收拢成一句</div>
+<div class="dv-card wf" style="width:460px">
+<div style="position:relative;height:250px;display:flex;align-items:center;justify-content:center;border-bottom:1.5px solid #1f1f1f">
+<div class="dot" style="position:absolute;width:190px;height:190px;border:1.5px dashed #9a958b"></div>
+<span class="t" style="position:absolute;left:222px;top:22px">01</span><span class="t" style="position:absolute;left:290px;top:48px">02</span><span class="t" style="position:absolute;left:318px;top:112px">03</span><span class="t" style="position:absolute;left:300px;top:180px">04</span><span class="t" style="position:absolute;left:240px;top:214px">05</span><span class="t" style="position:absolute;left:170px;top:214px">06</span><span class="t" style="position:absolute;left:112px;top:180px">07</span><span class="t" style="position:absolute;left:96px;top:112px">08</span><span class="t" style="position:absolute;left:124px;top:48px">09</span><span class="t gold h" style="position:absolute;left:172px;top:22px">10</span>
+<div class="col" style="align-items:center;text-align:center;max-width:150px"><span class="h" style="font-size:15px;line-height:1.15">Pourquoi la France compte encore</span><span class="s">滚动 → 编号向中心收拢</span></div></div>
+<div class="pad col" style="gap:6px"><div class="b col gb" style="padding:6px"><span class="s gold">⚠ SCÉNARIO · GDN-2040</span><span class="ln"></span></div><span class="s">À propos · 内容边界 · 技术栈</span></div></div>
+<p class="note">把首页的 10 个入口在结尾「合拢」，与 <a class="dv-oid" href="#1d">1d</a> 六边形矩阵是一对。动效依赖重。</p></div>
+</div>
+
+<p class="dv-next">Try next: "首页用 <a class="dv-oid" href="#1b">1b</a>，加上 <a class="dv-oid" href="#1c">1c</a> 的深度轴" · "模块页 <a class="dv-oid" href="#1f">1f</a> 出移动端版本" · "<a class="dv-oid" href="#1i">1i</a> 和 <a class="dv-oid" href="#1j">1j</a> 合并成一个可切换视图" · 配色字体见 <a href="Hexagone Color + Type.dc.html">Hexagone Color + Type</a></p>
+</section>
+</x-dc>
+</body>
+</html>

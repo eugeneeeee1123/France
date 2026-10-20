@@ -1,5 +1,7 @@
-Fixed top navigation - logo lockup left, section links center (underline on active), search glyph + language switch + a bordered CTA button right. No spring/bounce here - nav must feel instant per the motion guidelines.
+The site's sticky top bar — one per page, holds HOME + 10 numbered modules (7 visible + "+3 ▾" overflow), search and FR/EN/中.
 
 ```jsx
-<NavBar logoSrc="assets/logo-lockup.png" links={["Accueil","Arsenal","Statecraft","Époques","Territoires","Arena","Aesthétics"]} activeLink="Accueil" ctaLabel="Commencer l'exploration" onNavigate={(id)=>router.push('/'+id)} onCtaClick={()=>{}} />
+<NavBar modules={MODULES} activeKey="arsenal" lang={lang} onLangChange={setLang} onNavigate={go} />
 ```
+
+Items render "01 ARSENAL" — the two-digit numeral always travels with the name. Nav never animates beyond a 180ms color shift.

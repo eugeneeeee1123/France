@@ -1,0 +1,15 @@
+﻿{
+  "mcpServers": {
+    "blender-mcp": {
+      "command": "C:\\Users\\Eugen\\.local\\bin\\uvx.exe",
+      "args": [
+        "blender-mcp"
+      ],
+      "env": {
+        "BLENDER_HOST": "localhost",
+        "BLENDER_PORT": "9876",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

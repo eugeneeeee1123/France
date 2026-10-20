@@ -1,13 +1,38 @@
+/* Spacing, layout, shape. 8px base (design.md §5); literal mockup values kept where they differ */
 :root{
---space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;
---space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;--space-10:128px;--space-11:192px;
---radius-sm:2px;--radius-md:4px;--radius-lg:8px;--radius-pill:999px;
---shadow-card:0 1px 0 rgba(239,180,75,0.15),0 24px 48px -24px rgba(0,0,0,0.6);
---shadow-glow-gold:0 0 32px rgba(239,180,75,0.25);
---ease-monument:cubic-bezier(0.16,1,0.3,1);/* @kind other */
---spring-stiffness:120;/* @kind other */
---spring-damping:14;/* @kind other */
---spring-mass:0.8;/* @kind other */
---container-max:1440px;
---gutter:var(--space-6);
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:20px;
+--space-6:24px;
+--space-7:28px;
+--space-8:32px;
+--space-10:40px;
+--space-12:48px;
+--space-14:56px;
+--space-16:64px;
+--space-24:96px;
+--space-32:128px;
+--gutter-page:40px; /* @kind spacing */ /* mockup page padding */
+--gutter-hero:56px; /* @kind spacing */
+--gap-grid:20px; /* @kind spacing */
+--container-max:1520px; /* @kind spacing */
+--nav-height:62px; /* @kind spacing */
+--radius-0:0; /* cards, panels, inputs: square */
+--radius-chip:14px; /* "+3 ▾" overflow chip */
+--radius-pill:999px;
+--radius-round:50%; /* timeline nodes, social buttons */
+--border-w:1px; /* @kind spacing */
+--border-w-mark:1.5px; /* @kind spacing */
+--border-w-active:2px; /* @kind spacing */
+--hairline:1px solid var(--ink-700); /* @kind other */
+--clip-hex:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%); /* @kind other */
+--clip-hero-left:polygon(0 0,58% 0,42% 100%,0 100%); /* @kind other */
+--clip-hero-right:polygon(58% 0,100% 0,100% 100%,42% 100%); /* @kind other */
+--shadow-none:none; /* @kind shadow */
+--glow-module:0 0 40px -8px; /* @kind shadow */ /* + module hue: box-shadow: var(--glow-module) var(--mod-arsenal) */
+--z-nav:10; /* @kind other */
+--z-dropdown:20; /* @kind other */
+--z-overlay:50; /* @kind other */
 }

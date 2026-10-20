@@ -1,0 +1,97 @@
+3{
+  "title": "La France en Profondeur — INDEX hero collage v2",
+  "output": {
+    "aspect_ratio": "3:2",
+    "size_px": {
+      "recommended": [
+        3000,
+        2000
+      ],
+      "minimum": [
+        2400,
+        1600
+      ]
+    },
+    "format": "PNG or JPEG quality 92+, sRGB",
+    "file_name": "hero-collage.jpg",
+    "crops_used_by_the_site": {
+      "desktop_two_column_6x5": "centre crop keeping the middle 80% of the width (shown about 660x600 CSS px at 1440 wide)",
+      "tablet_and_mobile_16x9": "centre crop keeping the middle 84% of the height"
+    }
+  },
+  "safe_zones": {
+    "all_key_subjects_inside": "central 80% of the width AND central 84% of the height (so both crops keep them)",
+    "keep_calm_low_detail": [
+      "bottom-right quadrant: on desktop a quote card covers roughly x 50-96% / y 62-92% of the visible crop",
+      "bottom 20%: a navy gradient scrim darkens it into the page background",
+      "top-left corner triangle: the site cuts it away with a diagonal mask (14% of the width at the top edge, tapering to 0 at the bottom)"
+    ]
+  },
+  "prompt": "Cinematic painterly collage for the homepage of a French state atlas, dark navy and antique gold palette, dusk light. Top centre, the focal point: Eugène Delacroix's 'Liberty Leading the People' (1830) reinterpreted as a luminous oil painting, Liberty raising a muted tricolour flag, visible brushwork and old-master craquelure. Left third, on the far horizon: the next-generation French nuclear aircraft carrier 'France Libre' under way, flat flight deck with a few naval fighter jets, long wake catching gold light, rendered as concept art in the same painted style. Left third, in the foreground water below and in front of the carrier: a French Navy Triomphant-class ballistic missile submarine (SSBN) surfacing through dark Atlantic swell, its tall rounded sail with diving planes mounted on the sail, black hull awash, spray lit gold, no readable hull number. Centre, below Liberty: a French national football team forward in the blue home kit with the number 10, seen from behind in a three-quarter view, arm raised in celebration, face not visible, stadium light haze behind him. Right third, at mid height: the Louvre glass pyramid and palace courtyard at blue hour, the pyramid glowing warm gold from within, reflections on wet stone. A thin gold hexagon outline floats near the centre, linking the scenes with a fine network of gold constellation lines and small star points. Subjects blend into each other through mist, smoke, sea spray and light, one continuous composition, not separate panels. Keep the bottom-right area calm and dark. Muted, dignified, museum-dossier mood, deep navy shadows, gold highlights, restrained tricolour accents.",
+  "subjects": [
+    {
+      "id": "liberty",
+      "description": "Delacroix, 'Liberty Leading the People' (public domain, 1830), painterly reinterpretation, Liberty with the tricolour, figures of the barricade softened into smoke",
+      "position": "top centre, focal point",
+      "scale": "largest element, about 45% of the image height",
+      "texture": "oil paint, brushwork and craquelure kept"
+    },
+    {
+      "id": "france_libre_carrier",
+      "description": "PANG 'France Libre' next-generation nuclear aircraft carrier (speculative, not yet built): long flat flight deck, single island set aft, a few naval fighters on deck, under way with a long wake",
+      "position": "left third, on the far horizon (about 40-55% of the image height), kept right of the top-left mask",
+      "scale": "about 35% of the image width, smaller than the submarine because it is further away",
+      "texture": "painted concept art, not a photograph"
+    },
+    {
+      "id": "triomphant_ssbn",
+      "description": "French Navy Triomphant-class ballistic missile submarine (SNLE, in service): surfacing through dark swell, tall rounded sail with the diving planes mounted on the sail, black hull awash, spray lit gold, no readable hull number or markings",
+      "position": "left third, foreground water (about 58-80% of the image height, 12-42% of the width), in front of and below the carrier, above the bottom 20%",
+      "scale": "about 30% of the image width",
+      "texture": "painted, same treatment as the carrier"
+    },
+    {
+      "id": "footballer",
+      "description": "French national team forward, blue home kit, number 10, seen from behind / three-quarter, arm raised, face not visible (no real person's likeness)",
+      "position": "centre, below Liberty (about 40-50% of the width, 45-80% of the height), kept left of the bottom-right calm zone",
+      "scale": "about 35% of the image height"
+    },
+    {
+      "id": "louvre",
+      "description": "the Louvre pyramid and Cour Napoléon at blue hour, pyramid lit warm gold from inside, wet stone reflections",
+      "position": "right third, mid height (about 25-58% of the image height), above the bottom-right calm zone",
+      "scale": "about 30% of the image width"
+    },
+    {
+      "id": "hexagon_motif",
+      "description": "thin gold hexagon outline (flat-top) with a fine gold constellation line network and small star points tying the scenes together; no logo or emblem inside",
+      "position": "centre",
+      "scale": "about 25% of the image height"
+    }
+  ],
+  "style": {
+    "medium": "cinematic digital painting blending old-master oil painting with photographic lighting",
+    "references": "the existing prototype collage of the site (navy and gold, Liberty top centre, gold constellation lines), editorial museum poster",
+    "palette_hex": {
+      "ink_950": "#00152C",
+      "ink_900": "#001B39",
+      "ink_800": "#04264B",
+      "gold_500": "#EFB44B",
+      "gold_700": "#B8863A",
+      "paper": "#F3EFE4",
+      "tricolour_muted": [
+        "#2F4A8C",
+        "#F3EFE4",
+        "#A8402F"
+      ]
+    },
+    "lighting": "dusk to blue hour, warm gold rim light against deep navy, soft volumetric haze",
+    "mood": "solemn, dignified, monumental, restrained; not a video game, not a tourist poster",
+    "grade": "one cool navy-leaning grade across the whole image; gold kept for highlights"
+  },
+  "negative_prompt": "text, letters, captions, logos, watermarks, signatures, emblems, crests, national team badges, readable sponsor marks, recognisable real faces, pure black, pure white, neon colours, oversaturated tricolour, lens flares, glossy 3D render look, separate framed panels, borders, cartoon, anime, fantasy creatures, modern UI elements, cluttered details in the bottom-right quadrant",
+  "delivery_notes": [
+    "Replace hexagone/public/images/hero-collage.jpg with the 3000x2000 master; no code change needed for the desktop and mobile crops.",
+    "Tell the orchestrator when it is in place: the alt text (index.hero.imageAlt) will be rewritten by the copywriter, the CREDITS.md row updated (source: AI-generated illustration, the carrier labelled as a speculative concept), and the 1024-1199px slot set to 16:9 so it uses the same safe zone."
+  ]
+}

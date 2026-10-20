@@ -1,0 +1,34 @@
+# public/images credits
+
+Provenance for every raster in this folder (ARCHITECTURE-INDEX §9: each shipping image carries its source, real size and status). Pixel sizes were verified with Pillow on 2026-10-19. The untouched `degaulle-portrait.jpg` remains PNG data with a `.jpg` extension; `hero-collage.jpg` is a true JPEG since 2026-10-20; generated `thumb-*.jpg` files are true JPEGs.
+
+| File | Source (relative to the France folder) | Real pixels | Encoded as | Status |
+| --- | --- | --- | --- | --- |
+| hero-collage.jpg | AI generated with ChatGPT image generation (2026-10-20), chosen by the user; source file `ChatGPT Image Oct 20, 2026, 04_05_50 PM.png` in the France folder, converted to JPEG quality 90 | 1536 x 1024 | JPEG | hero collage static layer (§5), used by HeroSection. The previous 744 x 394 placeholder is still at Hexagone Design System/assets/images/hero-collage.jpg. |
+| degaulle-portrait.jpg | Hexagone Design System/assets/images/degaulle-portrait.jpg (byte-identical copy) | 165 x 140 | PNG, RGBA | low-res. Only usable as the 22 percent opacity texture behind the closing quote until a high-resolution portrait is supplied (§12-2). No longer used on the INDEX since 2026-10-21 (closing quote changed to Napoléon). |
+| napoleon-portrait.jpg | AI generated with Codex image generation (2026-10-21), prompt in hexagone/docs/NAPOLEON-PORTRAIT-PROMPT.json | 1254 x 1254 | JPEG, quality 88 | decorative portrait behind the closing Napoléon quote (ChronologySection, QuoteBlock panel, 45% opacity). |
+| thumb-aesthetics.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail, holds the v2 composition (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-aesthetics-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-arena.jpg | AI generated with built-in image_gen (2026-10-19), using the existing FFF crest and official Spurs primary mark as references | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail, holds the v2 composition (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-arena-v2.jpg | AI generated with built-in image_gen (2026-10-19), using the existing FFF crest and official Spurs primary mark as references | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-arsenal.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-arsenal-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-economy.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-economy-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-epochs.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-epochs-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-francophonie.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail, holds the v2 composition (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-francophonie-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-industry.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail, holds the v2 composition (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-industry-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-science.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail, holds the v2 composition (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-science-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-statecraft.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-statecraft-v2.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| thumb-territories.jpg | AI generated with built-in image_gen (2026-10-19) | 1600 x 800 | JPEG, quality 82 | canonical module thumbnail, holds the v2 composition (chosen 2026-10-19); wired in MatrixSection. |
+| thumb-territories-v2.jpg | AI generated with built-in image_gen (2026-10-19), guided by the user-provided Forbin photo | 1600 x 800 | JPEG, quality 82 | alternate composition v2 for comparison. |
+| fff-crest.png | Hexagone Design System/assets/editorial/fff-crest.png (byte-identical copy) | 927 x 1697 | PNG, RGBA | user-supplied third-party mark (crest of the Fédération Française de Football). Editorial use only: navigation logo and favicon. Do not recolor, crop or distort. src/app/icon.png (512 x 512) and src/app/apple-icon.png (180 x 180) are this file scaled with its aspect ratio kept, centered on a transparent square. |
+| eiffel-sommet-closeup.png | Hexagone Design System/assets/images/eiffel-sommet-closeup.png (byte-identical copy) | 1080 x 1350 | PNG, RGBA | unused. |
+| ../models/eiffel.glb | blender_eiffel/eiffel_tower_paris_mcp.glb (own Blender model); ground meshes removed by scripts/prepare-eiffel-glb.mjs, then gltf-transform optimize --compress meshopt | 3D model (524940 bytes) | GLB, EXT_meshopt_compression | hero 3D layer (§5), loaded lazily on desktop only. |
+
+Rules: no image ships without a row here; a replacement keeps the file name and updates its row (source, pixels, status).

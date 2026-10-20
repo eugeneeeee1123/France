@@ -1,0 +1,17 @@
+<!-- @dsCard group="Components" viewport="1100x400" name="Data" subtitle="StatStrip open/boxed + interactive Timeline" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Data</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../image-slot.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;background:var(--ink-950);padding:24px;box-sizing:border-box}.lbl{font:600 10px var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--paper-300);margin-bottom:10px}</style>
+</head><body><div id="root"></div><script type="text/babel">
+const { StatStrip, Timeline } = window.HexagoneDesignSystem_4acaef;
+ReactDOM.createRoot(document.getElementById('root')).render(
+<div style={{display:'grid',gap:24}}>
+  <StatStrip items={[{icon:'hexagon',value:'551,695',label:'km² hexagone'},{icon:'target',value:'11,000,000',label:'km² ZEE'},{icon:'person',value:'67M+',label:'population'},{icon:'speech',value:'57',label:'pays francophones'},{icon:'anchor',value:'2e',label:'puissance maritime'},{icon:'star',value:'P5',label:'membre ONU'}]} />
+  <StatStrip variant="boxed" items={[{value:'290',label:'têtes nucléaires (scénario)'},{value:'4',label:'SNLE nouvelle génération'},{value:'225',label:'Rafale F5 (scénario 2035)'},{value:'2',label:'groupes aéronavals'}]} />
+  <Timeline eras={[{year:'-52',caption:"Victoire d'Alésia"},{year:'1789',caption:'Révolution française'},{year:'1815',caption:'Congrès de Vienne'},{year:'1870',caption:'IIIe République'},{year:'1940',caption:'Seconde Guerre mondiale'},{year:'1958',caption:'Ve République'},{year:"Aujourd'hui",caption:'Une France mondiale'}]} />
+</div>);</script></body></html>

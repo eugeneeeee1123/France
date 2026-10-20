@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "La France en Profondeur：国家战略图册",
+    "description": "法国国家战略图册。以十个领域为切入点，系统梳理法国在独立防务、关键工业与全球主权中的战略实践。"
+  },
+  "a11y": {
+    "skipLink": "跳转至主要内容",
+    "mainNav": "主导航",
+    "home": "La France en Profondeur 首页",
+    "language": "切换语言",
+    "timeline": "打开时间线",
+    "moreModules": "其余 {count} 个模块",
+    "menuOpen": "打开菜单",
+    "menuClose": "关闭菜单",
+    "homeCrest": "法国足球协会徽标，返回首页"
+  },
+  "nav": {
+    "cta": "开始探索",
+    "modulesMenu": "全部模块",
+    "menu": "菜单"
+  },
+  "scenario": {
+    "badge": "设定 · GDN-2040",
+    "notice": "标有设定的数据基于2035至2040年R.I.F.战略推演，系推演设定，非当下现实。",
+    "marker": "设定",
+    "yearSuffix": "设定"
+  },
+  "modules": {
+    "arsenal": {
+      "name": "军工",
+      "sub": "最终的国家安全不外包给盟友。",
+      "how": "立足全方位独立核威慑，依靠完全自主的全谱系国防工业。",
+      "what": "约700枚核弹头（设定）、8艘SNLE（设定）、Rafale战机、Suffren级攻击核潜艇。"
+    },
+    "statecraft": {
+      "name": "治国",
+      "sub": "国家决策不受制于盟友表决。",
+      "how": "依托第五共和国总统权威与戴高乐主义传统，践行不依附大国的独立外交。",
+      "what": "1966年退出北约一体化指挥机构，2009年重返，发起欧洲干预倡议。"
+    },
+    "epochs": {
+      "name": "历程",
+      "sub": "今日国家能力皆脱胎于断裂。",
+      "how": "历经中央集权、大革命、民法典与戴高乐主义，国家在危机与断裂中反复重塑。",
+      "what": "全站时间线的数据基底，系统梳理奠定今日法国的重大历史转折。"
+    },
+    "territories": {
+      "name": "疆域",
+      "sub": "领土纵深保障全球到达能力。",
+      "how": "海外领地、1100万平方公里专属经济区与前沿军事据点，保障全球战略到达。",
+      "what": "主权版图延伸至六大洲，管辖面积居全球第二的专属经济区。"
+    },
+    "arena": {
+      "name": "竞技",
+      "sub": "体育展现国家认同与社会融合。",
+      "how": "依托普惠青训网络与持续公共投入，落实共和国跨族群融合机制。",
+      "what": "两夺男子世界杯冠军，以姆巴佩等核心球员具象化呈现国家融合历程。"
+    },
+    "aesthetics": {
+      "name": "美学",
+      "sub": "文化输出支撑全球话语权。",
+      "how": "以“文化例外”原则建立国家庇护制度，稳固电影、时装与艺术的全球声量。",
+      "what": "戛纳电影节、卢浮宫博物馆、Paris+当代艺术博览会。"
+    },
+    "science": {
+      "name": "科研",
+      "sub": "科研自主奠定长期国家实力。",
+      "how": "作为CNRS、CNES与欧洲航天局主导出资国，国家统筹推进量子与AI主权。",
+      "what": "Ariane 6运载火箭、Mistral AI、13位菲尔兹奖得主。"
+    },
+    "economy": {
+      "name": "经济",
+      "sub": "经济体量支撑国防与外交。",
+      "how": "立足CAC 40跨国巨头、粮食自给能力与全球顶奢资本，筑牢经济后盾。",
+      "what": "位列全球第七大经济体（名义GDP），LVMH稳居全球奢侈品行业第一。"
+    },
+    "francophonie": {
+      "name": "法语",
+      "sub": "语言与文化奠定持久影响力。",
+      "how": "法语国家组织联结88个成员国，依托全球法国文化中心与法语联盟投射软实力。",
+      "what": "全球现有3.2亿法语使用者，预计2050年将达7至8亿人口。"
+    },
+    "industry": {
+      "name": "工业",
+      "sub": "战略自主要求掌握关键产业链。",
+      "how": "贯通核能、国防军工、微电子与轨道交通，维持独立完整的全产业链条。",
+      "what": "Rafale全产业链自研、EPR2核电机组扩张、Ariane 6发射能力。"
+    }
+  },
+  "index": {
+    "hero": {
+      "eyebrow": "全景法兰西",
+      "subtitle": "LA FRANCE EN PROFONDEUR",
+      "tagline": "法兰西不只是一处疆界，它本身就是一种理念。",
+      "lede": "本图册从防务、工业、制度与文化等十个领域展开，记录法国在21世纪维系战略自主的具体实践。",
+      "ctaPrimary": "开始探索",
+      "ctaSecondary": "打开时间线",
+      "imageAlt": "对角线构图的拼贴画，由玛丽安娜、埃菲尔铁塔、阵风战机与战略潜艇组成。"
+    },
+    "heroQuote": {
+      "text": "«\u00a0Toute ma vie, je me suis fait une certaine idée de la France.\u00a0»",
+      "translation": "我一生之中，对法兰西始终怀有一种特定的信念。",
+      "attribution": "夏尔·戴高乐 · 《战争回忆录》，1954"
+    },
+    "stats": {
+      "eyebrow": "核心指标",
+      "eez": "专属经济区",
+      "warheads": "战略核弹头（四位一体作战支柱）",
+      "francophone": "以法语为官方语言的国家",
+      "continents": "拥有法国主权领地的大洲"
+    },
+    "matrix": {
+      "eyebrow": "图册模块",
+      "title": "战略自主的十个维度",
+      "intro": "每个模块均遵循统一的推导逻辑：为何立论、如何运转、何以呈现。",
+      "hint": "悬停指向任一边",
+      "whyLabel": "为什么",
+      "howLabel": "如何",
+      "whatLabel": "是什么",
+      "explore": "探索",
+      "selectedLabel": "已选模块"
+    },
+    "manifesto": {
+      "eyebrow": "战略自主原则",
+      "i": {
+        "title": "决策自主",
+        "body": "国家最高决策权不让渡给军事同盟，亦不受外部单一市场主导。"
+      },
+      "ii": {
+        "title": "体系完整",
+        "body": "国防工业、海外领地、国家制度与文化积淀，共同构成完整独立的主权体系。"
+      },
+      "iii": {
+        "title": "全球投射",
+        "body": "分布于各大洋的主权领地与骨干产业，使国家行动能力保持全球辐射。"
+      }
+    },
+    "chronology": {
+      "eyebrow": "历史纪年",
+      "open": "查看完整时间线",
+      "eras": {
+        "alesia": "阿莱西亚之战",
+        "revolution": "法国大革命",
+        "fifthRepublic": "法兰西第五共和国",
+        "today": "当代全球布局",
+        "gdn2040": "R.I.F.战略推演"
+      },
+      "today": "今天"
+    },
+    "citation": {
+      "eyebrow": "经典引言",
+      "text": "«\u00a0La politique de toutes les puissances est dans leur géographie.\u00a0»",
+      "translation": "一切强国的政策都在其地理之中。",
+      "attribution": "拿破仑一世 · 《致普鲁士国王书》，1804年11月10日"
+    }
+  },
+  "footer": {
+    "navLabel": "底部导航",
+    "rights": "© La France en Profondeur. 独立编辑出版项目。",
+    "scenarioNote": "现实数据力求考据详实且具可核查性；R.I.F. GDN-2040设定属于前瞻推演，凡涉及处均有专属标注。",
+    "links": {
+      "about": "关于本站",
+      "sources": "参考资料",
+      "legal": "法律声明",
+      "credits": "图片来源"
+    }
+  }
+}

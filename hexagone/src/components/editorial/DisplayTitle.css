@@ -1,0 +1,33 @@
+/* Per-letter entry for <DisplayTitle reveal> (ARCHITECTURE-INDEX §8).
+   The server HTML is the final state; @starting-style supplies the start, so browsers
+   without it, and readers without JS, see the finished title. Transform/opacity only, once. */
+.hx-letter {
+  opacity: 1;
+  translate: 0 0;
+  transition:
+    opacity var(--dur-slow) var(--ease-settle),
+    translate var(--dur-slow) var(--ease-settle);
+  transition-delay: calc(var(--i, 0) * var(--stagger-letter));
+}
+
+/* Note: the start state is gated on html.js (REVIEW-CODE-INDEX #20), so readers without JS never see the letters animate. */
+@starting-style {
+  html.js .hx-letter {
+    opacity: 0;
+    translate: 0 var(--rise-letter);
+  }
+}
+
+/* Reduced motion: the tokens already collapse duration and stagger; also drop the rise. */
+@media (prefers-reduced-motion: reduce) {
+  .hx-letter {
+    transition-property: opacity;
+    translate: none;
+  }
+
+  @starting-style {
+    html.js .hx-letter {
+      translate: none;
+    }
+  }
+}

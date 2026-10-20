@@ -1,28 +1,25 @@
-<!-- @dsCard group="Components" viewport="700x380" name="Content: ModuleCard / StatBlock / WhyHowWhat / Tag" subtitle="Content-page primitives" -->
+<!-- @dsCard group="Components" viewport="1100x720" name="Content" subtitle="ModuleHeader, ScenarioLabel, WhyHowWhat, ModuleCard states, RelatedLinks" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Content</title>
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../image-slot.js"></script>
 <script src="../../_ds_bundle.js"></script>
-<div id="root" style="background:var(--surface-page);padding:24px;min-height:380px"></div>
-<script type="text/babel">
-const { ModuleCard, StatBlock, WhyHowWhat, Tag } = window.HexagoneDesignSystem_e9210e;
-function Demo(){
-  return (
-    <div style={{display:"flex",flexDirection:"column",gap:24}}>
-      <div style={{display:"flex",gap:16}}>
-        <div style={{width:260}}><ModuleCard number="01" title="ARSENAL" titleFr="L'Arsenal souverain" description="独立核威慑体系 + 全谱系自研装备工业链。" accent="#EFB44B" /></div>
-        <div style={{display:"flex",gap:32}}>
-          <StatBlock value="11M km²" label="Zone Économique Exclusive" />
-          <StatBlock value="≈700" label="Têtes Nucléaires" />
-        </div>
-      </div>
-      <WhyHowWhat why="最终的国家安全，不能外包给盟友或市场。" how="独立核威慑体系（tous azimuts）+ 全谱系自研装备工业链。" what="约700枚核弹头、8 艘 SNLE、Rafale 全系列。" />
-      <div style={{display:"flex",gap:8}}>
-        <Tag active>问候</Tag><Tag>致谢</Tag><Tag>餐厅</Tag>
-      </div>
-    </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
-</script>
+<style>body{margin:0;background:var(--ink-950);padding:24px;box-sizing:border-box}.lbl{font:600 10px var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--paper-300);margin-bottom:10px}</style>
+</head><body><div id="root"></div><script type="text/babel">
+const { ModuleCard, ModuleHeader, ScenarioLabel, WhyHowWhat, RelatedLinks } = window.HexagoneDesignSystem_4acaef;
+ReactDOM.createRoot(document.getElementById('root')).render(
+<div style={{display:'grid',gap:28,padding:'0 16px'}}>
+  <ModuleHeader n="01" title="Arsenal" subtitle="Puissance militaire" hue={236} intro="Depuis la force de frappe gaullienne jusqu'aux appareils de nouvelle génération, l'Arsenal français conjugue dissuasion nucléaire, industrie souveraine et projection de force.">
+    <ScenarioLabel>Scénario prospectif 2035-2040. Ces chiffres décrivent un scénario, pas la situation actuelle.</ScenarioLabel>
+  </ModuleHeader>
+  <WhyHowWhat hue={236} why="Parce que la dissuasion nucléaire et une armée expéditionnaire restent, pour la France, la garantie ultime de sa liberté d'action." how="Une dissuasion océanique et aéroportée, une industrie de défense souveraine, des forces projetables sur tous les théâtres." what="Un scénario prospectif 2035-2040 : sous-marins de nouvelle génération, Rafale F5, un second porte-avions." />
+  <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:20}}>
+    <ModuleCard n="01" name="ARSENAL" hue={236} active imageSrc="../../assets/images/thumb-arsenal.jpg" bullets={['Arme nucléaire','Forces armées','Industrie de défense','OPEX & Légion étrangère']} />
+    <ModuleCard n="02" name="STATECRAFT" hue={272} imageSrc="../../assets/images/thumb-statecraft.jpg" bullets={['Ve République','Politique étrangère','Union européenne','Francophonie & influence']} />
+    <ModuleCard n="03" name="EPOCHS" hue={56} imageSrc="../../assets/images/thumb-epochs.jpg" bullets={["Des Gaulois à aujourd'hui",'Révolutions & Empires','Deux guerres mondiales','La France contemporaine']} />
+    <ModuleCard n="07" name="SCIENCE" hue={164} imageSlotId="card-thumb-science" bullets={['Ariane & espace','Nucléaire & énergie','Mathématiques','Recherche & CNRS']} />
+  </div>
+  <RelatedLinks links={[{key:'statecraft',n:'02',name:'STATECRAFT'},{key:'economy',n:'08',name:'ECONOMY'},{key:'francophonie',n:'09',name:'FRANCOPHONIE'}]} />
+</div>);</script></body></html>

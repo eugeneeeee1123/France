@@ -1,0 +1,44 @@
+/* Hexagone type tokens. Source: design.md §4 + UI Mockup v3.0 exact sizes */
+:root{
+--font-display:'Playfair Display','Noto Serif SC',serif;
+--font-sans:'Public Sans','Noto Sans SC',sans-serif;
+--font-mono:'IBM Plex Mono',monospace; /* Display */
+--fs-grandeur:clamp(3rem,14vw,9rem); /* @kind font */ /* GRANDEUR treatment, design.md */
+--fs-hero:clamp(2.2rem,4.4vw,3.8rem); /* @kind font */ /* mockup hero H1 */
+--fs-h1:clamp(3.5rem,5vw,4.5rem); /* @kind font */ /* 56–72px */
+--fs-h2:clamp(2.25rem,3vw,2.75rem); /* @kind font */ /* 36–44px */
+--fs-h3:26px; /* @kind font */
+--fs-module-numeral:56px; /* @kind font */
+--fs-module-title:34px; /* @kind font */
+--fs-card-numeral:22px; /* @kind font */
+--fs-quote-lg:19px; /* @kind font */
+--fs-quote:15px; /* @kind font */ /* Text */
+--fs-body-lg:15.5px; /* @kind font */
+--fs-body:15px; /* @kind font */
+--fs-body-sm:14px; /* @kind font */
+--fs-ui:13px; /* @kind font */
+--fs-caption:12px; /* @kind font */
+--fs-label:11px; /* @kind font */
+--fs-micro:10px; /* @kind font */ /* Data */
+--fs-stat:18px; /* @kind font */
+--fs-stat-lg:19px; /* @kind font */
+--fs-year:15px; /* @kind font */
+--lh-tight:1; /* @kind font */
+--lh-display:1.1; /* @kind font */
+--lh-quote:1.5; /* @kind font */
+--lh-body:1.65; /* @kind font */
+--lh-body-cjk:1.8; /* @kind font */
+--lh-list:1.7; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+--fw-black:800; /* @kind font */
+--tracking-hero:.02em; /* @kind font */
+--tracking-grandeur:.05em; /* @kind font */
+--tracking-nav:.03em; /* @kind font */
+--tracking-brand:.04em; /* @kind font */
+--tracking-label:.06em; /* @kind font */
+--tracking-eyebrow:.08em; /* @kind font */
+--tracking-eyebrow-wide:.1em; /* @kind font */
+}

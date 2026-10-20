@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "La France en Profondeur\u00a0: atlas stratégique",
+    "description": "Atlas stratégique de la France. Dix domaines analysent les pratiques du pays pour sa défense autonome, ses industries clés et sa souveraineté mondiale."
+  },
+  "a11y": {
+    "skipLink": "Aller au contenu principal",
+    "mainNav": "Navigation principale",
+    "home": "La France en Profondeur, accueil",
+    "language": "Changer de langue",
+    "timeline": "Ouvrir la chronologie",
+    "moreModules": "{count} modules supplémentaires",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "homeCrest": "Écusson de la Fédération Française de Football, retour à l’accueil"
+  },
+  "nav": {
+    "cta": "COMMENCER L’EXPLORATION",
+    "modulesMenu": "MODULES",
+    "menu": "MENU"
+  },
+  "scenario": {
+    "badge": "SCÉNARIO · GDN-2040",
+    "notice": "Les données marquées comme scénario décrivent la projection R.I.F. 2035 à 2040, un monde fictif distinct de la réalité contemporaine.",
+    "marker": "scénario",
+    "yearSuffix": "scénario"
+  },
+  "modules": {
+    "arsenal": {
+      "name": "ARSENAL",
+      "sub": "La sécurité ultime ne se délègue pas aux alliés.",
+      "how": "La dissuasion nucléaire tous azimuts s’appuie sur une filière souveraine d’équipements.",
+      "what": "Environ 700 ogives (scénario), 8 SNLE (scénario), Rafale, sous-marins d’attaque Suffren."
+    },
+    "statecraft": {
+      "name": "STATECRAFT",
+      "sub": "La décision d’État ne cède pas au vote des alliés.",
+      "how": "La présidence de la Ve République et la tradition gaulliste soutiennent une diplomatie indépendante.",
+      "what": "Sortie du commandement intégré de l’OTAN en 1966, retour en 2009, Initiative européenne d’intervention."
+    },
+    "epochs": {
+      "name": "ÉPOQUES",
+      "sub": "Les capacités d’aujourd’hui sont nées de ruptures.",
+      "how": "L’État se refonde par la centralisation, la Révolution, le Code civil et le gaullisme.",
+      "what": "Source de données de la chronologie du site, reliant chaque grande rupture fondatrice."
+    },
+    "territories": {
+      "name": "TERRITOIRES",
+      "sub": "La profondeur territoriale assure l’allonge mondiale.",
+      "how": "L’outre-mer, 11 millions de km² de ZEE et des points d’appui militaires assurent l’allonge mondiale.",
+      "what": "Présence souveraine sur six continents, deuxième zone économique exclusive mondiale."
+    },
+    "arena": {
+      "name": "ARENA",
+      "sub": "Le sport illustre l’unité et l’intégration.",
+      "how": "Le modèle d’intégration républicain s’articule à un investissement public continu dans le sport.",
+      "what": "Titres en Coupe du monde masculine, récit républicain d’intégration incarné par Kylian Mbappé."
+    },
+    "aesthetics": {
+      "name": "AESTHETICS",
+      "sub": "L’export culturel soutient l’autorité mondiale.",
+      "how": "L’exception culturelle et la protection publique soutiennent le cinéma, la mode et les arts.",
+      "what": "Festival de Cannes, Musée du Louvre, salon d’art contemporain Paris+."
+    },
+    "science": {
+      "name": "SCIENCE",
+      "sub": "L’autonomie scientifique fonde la puissance durable.",
+      "how": "Premier contributeur au CNRS, au CNES et à l’ESA, l’État pilote les plans quantique et d’IA.",
+      "what": "Lanceur Ariane 6, Mistral AI, 13 lauréats de la médaille Fields."
+    },
+    "economy": {
+      "name": "ÉCONOMIE",
+      "sub": "L’économie finance la défense et la diplomatie.",
+      "how": "Les groupes du CAC 40, l’autonomie agricole et le capital du luxe consolident l’assise nationale.",
+      "what": "Septième PIB mondial, LVMH au premier rang mondial du luxe."
+    },
+    "francophonie": {
+      "name": "FRANCOPHONIE",
+      "sub": "La langue et la culture fondent l’influence durable.",
+      "how": "Le réseau de l’OIF rassemble 88 États, appuyé par les Instituts français et les Alliances françaises.",
+      "what": "320 millions de locuteurs actuels, projection de 700 à 800 millions d’utilisateurs en 2050."
+    },
+    "industry": {
+      "name": "INDUSTRY",
+      "sub": "L’autonomie exige la maîtrise des filières clés.",
+      "how": "Une filière intégrée relie l’énergie, la défense, l’électronique, les transports et le luxe souverain.",
+      "what": "Production autonome du Rafale, réacteurs nucléaires EPR2, lanceur Ariane 6."
+    }
+  },
+  "index": {
+    "hero": {
+      "eyebrow": "LA FRANCE SOUS TOUS LES ANGLES",
+      "subtitle": "LA FRANCE EN PROFONDEUR",
+      "tagline": "La France n’est pas un pays, c’est une idée.",
+      "lede": "À travers dix domaines, dont la défense, l’industrie, les institutions et la culture, cet atlas retrace les pratiques concrètes de la France pour maintenir son autonomie stratégique au XXIe siècle.",
+      "ctaPrimary": "COMMENCER L’EXPLORATION",
+      "ctaSecondary": "OUVRIR LA CHRONOLOGIE",
+      "imageAlt": "Collage découpé en diagonale montrant Marianne, la tour Eiffel, un chasseur Rafale et un sous-marin."
+    },
+    "heroQuote": {
+      "text": "«\u00a0Toute ma vie, je me suis fait une certaine idée de la France.\u00a0»",
+      "translation": "",
+      "attribution": "Charles de Gaulle · Mémoires de guerre, 1954"
+    },
+    "stats": {
+      "eyebrow": "INDICATEURS MAJEURS",
+      "eez": "Zone économique exclusive",
+      "warheads": "Ogives, quatre composantes",
+      "francophone": "Pays où le français est officiel",
+      "continents": "Continents avec des territoires français"
+    },
+    "matrix": {
+      "eyebrow": "LES MODULES DE L’ATLAS",
+      "title": "Dix dimensions de l’autonomie stratégique",
+      "intro": "Chaque module répond selon la même structure\u00a0: pourquoi, comment, pour quels résultats.",
+      "hint": "Survolez un côté",
+      "whyLabel": "POURQUOI",
+      "howLabel": "COMMENT",
+      "whatLabel": "QUOI",
+      "explore": "EXPLORER",
+      "selectedLabel": "Module sélectionné"
+    },
+    "manifesto": {
+      "eyebrow": "PRINCIPES D’ACTION",
+      "i": {
+        "title": "Autonomie de décision",
+        "body": "La décision suprême de l’État ne se délègue ni à une alliance militaire ni à aucun marché extérieur."
+      },
+      "ii": {
+        "title": "Système complet",
+        "body": "Industrie de défense, outre-mer, institutions et culture forment un système souverain complet et indépendant."
+      },
+      "iii": {
+        "title": "Projection mondiale",
+        "body": "Territoires sur tous les océans et industries clés maintiennent la capacité d’action mondiale de l’État."
+      }
+    },
+    "chronology": {
+      "eyebrow": "CHRONOLOGIE",
+      "open": "Ouvrir la chronologie",
+      "eras": {
+        "alesia": "Bataille d’Alésia",
+        "revolution": "Révolution française",
+        "fifthRepublic": "Ve République",
+        "today": "Dispositif mondial actuel",
+        "gdn2040": "Scénario R.I.F. 2040"
+      },
+      "today": "Aujourd’hui"
+    },
+    "citation": {
+      "eyebrow": "CITATION",
+      "text": "«\u00a0La politique de toutes les puissances est dans leur géographie.\u00a0»",
+      "translation": "",
+      "attribution": "Napoléon Ier · Lettre au roi de Prusse, 10 novembre 1804"
+    }
+  },
+  "footer": {
+    "navLabel": "Navigation secondaire",
+    "rights": "© La France en Profondeur. Projet éditorial indépendant.",
+    "scenarioNote": "Les données réelles visent l’exactitude documentaire\u00a0; le scénario R.I.F. GDN-2040 est une projection prospective signalée à chaque occurrence.",
+    "links": {
+      "about": "À propos",
+      "sources": "Sources",
+      "legal": "Mentions légales",
+      "credits": "Crédits photographiques"
+    }
+  }
+}

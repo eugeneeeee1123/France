@@ -1,0 +1,149 @@
+[
+ {
+  "file": "R03b_plate01_general_elevation.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_01.jpg",
+  "license": "Public domain",
+  "pixels": "4580x3194",
+  "bytes": 5458506
+ },
+ {
+  "file": "R03c_plate05_pedestal_walls_foundations.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_05.jpg",
+  "license": "Public domain",
+  "pixels": "4580x3215",
+  "bytes": 4576331
+ },
+ {
+  "file": "R03d_plate07_metal_structure.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_07.jpg",
+  "license": "Public domain",
+  "pixels": "4593x3215",
+  "bytes": 6685134
+ },
+ {
+  "file": "R03e_plate11_first_platform_arches.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_11.jpg",
+  "license": "Public domain",
+  "pixels": "4602x3215",
+  "bytes": 6867558
+ },
+ {
+  "file": "R03f_plate15_upper_part.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_17.jpg",
+  "license": "Public domain",
+  "pixels": "4602x3199",
+  "bytes": 6221655
+ },
+ {
+  "file": "R03g_plate18_ground_and_first_platform_plan.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_20.jpg",
+  "license": "Public domain",
+  "pixels": "4590x3239",
+  "bytes": 6919017
+ },
+ {
+  "file": "R03h_plate20_diagonal_vertical_section.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_22.jpg",
+  "license": "Public domain",
+  "pixels": "4559x3260",
+  "bytes": 7195056
+ },
+ {
+  "file": "R03i_plate29_first_platform_restaurants.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_35.jpg",
+  "license": "Public domain",
+  "pixels": "4607x3199",
+  "bytes": 6890201
+ },
+ {
+  "file": "R08b_plate22-3_otis_track_and_cabin.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_26.jpg",
+  "license": "Public domain",
+  "pixels": "4607x3222",
+  "bytes": 7070785
+ },
+ {
+  "file": "R10d_plate23ter_edoux_lift.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_30.jpg",
+  "license": "Public domain",
+  "pixels": "4607x3222",
+  "bytes": 6985807
+ },
+ {
+  "file": "R10e_plate35_fives_lille_lift.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_41.jpg",
+  "license": "Public domain",
+  "pixels": "4572x3192",
+  "bytes": 6422337
+ },
+ {
+  "file": "R12a_plate28_stairs_ground_to_first.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_plans_34.jpg",
+  "license": "Public domain",
+  "pixels": "4607x3222",
+  "bytes": 6454987
+ },
+ {
+  "file": "R12b_stairs_above_second_platform_print.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Les_escaliers_de_la_Tour_Eiffel,_au-dessus_de_la_deuxi%C3%A8me_plate-forme.jpg",
+  "license": "Public domain",
+  "pixels": "2719x3749",
+  "bytes": 3592690
+ },
+ {
+  "file": "R12c_ascension_par_les_escaliers_print.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Ascension_de_la_tour_Eiffel_par_les_escaliers.jpg",
+  "license": "Public domain",
+  "pixels": "2810x4012",
+  "bytes": 14706803
+ },
+ {
+  "file": "R12d_staircase_photo.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Staircase_in_the_Eiffel_Tower.jpg",
+  "license": "CC0",
+  "pixels": "2400x3200",
+  "bytes": 1132829
+ },
+ {
+  "file": "R06a_leg_lattice_from_below.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Eiffel_tower_support_detail_(27264705599).jpg",
+  "license": "CC BY 2.0",
+  "pixels": "5184x3456",
+  "bytes": 6529428
+ },
+ {
+  "file": "R06b_lattice_structure_detail.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Armazon.001_-_Torre_Eiffel.jpg",
+  "license": "CC BY-SA 4.0",
+  "pixels": "3864x5152",
+  "bytes": 7554627
+ },
+ {
+  "file": "R06c_base_and_arch_1889.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Adolphe_Block,_Paris_-_Base_de_la_Tour_Eiffel_et_le_Trocad%C3%A9ro,_about_1889.jpg",
+  "license": "Public domain",
+  "pixels": "5518x4344",
+  "bytes": 22753482
+ },
+ {
+  "file": "R06d_arch_from_champ_de_mars.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Paris_75007_Champ-de-Mars_lawn_20170526_Eiffel_Tower_(6).jpg",
+  "license": "CC BY 2.0",
+  "pixels": "6016x4016",
+  "bytes": 6418636
+ },
+ {
+  "file": "R06e_second_floor_platform.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_2nd_Floor,_Paris,_France_(53172594307).jpg",
+  "license": "CC BY-SA 2.0",
+  "pixels": "6000x4000",
+  "bytes": 16553234
+ },
+ {
+  "file": "R11d_cabin_engraving_1889.png",
+  "source": "https://commons.wikimedia.org/wiki/File:T6-_d621_-_Fig._462._%E2%80%94_Une_cabine_de_l%E2%80%99ascenseur_de_la_tour_Eiffel.png",
+  "license": "Public domain",
+  "pixels": "1657x2216",
+  "bytes": 189236
+ }
+]

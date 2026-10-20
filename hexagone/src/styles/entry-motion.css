@@ -1,0 +1,53 @@
+/* Section entry (ARCHITECTURE-INDEX §8). Server HTML is the final state: only under html.js are
+   .hx-reveal sections (and .hx-reveal-item children of a .hx-reveal-group) held back; the inline
+   observer in [locale]/layout.tsx adds .is-in once. Reduced motion: tokens turn this into a
+   120ms opacity fade (rise 0, stagger 0). Transform-family properties and opacity only. */
+html.js .hx-reveal:not(.is-in),
+html.js .hx-reveal-group:not(.is-in) .hx-reveal-item {
+  opacity: 0;
+  translate: 0 var(--rise-section);
+}
+.hx-reveal,
+.hx-reveal-item {
+  transition:
+    opacity var(--dur-slow) var(--ease-settle),
+    translate var(--dur-slow) var(--ease-settle);
+}
+.hx-reveal-item {
+  transition-delay: calc(var(--i, 0) * var(--stagger-card));
+}
+/* Timeline gold line grows once when its section enters (Tailwind scale-x uses the scale property). */
+[data-hx-fill] {
+  transition: scale var(--dur-slow) var(--ease-settle);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.js .hx-reveal:not(.is-in) [data-hx-fill] {
+    scale: 0 1;
+  }
+}
+/* Failsafe: if the observer never initialised (html lacks .io), show everything after 3s. */
+html.js:not(.io) .hx-reveal,
+html.js:not(.io) .hx-reveal-item {
+  animation: hx-failsafe 1ms 3s forwards;
+}
+@keyframes hx-failsafe {
+  to {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/* Print: paged media never fires the observer, so print the final state (REVIEW-CODE-INDEX #8). */
+@media print {
+  html.js .hx-reveal:not(.is-in),
+  html.js .hx-reveal-group:not(.is-in) .hx-reveal-item {
+    opacity: 1;
+    translate: none;
+    animation: none;
+  }
+  /* Same selector shape as the rule it overrides (a bare [data-hx-fill] would lose on specificity).
+     The final fill is --fill (Timeline's fraction up to fillToIndex), not 1. */
+  html.js .hx-reveal:not(.is-in) [data-hx-fill] {
+    scale: var(--fill, 1) 1;
+  }
+}

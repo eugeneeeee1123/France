@@ -1,0 +1,26 @@
+/* Motion tokens. Source: design.md §9 */
+:root{
+--dur-instant:100ms; /* @kind other */
+--dur-fast:180ms; /* @kind other */
+--dur-base:320ms; /* @kind other */
+--dur-slow:700ms; /* @kind other */
+--ease-standard:cubic-bezier(0.4,0,0.2,1); /* @kind other */
+--ease-settle:cubic-bezier(0.16,1,0.3,1); /* @kind other */
+--ease-linear:linear; /* @kind other */
+--stagger-letter:20ms; /* @kind other */
+--stagger-card:50ms; /* @kind other */
+--rise-section:16px; /* @kind other */
+--rise-letter:0.4em; /* @kind other */
+--press-scale:0.98; /* @kind other */
+--lift-card:-2px; /* @kind other */
+}
+@media (prefers-reduced-motion:reduce){
+:root{--dur-fast:0ms; /* @kind other */
+--dur-base:120ms; /* @kind other */
+--dur-slow:120ms; /* @kind other */
+--stagger-letter:0ms; /* @kind other */
+--stagger-card:0ms; /* @kind other */
+--rise-section:0px; /* @kind other */
+--rise-letter:0em; /* @kind other */
+--lift-card:0px}
+}

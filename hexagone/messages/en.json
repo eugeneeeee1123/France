@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "La France en Profondeur: Strategic Atlas",
+    "description": "Atlas of French national strategy. Ten domains examine French practice in independent defence, critical industries, and global sovereignty."
+  },
+  "a11y": {
+    "skipLink": "Skip to main content",
+    "mainNav": "Main navigation",
+    "home": "La France en Profondeur, home",
+    "language": "Change language",
+    "timeline": "Open timeline",
+    "moreModules": "{count} more modules",
+    "menuOpen": "Open the menu",
+    "menuClose": "Close the menu",
+    "homeCrest": "Crest of the French Football Federation, return to home"
+  },
+  "nav": {
+    "cta": "BEGIN EXPLORATION",
+    "modulesMenu": "MODULES",
+    "menu": "MENU"
+  },
+  "scenario": {
+    "badge": "SCENARIO · GDN-2040",
+    "notice": "Figures marked as scenario describe the R.I.F. 2035 to 2040 projection, a fictional world distinct from current reality.",
+    "marker": "scenario",
+    "yearSuffix": "scenario"
+  },
+  "modules": {
+    "arsenal": {
+      "name": "ARSENAL",
+      "sub": "Ultimate security is not delegated to allies.",
+      "how": "Independent deterrence tous azimuts relies on entirely sovereign defence equipment.",
+      "what": "About 700 warheads (scenario), 8 SNLE (scenario), Rafale, Suffren-class attack submarines."
+    },
+    "statecraft": {
+      "name": "STATECRAFT",
+      "sub": "State decisions do not yield to allied votes.",
+      "how": "Fifth Republic presidential authority and Gaullist tradition sustain independent diplomacy.",
+      "what": "1966 exit from NATO integrated command, 2009 return, European Intervention Initiative."
+    },
+    "epochs": {
+      "name": "EPOCHS",
+      "sub": "Present capabilities were born of ruptures.",
+      "how": "State power rebuilt itself through centralisation, the Revolution, the Civil Code, and Gaullism.",
+      "what": "Data source for the site timeline, tracking major foundational historical ruptures."
+    },
+    "territories": {
+      "name": "TERRITORIES",
+      "sub": "Territorial depth secures global reach.",
+      "how": "Overseas territories, an 11 million km² EEZ, and military footholds secure global reach.",
+      "what": "Sovereign presence across six continents, second largest exclusive economic zone in the world."
+    },
+    "arena": {
+      "name": "ARENA",
+      "sub": "Sport displays national unity and integration.",
+      "how": "The republican integration model is backed by sustained public investment in sport.",
+      "what": "World Cup victories, republican integration narrative embodied by Kylian Mbappé."
+    },
+    "aesthetics": {
+      "name": "AESTHETICS",
+      "sub": "Cultural export sustains global authority.",
+      "how": "The cultural exception and state support protect domestic cinema, fashion, and the arts.",
+      "what": "Cannes Film Festival, Louvre Museum, Paris+ contemporary art fair."
+    },
+    "science": {
+      "name": "SCIENCE",
+      "sub": "Scientific autonomy sustains lasting power.",
+      "how": "Leading contributor to CNRS, CNES, and ESA, the state directs national quantum and AI plans.",
+      "what": "Ariane 6 launcher, Mistral AI, 13 Fields Medal recipients."
+    },
+    "economy": {
+      "name": "ECONOMY",
+      "sub": "Economic scale funds defence and diplomacy.",
+      "how": "CAC 40 multinationals, agricultural autonomy, and luxury capital consolidate economic scale.",
+      "what": "Seventh largest global GDP, LVMH ranked first worldwide in luxury."
+    },
+    "francophonie": {
+      "name": "FRANCOPHONIE",
+      "sub": "Language and culture secure lasting influence.",
+      "how": "The 88-state OIF network is supported by Instituts français and Alliances françaises worldwide.",
+      "what": "320 million current speakers, projected 700 to 800 million users by 2050."
+    },
+    "industry": {
+      "name": "INDUSTRY",
+      "sub": "Autonomy requires control of key supply chains.",
+      "how": "An integrated industrial base links energy, defence, electronics, transport, and sovereign luxury.",
+      "what": "Autonomous Rafale production, EPR2 nuclear reactors, Ariane 6 space launcher."
+    }
+  },
+  "index": {
+    "hero": {
+      "eyebrow": "FRANCE FROM EVERY ANGLE",
+      "subtitle": "LA FRANCE EN PROFONDEUR",
+      "tagline": "France is not a country, it is an idea.",
+      "lede": "Across ten domains, including defence, industry, institutions, and culture, this atlas records France’s concrete practice in maintaining strategic autonomy in the 21st century.",
+      "ctaPrimary": "BEGIN EXPLORATION",
+      "ctaSecondary": "OPEN TIMELINE",
+      "imageAlt": "Collage cut diagonally showing Marianne, the Eiffel Tower, a Rafale fighter and a submarine."
+    },
+    "heroQuote": {
+      "text": "«\u00a0Toute ma vie, je me suis fait une certaine idée de la France.\u00a0»",
+      "translation": "All my life, I have had a certain idea of France.",
+      "attribution": "Charles de Gaulle · Mémoires de guerre, 1954"
+    },
+    "stats": {
+      "eyebrow": "KEY FIGURES",
+      "eez": "Exclusive economic zone",
+      "warheads": "Warheads across four components",
+      "francophone": "Countries with French as an official language",
+      "continents": "Continents with French territory"
+    },
+    "matrix": {
+      "eyebrow": "THE ATLAS MODULES",
+      "title": "Ten dimensions of strategic autonomy",
+      "intro": "Every module follows the same structure: the motive, the system, and the results.",
+      "hint": "Hover over a side",
+      "whyLabel": "WHY",
+      "howLabel": "HOW",
+      "whatLabel": "WHAT",
+      "explore": "EXPLORE",
+      "selectedLabel": "Selected module"
+    },
+    "manifesto": {
+      "eyebrow": "PRINCIPLES OF AUTONOMY",
+      "i": {
+        "title": "Decision autonomy",
+        "body": "Supreme state decisions are not ceded to a military alliance, nor governed by any outside market."
+      },
+      "ii": {
+        "title": "A complete system",
+        "body": "Defence industry, overseas territories, institutions, and culture form a fully independent sovereign system."
+      },
+      "iii": {
+        "title": "Global projection",
+        "body": "Sovereign territories across all oceans and core industries maintain the state’s global reach."
+      }
+    },
+    "chronology": {
+      "eyebrow": "CHRONOLOGY",
+      "open": "Open full timeline",
+      "eras": {
+        "alesia": "Battle of Alesia",
+        "revolution": "The French Revolution",
+        "fifthRepublic": "Fifth Republic",
+        "today": "Current global posture",
+        "gdn2040": "R.I.F. scenario 2040"
+      },
+      "today": "Today"
+    },
+    "citation": {
+      "eyebrow": "QUOTATION",
+      "text": "«\u00a0La politique de toutes les puissances est dans leur géographie.\u00a0»",
+      "translation": "The policy of all powers is in their geography.",
+      "attribution": "Napoleon I · Letter to the King of Prussia, 10 November 1804"
+    }
+  },
+  "footer": {
+    "navLabel": "Footer navigation",
+    "rights": "© La France en Profondeur. Independent editorial project.",
+    "scenarioNote": "Real-world data aims for documentary accuracy; the R.I.F. GDN-2040 scenario is a prospective projection marked wherever it appears.",
+    "links": {
+      "about": "About",
+      "sources": "Sources",
+      "legal": "Legal notice",
+      "credits": "Image credits"
+    }
+  }
+}

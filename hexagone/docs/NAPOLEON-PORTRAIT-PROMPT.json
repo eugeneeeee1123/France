@@ -1,0 +1,13 @@
+{
+  "for_generator": {
+    "aspect_ratio": "1:1",
+    "size_px": [1024, 1024],
+    "prompt": "One single oil painting in the manner of early 19th-century French history painting (Jacques-Louis David, Ingres), rendered as a cinematic matte painting, never a photograph: visible brushwork, one warm golden light from the left against deep navy shadows. Subject: Napoléon Bonaparte as Emperor, half-length, three-quarter view, face clearly visible and recognisable, calm and resolute, looking out of frame to the left. He wears the dark blue uniform coat of a colonel of the Grenadiers of the Imperial Guard with gold epaulettes and the red sash and star of the Légion d'honneur, his right hand tucked into his waistcoat. He stands in the right half of the frame. The background is a plain, very dark navy (close to #00152C) with a faint hint of a gilded study in deep shadow, so the left half of the image is almost empty dark navy and every edge of the picture dissolves into that same dark navy. Palette: deep navy, antique gold, warm skin tones, small accents of red. Solemn, monumental, quiet mood.",
+    "negative_prompt": "photograph, photorealistic, 3D render, glossy CGI, text, letters, captions, numbers, logos, watermark, signature, frame, border, bright background, white background, cartoon, anime, caricature, multiple people"
+  },
+  "site_notes_do_not_paste": {
+    "use": "Decorative portrait behind the closing quote on the INDEX (ChronologySection, QuoteBlock panel): object-contain, right-aligned, 45% opacity, text on the left.",
+    "why_dark_edges": "The image is drawn at reduced opacity over the ink page ground; edges that fall to the same dark navy avoid a visible rectangle.",
+    "file": "hexagone/public/images/napoleon-portrait.jpg (true JPEG, quality about 88)"
+  }
+}

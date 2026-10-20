@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hexagone-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "hexagone", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}
