@@ -1,0 +1,46 @@
+/* Index hero (S1, ARCHITECTURE-INDEX §1) styles. Only the GRANDEUR echo lives here; the letters are DisplayTitle's (DisplayTitle.css).
+   Every selector is scoped to .hx-grandeur-echo, so no global element is touched. */
+
+/* GRANDEUR echo: a 1px gold outline copy of the word, offset down-right, behind the solid letters.
+   GRANDEUR is never translated (D7), so the word can live in CSS. The alt text "" keeps it out of the
+   accessible name (the h1 already has the sr-only text). Static except one fade-in after the letter reveal. */
+.hx-grandeur-echo {
+  position: relative;
+}
+
+.hx-grandeur-echo::before {
+  content: "GRANDEUR";
+  content: "GRANDEUR" / "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold-500);
+  font-kerning: none;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.42;
+  /* 2026-10-21 (user decision, review item 2): offset 0.05em -> 0.03em so the echo sits closer to the letters and reads quieter. */
+  translate: 0.03em 0.03em;
+  transition: opacity var(--dur-slow) var(--ease-settle), translate var(--dur-slow) var(--ease-settle);
+  transition-delay: 320ms;
+}
+
+@starting-style {
+  html.js .hx-grandeur-echo::before {
+    opacity: 0;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hx-grandeur-echo::before {
+    transition-property: opacity;
+  }
+
+  @starting-style {
+    html.js .hx-grandeur-echo::before {
+      translate: 0.03em 0.03em;
+    }
+  }
+}

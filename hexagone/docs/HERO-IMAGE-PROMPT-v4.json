@@ -1,0 +1,13 @@
+{
+  "for_generator": {
+    "aspect_ratio": "3:2",
+    "size_px": [3000, 2000],
+    "reference_images": [
+      "codex3.png (hero artwork only: style, palette, diagonal panel cuts)",
+      "hexagone/public/images/fff-crest.png (exact FFF rooster crest for the jersey)"
+    ],
+    "prompt": "Dark cinematic painterly collage of France on a deep navy ground, split by sharp diagonal cuts into angled panels, premium and moody, oil-painting texture with fine gold technical blueprint line work. Centre, the main subject: a large Eiffel Tower lit in warm gold against a cloudy dusk sky, surrounded by thin gold blueprint lines, construction circles and measurement marks. Left-centre panel: Liberty from Delacroix's 'Liberty Leading the People' in dark sepia oil tones, raising the French tricolour flag. Lower left panel: a stormy dark sea with a French ballistic missile submarine surfacing through the waves. Upper right: a Dassault Rafale fighter jet in flight with faint gold blueprint circles around it. Below the tower: Paris Haussmann rooftops at dusk. Right side, in front: Kylian Mbappé, three-quarter view facing the viewer, determined expression, wearing the current France national football team home jersey in dark navy blue, with the Nike swoosh and the FFF gold rooster crest clearly visible and accurately drawn on the chest, a small number 10. Lower right, on the dark sea: the new French nuclear aircraft carrier 'France Libre' under way, larger than the Charles de Gaulle, flat flight deck with an island superstructure and Rafale aircraft on deck. Keep the Eiffel Tower, Mbappé and the carrier inside the right two thirds of the frame. Palette: deep navy and ink blue, muted gold, desaturated sepia, small tricolour red and blue accents.",
+    "negative_prompt": "text, letters, captions, watermark, signature, extra logos, hexagon emblem, letter H, UI elements, frames, borders, bright saturated colours, blurry, low detail, cartoon, anime"
+  },
+  "site_crop_note": "On desktop the image is shown with object-fit: cover anchored right inside a near-square box with a diagonal left cut, so roughly the left third is hidden. On mobile the full width shows in a 16:9 band."
+}

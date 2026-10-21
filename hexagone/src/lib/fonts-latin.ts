@@ -13,8 +13,9 @@ import { IBM_Plex_Mono, Playfair_Display, Public_Sans } from "next/font/google";
 // next/font/google applies `style` to every listed weight, so asking for the
 // 400 italic also produces 500 and 600 italic faces; there is no per-weight
 // style option.
+// 2026-10-21 (user decision): 700 added for the GRANDEUR title (DisplayTitle size="grandeur"); like the others it also brings a 700 italic face.
 export const playfair = Playfair_Display({
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",

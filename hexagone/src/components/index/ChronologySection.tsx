@@ -43,8 +43,9 @@ export async function ChronologySection() {
 
   return (
     // hx-reveal: P3 attaches the CSS entry; the class it adds before hydration must not warn.
+    // 2026-10-21 (user decision, review item 9): top padding 88px -> 44px and bottom 96px -> 48px, halving the gap after the manifesto and the gap before the footer.
     <section
-      className="hx-reveal mx-auto grid max-w-[var(--container-max)] grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] gap-5 px-5 pb-24 pt-[88px] md:px-[var(--gutter-page)]"
+      className="hx-reveal mx-auto grid max-w-[var(--container-max)] grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] gap-5 px-5 pb-12 pt-[44px] md:px-[var(--gutter-page)]"
       suppressHydrationWarning
     >
       <div className="flex flex-col border-t border-ink-700 pt-8">

@@ -21,7 +21,8 @@ export interface HeroCollageProps {
 export function HeroCollage({ src, alt, children, className }: HeroCollageProps) {
   return (
     // 2026-10-20 (user decision): a taller panel, clamp(460px, 46vw, 680px) (was clamp(420px, 42vw, 600px)).
-    <div className={cx('relative max-md:aspect-[16/9] md:h-[clamp(460px,46vw,680px)]', className)}>
+    // 2026-10-21 (user decision): the panel takes the image's own 3:2 ratio at every width (was a fixed height on md and up, 16:9 below), so the whole collage shows and nothing is cropped by object-cover.
+    <div className={cx('relative aspect-[3/2]', className)}>
       <div className="absolute inset-0 overflow-hidden bg-ink-800 [clip-path:polygon(14%_0,100%_0,100%_100%,0_100%)]">
         <Image
           src={src}

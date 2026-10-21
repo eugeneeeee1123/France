@@ -60,9 +60,10 @@ export function ModuleCard({ n, name, hue = 236, bullets = [], imageSrc, active 
             <span aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[image:var(--scrim-thumb)]" />
           </>
         )}
+        {/* 2026-10-21 (user decision, review item 5): the numeral is gold on every tile (was the module hue), so the ten tiles read as one navy-and-gold set; hover and focus still show the module hue. */}
         <span
           className={cx(
-            'pointer-events-none absolute bottom-2 left-[10px] font-display leading-none text-[oklch(68%_0.1_var(--h))]',
+            'pointer-events-none absolute bottom-2 left-[10px] font-display leading-none text-gold-500',
             imageSrc ? 'text-[length:var(--fs-card-numeral)]' : 'text-[length:var(--fs-module-numeral)]',
           )}
         >

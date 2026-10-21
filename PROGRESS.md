@@ -23,6 +23,42 @@
 
 <!-- 在下方插入新记录，最新的写最上面 -->
 
+### 2026-10-21 20:02
+
+**文件**：`hexagone/src/components/index/HeroLinework.tsx`（修改）
+**改动**：+2 / -1 行（路径数据那一行从 93,441 字符缩到 79,237 字符）
+**内容**：修掉 `npm run verify` 的 check:messages 报错：首屏地图轮廓的路径数据里有 99 个落在 290–291 之间的绝对坐标（如 `290.64`），触发「src 里不许出现 290」这条规则。改法是把 6,070 个 `L` 绝对坐标改写成相对步长 `l`（与上一点的差），25 个 `M` 起点和 `Z` 不变，点位完全相同，并在路径上方加了一行注释说明原因。代码由 Haiku 5.5（effort xhigh）用一次性脚本局部替换（脚本放在会话临时目录，不进仓库）。我另写脚本逐点比对新旧路径，6,095 个点全部一致；浏览器里路径总长 2680.211（改前 2680.208）、7 个取样点误差都在 0.001px 以内，控制台无报错。`npm run verify` 全部通过。未提交
+**关联 TODO**：无直接对应条目（verify 报错修复，接 19:54 那条记录）
+
+---
+
+### 2026-10-21 19:54
+
+**文件**：`hexagone/src/components/index/HeroSection.tsx`、`HeroSection.css`、`HeroLinework.tsx`、`ChronologySection.tsx`、`hexagone/src/components/content/ModuleCard.tsx`（修改）
+**改动**：+16 / -11 行
+**内容**：按 2026-10-21 截图审查做完 4 条优先项，代码由 Haiku 5.5（effort xhigh）改，我审查 diff 并在浏览器里核对。① 首屏拼贴整体右移 48px（`xl:-ml-[clamp(32px,calc(6vw_-_48px),72px)]`），GRANDEUR 字号不变；R 与斜边的距离实测：1280 +24px、1440 +22px、1536 +15px、2560 +23px，1680 −24px、1920 −89px（大屏上「UR」照旧压在图上）；用户选了这个方案，已知约 1600–1700px 之间 R 仍会贴边；各宽度都没有横向滚动条。② 金色重影偏移 0.05em → 0.03em，地图轮廓、准星圈和十字线的透明度全部减半。⑤ 十张模块卡的编号统一改成金色（gold-500），悬停和聚焦时仍显示各模块颜色。⑨ 时间线区块上内边距 88px → 44px、下内边距 96px → 48px。实测原间距只有 88px 和 96px，不到一屏；审查截图里的「一屏空白」很可能是区块淡入动画还没跑完时截的图。`npm run verify` 卡在 check:messages：`HeroLinework.tsx` 第 31 行的地图路径数据里有 99 处「290」，这行是另一个会话新建的、本次没改；其余各步（tsc、eslint、check-banned、next build、check-static-html、check-js-budget）单独跑全部通过。未提交
+**关联 TODO**：「INDEX 截图审查修改」第 1、2、5、9 条，已勾选 [x]
+
+---
+
+### 2026-10-21 19:34
+
+**文件**：`hexagone/public/images/thumb-arsenal.jpg`、`thumb-statecraft.jpg`、`thumb-epochs.jpg`、`thumb-arena.jpg`、`thumb-aesthetics.jpg`、`thumb-science.jpg`、`thumb-economy.jpg`、`thumb-francophonie.jpg`、`thumb-industry.jpg`（替换 9 张）、`hexagone/public/images/CREDITS.md`（修改）、`hexagone/public/images/section-card-candidates/`（新增，46 张候选 PNG + 2 张拼版图）
+**改动**：CREDITS.md +9 / -9 行（另替换 9 张图片），没有改代码
+**内容**：INDEX 十张模块卡片图里，除 04 Territories 保留外，其余 9 张全部换新。做法：参考 `codex2.png`、`codex3.png`、`protoype_index_final.png` 三张原型图，加上用户定的统一画风（干净、平滑、大色块、无噪点），写成出图 JSON；用户用 Codex 出图并挑选，转成 1600×800、质量 82 的 JPEG，覆盖原文件。题材调整：Rafale 从 Industry 移到 Arsenal，Industry 改为发动机涡轮加技师，Science 改为 Ariane 6 发射，Statecraft 改为爱丽舍宫门廊加国旗，Epochs 改为《自由引导人民》式人物，Economy 只留拉德芳斯，Francophonie 改为法语国家世界地图，Arena 画的是 Mbappé（法国队 10 号）和 Wembanyama（法国篮球队 32 号）。清过 Next.js 图片缓存（`.next/dev/cache/images`），在本地页面逐张核对，显示的都是新图。这项工作在 pokemon 文件夹的会话「代码审查工具检查」里完成，该会话已归档；汇报里没提到跑过 `npm run verify`。按用户要求未提交。待处理：① CREDITS.md 里 Arsenal、Statecraft、Epochs 三行写的原图 `thumb-<id>-candidate-05.png` 不存在：Statecraft 原图其实是 `thumb-statecraft-candidate-01.png`，Epochs 是 `thumb-epochs-candidate-03.png`，Arsenal 原图只在 `~/.codex/generated_images/01a15e0f-bd88-7ea2-8a7d-c04b977fc37e/exec-9b071075-846a-4560-9469-7e6314c096c1.png`，没有复制进候选文件夹；② Arena 图含真人肖像和 Nike、FFF 商标，CREDITS 记为 editorial use，上线前要确认
+**关联 TODO**：无直接对应条目（INDEX 模块卡片图替换）
+
+---
+
+### 2026-10-21 14:20
+
+**文件**：`hexagone/public/images/hero-collage.jpg`（替换）、`hexagone/public/images/CREDITS.md`（修改）、`hexagone/docs/HERO-IMAGE-PROMPT-v4.json`、`hexagone/docs/HERO-IMAGE-PROMPT-v5-clean.json`（新增）
+**改动**：+30 / -1 行（另替换 1 张图片）
+**内容**：INDEX 英雄区换成以埃菲尔铁塔为主体的新拼贴图（参考 codex3.png 原型，含 Mbappé 球衣 Nike 与 FFF 队徽、自由法兰西号航母）；Codex gpt-6-luna（max）出了 3 批共 12 张候选图，放在 `hero-review/`，最终用户选定一张；只换图片文件，没有改代码；`npm run verify` 全检通过
+**关联 TODO**：无直接对应条目（INDEX 英雄图替换）
+
+---
+
 ### 2026-10-21 01:23
 
 **文件**：`README.md`、`ALL_IN_ONE.md`（新增）

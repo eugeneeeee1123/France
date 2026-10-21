@@ -1,0 +1,15 @@
+{
+  "for_generator": {
+    "aspect_ratio": "3:2",
+    "size_px": [3000, 2000],
+    "reference_images": [
+      "codex3.png (hero artwork only: palette, diagonal panel cuts)",
+      "hexagone/public/images/fff-crest.png (exact FFF rooster crest for the jersey)",
+      "hero-review/ref/france-libre-carrier-ref.png (user-supplied render of the France Libre carrier: copy its hull, island and deck shape)"
+    ],
+    "style_requirement_zh": "整体画面必须干净、平滑、统一，强调大色块叙事与整体轮廓，不要细碎噪点，不要高频纹理，不要脏污颗粒，不要密集小装饰，边缘清晰利落，表面干净，画面呼吸感强，一目了然。",
+    "prompt": "Clean, smooth, unified cinematic collage of France on a deep navy ground, told through large colour blocks and strong overall silhouettes, split by a few sharp diagonal cuts into angled panels. Crisp clean edges, clean surfaces, generous breathing room, readable at a glance. Centre, the main subject: a large Eiffel Tower lit in warm gold against a calm dusk sky, with only a few clean thin gold lines around it. Left-centre panel: Liberty from Delacroix's 'Liberty Leading the People' rendered in simplified dark sepia shapes, raising the French tricolour flag. Lower left panel: a dark sea with a French ballistic missile submarine surfacing, shown as one clear silhouette. Upper right: a Dassault Rafale fighter jet in flight. Below the tower: Paris Haussmann rooftops as a simple dusk silhouette. Right side, in front: Kylian Mbappé, three-quarter view facing the viewer, wearing the current France national football team home jersey in dark navy blue, with the Nike swoosh and the FFF gold rooster crest clearly visible and accurately drawn on the chest, a small number 10. Lower right, on the sea: the new French nuclear aircraft carrier 'France Libre' under way, shape copied from the reference render: a long light-grey hull about 310 m long with a flared, overhanging bow; one wide flat flight deck with no ski-jump ramp and an angled landing area on the port side; a single tall, boxy, square-edged island set on the starboard side well aft of midships, topped by a short mast and two white satellite domes; deck-edge aircraft lifts on the starboard side; a few aircraft parked along the deck edges, shown as simple shapes. Seen from a distance in three-quarter bow view, as one clean silhouette. Keep the Eiffel Tower, Mbappé and the carrier inside the right two thirds of the frame. Palette: deep navy and ink blue, muted gold, desaturated sepia, small tricolour red and blue accents.",
+    "negative_prompt": "noise, film grain, dirty grain, high-frequency texture, brush-stroke texture, dense small decorations, busy blueprint line work, cluttered details, smudges, text, letters, captions, watermark, signature, extra logos, ski-jump ramp, two islands, island at the bow, hull number, CVN markings, Nimitz-class or Ford-class carrier, Charles de Gaulle carrier, cluttered deck details, hexagon emblem, letter H, UI elements, frames, borders, blurry, cartoon, anime"
+  },
+  "site_crop_note": "On desktop the image is shown with object-fit: cover anchored right inside a near-square box with a diagonal left cut, so roughly the left third is hidden. On mobile the full width shows in a 16:9 band."
+}

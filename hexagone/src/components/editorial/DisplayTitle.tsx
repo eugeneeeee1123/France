@@ -27,7 +27,10 @@ export interface DisplayTitleProps {
 const SIZE = {
   hero: 'text-[length:var(--fs-hero)] font-medium tracking-[var(--tracking-hero)]',
   // 2rem floor: 3rem overflows the 280px text column at 320px (WCAG 1.4.10).
-  grandeur: 'text-[length:clamp(2rem,16.5cqi,9rem)] font-normal tracking-[var(--tracking-grandeur)]',
+  // 2026-10-21 (user decision): GRANDEUR is set in Playfair 600 (was 400) for more weight; 600 is already among the loaded faces.
+  // 2026-10-21 (user decision): 16cqi (was 16.5cqi) so the wider 600 weight still fits the 335px text column at 375px.
+  // 2026-10-21 (user decision): GRANDEUR is now Playfair 700 (was 600); 700 is loaded in fonts-latin.ts.
+  grandeur: 'text-[length:clamp(2rem,16cqi,9rem)] font-bold tracking-[var(--tracking-grandeur)]',
 } as const
 
 // Letters only (Latin + Latin-1 / Latin Extended), lower-cased, so "Grandeur," matches "GRANDEUR".
