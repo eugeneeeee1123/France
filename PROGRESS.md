@@ -23,6 +23,15 @@
 
 <!-- 在下方插入新记录，最新的写最上面 -->
 
+### 2026-10-22 16:30
+
+**文件**：`hexagone/public/images/REPLACED-2026-10-21.md`（修改）
+**改动**：+30 / -0 行
+**内容**：补全图片替换记录：除 9 张模块缩略图外，`hero-collage.jpg` 也是 2026-10-21 替换的（替换前版本在提交 `59ba4ef`，来源、候选图和 prompt 位置已写明）；写清哪些没被替换（`thumb-territories.jpg`、`napoleon-portrait.jpg` 等）、仓库根目录的 thumb 副本与线上文件逐字节一致（md5 核对）、各归档文件夹分别是什么，以及替换前版本怎么从 git 取回。整个文件夹已推送到 GitHub（提交 `9e7a968`），PC 端 `git pull` 即可
+**关联 TODO**：无直接对应条目（图片替换记录补全）
+
+---
+
 ### 2026-10-21 20:02
 
 **文件**：`hexagone/src/components/index/HeroLinework.tsx`（修改）
