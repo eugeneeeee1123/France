@@ -1,0 +1,69 @@
+{
+  "source_url": "https://etalab-datasets.geo.data.gouv.fr/contours-administratifs/2026/geojson/regions-50m.geojson",
+  "dataset_description_url": "https://www.data.gouv.fr/datasets/contours-administratifs",
+  "dataset_license": "ODbL",
+  "base_data": "IGN ADMIN EXPRESS 2026",
+  "retained_region_codes": [
+    "11",
+    "24",
+    "27",
+    "28",
+    "32",
+    "44",
+    "52",
+    "53",
+    "75",
+    "76",
+    "84",
+    "93",
+    "94"
+  ],
+  "projection": "EPSG:2154 (Lambert-93)",
+  "simplification_tolerance_metres": 250.0,
+  "min_island_area_km2": 1.0,
+  "bounds_epsg_2154": {
+    "minx": 99046.93,
+    "miny": 6046550.46,
+    "maxx": 1242423.59,
+    "maxy": 7110496.76
+  },
+  "normalization_transform": {
+    "scale": 0.0003122330666319545,
+    "center_x_2154": 670735.2633863622,
+    "center_y_2154": 6578523.610495077,
+    "target_center_x": 184.8,
+    "target_center_y": 190.8,
+    "target_bounds": [
+      6.3,
+      18.8,
+      363.3,
+      362.8
+    ],
+    "formula": "svg_x = 184.8 + (x - center_x_2154) * s; svg_y = 190.8 - (y - center_y_2154) * s"
+  },
+  "paris_coordinates": {
+    "wgs84": [
+      2.3522,
+      48.8566
+    ],
+    "epsg_2154": [
+      652469.02,
+      6862035.26
+    ],
+    "svg": [
+      179.1,
+      102.28
+    ]
+  },
+  "metrics": {
+    "official_metropolitan_projected_area_m2": 548851404392.65,
+    "reconstructed_svg_projected_area_m2": 548878462531.77,
+    "intersection_over_union_pct": 99.90013,
+    "symmetric_difference_pct": 0.09992,
+    "symmetric_difference_area_m2": 548411580.79,
+    "retained_polygons_count": 24,
+    "retained_rings_count": 25,
+    "vertex_count": 6095,
+    "path_character_length": 93441
+  }
+}
